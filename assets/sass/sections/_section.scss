@@ -1,0 +1,32 @@
+// Section
+
+section {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    margin-top: 45px;
+    
+    &.background-dark {
+        background: $light-gray; 
+        padding: 45px 0;
+    }
+    
+    &.section-curved {
+        &.background-dark {
+            background-color: transparent;
+            margin-top: 0;
+            padding: 0;
+            
+            .wrap {
+                background-color: $light-gray; 
+                padding: 45px 0;  
+            }
+        }
+    }
+        
+    header {
+        margin-bottom: 30px;    
+    }
+    
+}

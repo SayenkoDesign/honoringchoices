@@ -1,0 +1,52 @@
+//
+// Gravity Forms
+//  --------------------------------------------------
+
+.gform_wrapper *:focus { 
+    outline: thin solid transparent; 
+}
+
+@media only screen and (max-width: 641px) {
+    .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+        line-height: inherit!important;
+        min-height: 2rem;
+    }
+}
+
+body img.gform_ajax_spinner {
+   display: none!important;
+}
+
+
+
+
+li.gfield {
+	
+	@include placeholder {
+		
+	}	
+}
+
+
+.gform_wrapper ul.gfield_radio li input[type="radio"]:checked+label, 
+.gform_wrapper ul.gfield_checkbox li input[type="checkbox"]:checked+label {
+	font-weight: normal!important;
+}
+
+.gform_footer .gform_button {
+    outline: none;
+}
+
+
+@media only screen and (min-width: 641px)  {
+     .gform_wrapper .top_label li.gfield.gfield_error {
+        padding-bottom: 0!important;
+        margin-bottom: 0!important;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    body  .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+        max-width: 100%!important;
+    }
+}

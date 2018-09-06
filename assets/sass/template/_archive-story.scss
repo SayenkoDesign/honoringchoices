@@ -1,0 +1,236 @@
+// Archive Story
+
+.post-type-archive-story {
+    .site-main {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    
+    .section-hero {
+        
+        .wrap {
+            background-color: $green;
+            text-align: center;   
+        }
+    }
+    
+    .section-after-hero {
+        
+        
+    
+        .photo-grid {
+                        
+            > div {
+                
+                &:first-child() .background {
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba($maroon,0.8);
+                    }
+                }
+                
+                &:nth-child(4) .background  {
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba($blue,0.8);
+                    }
+                }
+            }
+            
+        }
+                
+        .caption {
+            
+            .wrap {
+                background-color: $green;
+            }
+            
+        }
+        
+    }
+    
+    
+}
+
+.masonry-grid {
+    
+    margin: 40px -4px 0;
+        
+    /* clear fix */
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    
+    .gutter-sizer {
+       width: 0;
+    }
+    
+    /* ---- .grid-item ---- */
+    .grid-sizer,
+    .grid-item {
+      width: 100%;
+      
+      @include breakpoint(medium) {
+          width: 50%;
+          padding: 0 4px;
+      }
+      @include breakpoint(large) {
+          width: 33.333%;   
+      }
+    }
+    
+    .grid-item {
+         float: left;
+    }
+    
+    .grid-item img {
+        
+    }
+}
+
+
+.masonry-grid {
+ 
+    article {
+        
+        margin-bottom: 8px; 
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+        > .tagline {
+            background-color: $blue;
+            color: #fff;
+            padding: 4px;
+            text-align: center;
+            font-size: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;   
+        }
+        
+        img {
+            opacity: 0; 
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            margin-left: -100%;
+            float: left;   
+        }
+        
+        .background-image {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: table;
+            
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;   
+            }
+        }
+        
+        
+        &:hover {
+            
+            .background-image:after {
+                background-color: rgba( $blue, .8);   
+            }
+            
+            > .tagline {
+                display: none;   
+            }
+            
+            .card {
+                z-index: 10;
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            > .background-image .play {
+                display: none;   
+            }
+            
+            > .background-image .card .play {
+                display: block;   
+            }
+        }
+        
+        .card {
+            visibility: hidden;
+            opacity: 0;  
+            transition: opacity .2s ease-out, visibility .2s ease-out;
+            position: relative;
+            z-index: 2;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 40px 10px;
+            
+            .play {
+                display: none;   
+            }
+            
+            .center {                
+                text-align: center;
+                h5,
+                h3 {
+                    color: #fff;   
+                }
+            }
+        }
+
+    }
+    
+    .arrow {
+        svg {
+            width: 32px;
+            height: 32px;  
+            
+            path {
+                &.arrow {
+                   fill: $white; 
+                }
+                
+                &.line {
+                    stroke: $white;
+                }   
+            } 
+        }
+    }
+    
+    
+    .play {
+        
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
+        z-index: 10;
+        svg {
+            width: 39px;
+            height: 39px;   
+        }
+    }
+    
+}

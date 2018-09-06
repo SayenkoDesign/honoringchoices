@@ -1,0 +1,31 @@
+// WPML
+
+.site-header.fixed  .wpml-ls {
+    .wpml-ls-current-language a {
+        color: $blue!important;   
+    }
+}
+
+.site-header .wpml-ls {
+    border: none!important;
+    padding: 0!important; 
+    
+    li {
+        margin-right: 15px!important;   
+    }
+    
+    a {
+        padding: 0!important;  
+        line-height: 30px!important;   
+    }
+    
+    .wpml-ls-current-language a {
+        color: $blue!important;   
+        
+        @media #{$xlarge-up} {
+            color: #fff!important;
+        }
+    }
+    
+}
+

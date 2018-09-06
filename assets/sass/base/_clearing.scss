@@ -1,0 +1,14 @@
+//--------------------------------------------------------------
+// Clearings
+//--------------------------------------------------------------
+
+.clear,
+.clearfix,
+.entry-content,
+.comment-content,
+.site-header,
+.site-content,
+section,
+.site-footer {
+	@include clearfix;
+} // .clear, .entry-content, .comment-content, .site-header, .site-content, .site-footer

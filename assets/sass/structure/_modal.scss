@@ -1,0 +1,54 @@
+// Modals
+
+
+// fix reveal overflow, we don't want it hidden
+ body.is-reveal-open {
+    //position: fixed; 
+    overflow-y: scroll!important;
+}
+
+.reveal:focus{
+    outline: none;
+}
+
+.reveal-overlay {
+    background-color: rgba(51,51,51,.7);
+}
+
+.reveal {
+	
+    background: transparent;  
+    border: none;
+    padding-top: 40px;
+    
+    .close-button {
+		position: absolute;
+		top: rem-calc(map-get($grid-column-gutter, small)/2); 
+		right: rem-calc(map-get($grid-column-gutter, small)/2);
+		font-size: 40px;
+		outline: none;
+        color: #fff;
+        cursor: pointer;
+        
+        @include breakpoint(large) {
+            top: rem-calc(map-get($grid-column-gutter, large)/2); 
+		    right: rem-calc(map-get($grid-column-gutter, large)/2);
+        }
+  	}
+    
+}
+
+
+
+
+.modal-video {
+    position: absolute!important;
+    top: 50%!important;
+    left: 50%!important;
+    transform: translate(-50%,-50%)!important;  
+    
+    .column {
+        padding-left: 0;
+        padding-right: 0;   
+    }
+}

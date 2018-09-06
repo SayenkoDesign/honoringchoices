@@ -1,0 +1,106 @@
+html, body {
+	height: 100%;
+    
+    .site-content {
+        background: #fff;   
+    }
+      
+}
+
+body {
+   &:focus {
+      outline: none!important;
+   }
+}
+
+#wpadminbar {
+    z-index: 999999;   
+}
+
+
+button:focus {
+    outline: none;   
+}
+
+
+.site-content {
+    padding-bottom: 45px;   
+}
+
+#primary section:last-child {
+    //margin-bottom: 45px;   
+}
+
+
+
+
+// custom styles
+.wave-top {
+    position: relative;
+    line-height: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 2.011096%;
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0; 
+        z-index: 1;   
+    }   
+}
+
+.wave-bottom {
+    position: relative;
+    top: -1px;
+    line-height: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 1.875%;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        z-index: 1;   
+    }   
+}
+
+
+.point,
+.shape {
+
+    line-height: 0;
+    
+    img {
+        display: block;   
+    }
+
+}
+
+
+.logo-mark {
+    width: 116px; 
+    height: 116px;  
+    background-color: #fff;
+}
+
+.icon {
+    border-radius: 50%;
+    box-shadow: 0 11px 12px 0 rgba(0,0,0,0.12);
+    position: relative;
+    
+    svg,
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        height: 60%;
+    }
+}

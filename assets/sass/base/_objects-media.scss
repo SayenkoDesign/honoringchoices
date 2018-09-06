@@ -1,0 +1,118 @@
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+// Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440
+audio,
+canvas,
+img,
+video {
+	vertical-align: middle;
+}
+
+svg, img[src$=".svg"] {
+  //width: 100%;
+  height: auto;
+  max-width: 100%; // use max-width for it to work
+}
+
+svg {
+   overflow: visible!important;   
+}
+
+svg:not(:root) {
+    overflow: visible!important;
+}
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+figure {
+	margin: 0;
+}
+
+img {
+	// width: auto;
+	// height: auto; /* IE8 image height correct, so that img max-width: 100% doesn't produce disproportionate images */
+}
+
+img.aligncenter,
+.aligncenter {
+	display: block;
+	margin: 0 auto $global-margin auto;
+}
+
+img.alignnone {
+}
+
+img.alignleft,
+.wp-caption.alignleft {
+	
+	margin-bottom: $global-margin;
+    
+    @include breakpoint(large) {
+        margin-right: $global-margin;
+    }
+}
+
+img.alignright,
+.wp-caption.alignright {
+	margin-bottom: $global-margin;
+	
+    @include breakpoint(large) {
+        margin-left: $global-margin;
+    }
+}
+
+.wp-caption {
+	width: auto !important;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.wp-caption-text {
+	margin: 0;
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter {
+}
+
+
+
+@media #{$large-up} {
+      
+	.alignleft {
+		float: left;
+	}
+	
+	.alignright {
+		float: right;
+	}
+
+}

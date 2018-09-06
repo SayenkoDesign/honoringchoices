@@ -1,0 +1,94 @@
+//--------------------------------------------------------------
+// Navigation
+//--------------------------------------------------------------
+
+// Default menu (active after a fresh WordPress install)
+.menu {
+	@include list-reset;
+
+	li {
+		margin: 0 10px 0 0;
+        
+		a {
+			
+		}
+	}
+
+	ul {
+		@include list-reset;
+	}
+    
+    // Mega menu
+	&.mega-menu {
+        		
+ 		.mega-menu-item { 			
+			
+            @include breakpoint(large) {
+                position: static;
+            }
+            
+            @include breakpoint(medium down) {
+                [class^="mega-menu-post"] {
+                    display: none;
+                }
+            }
+ 		}
+		
+		.sub-menu {
+		  position: absolute;
+		  z-index: 99;
+		  top: 100%;
+		  left: 0;
+		  transition: top 0.2s ease 0.2s, opacity 0.2s ease 0.2s, visibility 0.2s ease 0.2s;
+		  opacity: 0;
+		  visibility: hidden;
+		  width: 100%;
+	
+		}
+		
+		li:hover > .sub-menu {
+          opacity: 1;
+		  visibility: visible;
+          transition-delay: .2s;
+          transition: top 0.2s ease 0.2s, opacity 0.2s ease 0.2s, visibility 0.2s ease 0.2s;
+ 		}
+        
+        li.mega-menu-item:hover > .sub-menu {
+		  margin-left: 0!important;
+		}
+		
+		.menu:hover > .sub-menu {
+ 			opacity: 0;
+		    visibility: hidden;
+			transition: none;	
+		}
+		
+	}
+
+} // .menu
+
+
+.no-touchevents a[href^="tel:"]:not(.button) {
+	pointer-events: none;    /* prevents click event */
+    cursor: text;            /* use text highlight cursor*/
+}
+
+// Navigation on Comment, Post and Posts
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0;
+		//overflow: hidden;
+	} // .site-main &
+
+	&.nav-previous {
+		float: left;
+	} // &.nav-previous
+
+	&.nav-next {
+		float: right;
+		text-align: right;
+	} // &.nav-next
+} // .comment-navigation, .posts-navigation, .post-navigation

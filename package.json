@@ -1,0 +1,57 @@
+{
+  "name": "_s",
+  "version": "1.0.0",
+  "description": "A theme boilerplate based on Underscores from Automattic.",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "foundation-sites": "6.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "browser-sync": "*",
+    "change-case": "^3.0.1",
+    "css-mqpacker": "*",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "*",
+    "gulp-babel": "*",
+    "gulp-cached": "*",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-filter": "*",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-notify": "*",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "*",
+    "gulp-replace": "^0.5.4",
+    "gulp-s3-publish": "^2.0.0",
+    "gulp-sass": "*",
+    "gulp-sort": "^1.1.1",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-wp-pot": "^1.1.1",
+    "gulp-zip": "*",
+    "motion-ui": "*",
+    "postcss-focus": "*",
+    "slick-carousel": "*"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamcanadian1973/_s.git"
+  },
+  "keywords": [
+    "theme"
+  ],
+  "author": "Kyle Rumble",
+  "license": "GPL-3.0"
+}

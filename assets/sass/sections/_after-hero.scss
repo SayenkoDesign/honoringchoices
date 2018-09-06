@@ -1,0 +1,129 @@
+// After-hero
+
+.section-after-hero {
+        
+    .wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    .photo-grid {
+        
+        margin: 0 -7px;
+        
+        @include breakpoint(large) {
+            position: relative;
+            left: -30px;
+            max-width: 500px;
+            
+            > div:nth-child(3),
+            div:nth-child(4) {
+                left: 36px;
+            }
+        }
+        
+        > div {
+            padding: 0 7px 14px;  
+            float: left;
+            position: relative;   
+            
+            .background {
+                position: relative;   
+            }
+            
+            &.width-40 {
+                width: 40%;   
+            }
+            
+            &.width-60 {
+                width: 60%;
+            }
+            
+        }
+        
+        .background {
+            background-size: cover;
+            background-position: center;
+            height: 227px;
+            box-shadow: 0 0 5px 2px rgba(40,36,37,0.5);
+            
+            
+            .text {
+                color: #fff;
+                font-family: $lato;
+                font-size: 30px;
+                letter-spacing: 0.5px;
+                line-height: 36px;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+                padding: 15px;
+            }
+            
+            svg {
+                transform: rotate(90deg);  
+                width: 31px;
+                height: 22px; 
+                position: absolute;
+                bottom: 30px;
+                right: 15px;
+                z-index: 3;
+                
+                path {
+                    &.arrow {
+                       fill: $white; 
+                    }
+                    
+                    &.line {
+                        stroke: $white;
+                    }   
+                }
+            }
+        }
+    }
+    
+    .logo-mark {
+        position: absolute;
+        left: 30px;
+        top: 0;
+    }
+    
+    .caption {
+        margin-top: 15px;
+        padding-top: 68px;
+        position: relative;
+        
+        @include breakpoint(large) {
+            margin-top: -30px;
+        }
+        
+        .wrap {
+            border-radius: 8px;
+            background-color: $blue;
+            box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+            min-height: 340px;
+            padding: 60px 30px 30px 30px;   
+        }
+        
+        
+        
+        h3 {
+            color: #ffffff;
+            
+            @include breakpoint(large) {
+                font-size: 30px;
+            }
+            
+        }
+        
+        p {
+            color: #FFFFFF;
+            font-family: $lato;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 32px;
+            margin-bottom: 22px;
+        }
+    }
+    
+}

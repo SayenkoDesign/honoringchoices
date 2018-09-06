@@ -1,0 +1,24 @@
+/* CSS Document */
+
+.section-wysiwyg {
+    
+    padding-bottom: 45px;
+    
+     &.background-gray {
+        background-color: $light-gray;   
+        padding: 45px 0;   
+    }
+    
+    .entry-content {
+        
+         h2:after {
+            margin-left: 0;
+         }
+        
+        
+         *:last-child {
+            margin-bottom: 0;   
+         }
+    }
+    
+}

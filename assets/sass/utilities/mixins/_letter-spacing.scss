@@ -1,0 +1,5 @@
+
+// Adds letter spacing to match photoshop tracking
+@mixin letter-spacing($ps-tracking){
+    letter-spacing: #{ $ps-tracking / 1000 }em;
+}

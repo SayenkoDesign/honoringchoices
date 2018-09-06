@@ -1,0 +1,139 @@
+// Team
+
+.page-template-team {
+ 
+    .section-hero {
+     
+        &:after {
+            display: none!important;   
+        }
+        
+        .point img {
+            width: 100%;   
+        }
+        
+        .row {
+            padding: 32px 0!important;   
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 21px;
+            font-family: $header-font-family;
+            max-width: 500px;
+            margin:: 0 auto;   
+        }
+        
+    }
+    
+    
+    .site-main {
+        
+        section:first-child {
+            position: relative;
+            z-index: 2;
+            @include breakpoint(large) {
+                margin-top: -5%!important;
+            }
+            
+            @include breakpoint(large) {
+                article .thumbnail {
+                    width: 100%;
+                    padding-top: 100%;   
+                }
+            }
+        }
+     
+        section {
+            
+            .wrap {
+               padding-top: 45px; 
+            }
+            
+            header {
+                
+                h2 {
+                    color: $red;
+                    margin-bottom: 45px;
+                    span {
+                        font-size: 20px;
+                        border-bottom: 3px solid $red;
+                        position: relative;
+                        top: -7px;
+                        padding: 0 2px;
+                    } 
+                    
+                    br {
+                       @include breakpoint(medium) {
+                           display: none;
+                       }
+                    }
+                }
+                
+                img {
+                    margin-bottom: 20px;   
+                }
+            }
+            
+            .point img {
+                width: 100%;   
+            }
+            
+            &:nth-child(odd) {
+                @include breakpoint(large) {
+                    margin-bottom: -5%!important;
+                }
+            }
+         
+            &:nth-child(even) {
+                background-color: $light-gray;
+                
+                &:last-child {
+                    @include breakpoint(large) {
+                        margin-bottom: -5%!important;
+                    }
+                }
+                
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    article {
+        
+        padding-bottom: $global-margin;
+        
+        @include breakpoint(large) {
+            padding-bottom: 40px;
+        }
+        
+        .panel {
+            display: block;
+            max-width: 280px;
+            margin: 0 auto;  
+            text-align: center; 
+            
+            h4 {
+                color: $dark-gray;   
+                margin: 0 auto;
+                text-transform: none;
+            }
+        }
+        
+        .thumbnail {
+            background-size: cover;
+            background-position: center top;
+            box-shadow: 0 0 13px 2px rgba(40,36,37,0.5);
+            border-radius: 50%;
+            width: 90%;
+            padding-top: 90%;
+            margin: 0 auto 20px;
+               
+        }
+           
+    }
+        
+}

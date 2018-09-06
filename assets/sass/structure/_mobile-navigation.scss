@@ -1,0 +1,80 @@
+// Mobile Navigation
+
+.menu-toggle,
+.sub-menu-toggle {
+	display: block;
+    
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+.menu-toggle {
+    
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" class="menu-icon" viewBox="0 0 38 34"><g fill="none" fill-rule="evenodd" stroke="#22587a" stroke-width="3" stroke-linecap="square"><path d="M2 22h34M2 12h34M2 32h27M2 2h27"/></g></svg>');
+    border-radius: 0;
+    width: 38px;
+    height: 34px;
+}
+
+.sub-menu-toggle {
+	
+	outline: none;
+	display: inline-block;
+	padding: 10px;
+ 	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+    height: 45px;
+    width: 45px;
+	
+	&:after {
+		content: '';
+		display: inline-block;
+  		border: solid $white;
+		border-width: 0 2px 2px 0;
+		transform: rotate(-45deg);
+		width: 10px;
+		height: 10px;
+ 	}
+	
+	&.activated {
+		
+		top: 0;
+		
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+	
+}
+
+.genesis-responsive-menu,
+.genesis-responsive-menu .sub-menu {
+	display: none;
+}
+
+
+.genesis-responsive-menu .menu li {
+	width: auto;
+	position: relative;
+    margin: 0;
+
+	a {
+		display: block;
+        margin: 0;
+		padding: 15px 50px 15px 40px;
+	}
+    
+    > span {
+        display: block;
+        padding: 15px 50px 15px 40px;
+    }
+
+	.sub-menu li {
+		padding-left: 30px;
+	}
+}
+
+

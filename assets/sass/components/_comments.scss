@@ -1,0 +1,71 @@
+//
+// Comments
+//  --------------------------------------------------
+
+.comment-list {
+	.comment {
+		> article {
+		}
+	}
+
+	.children {
+	}
+}
+
+.comment-header {
+	@extend %clearfix;
+
+	.comment-author {
+	}
+
+	img {
+	}
+}
+
+.comment-content {
+	@extend .entry-content;
+}
+
+.comment-respond {
+	.form-submit {
+		@extend %clearfix;
+	}
+}
+
+.comment-notes,
+.logged-in-as,
+.form-allowed-tags {
+	@extend %type;
+}
+
+.comment-notes,
+.logged-in-as,
+.form-allowed-tags,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+}
+
+
+.comment-form {
+	
+	p {		
+	}
+	
+	label {
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	select,
+	textarea {
+	}
+	
+	input[type="submit"] {
+	}
+	
+}
+
+.comment-form-comment {
+}

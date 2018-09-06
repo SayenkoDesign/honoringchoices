@@ -1,0 +1,208 @@
+/*
+Header
+---------------------------------------------- */
+
+// Fix for sticky header
+.logged-in .site-header.fixed {
+    top: 46px;
+
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }      
+ }
+ 
+ .site-header {
+
+	&.fixed {
+		display: none;
+		
+		@media #{$xlarge-up} {
+      		display: block;
+		}
+		
+		transition: transform .25s ease-in-out;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+		transform: translateY(-150%);
+		background-color: white;
+
+        
+        .wrap {
+            position: relative;
+            top: auto; 
+            
+            @include breakpoint(large) {                
+                .row:last-child {
+                    padding-top: 0;   
+                }
+            } 
+            
+        }
+        
+        
+
+	}
+
+	&.fixed.fixed-show {
+		transform: translateY(0);
+	}
+}
+
+
+.site-header {
+    
+    width: 100%;
+    z-index: 999;
+    position: relative;
+    
+    border-top: 6px solid #AAC687;
+    
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        opacity: .4;
+        background: rgb(0,0,0);
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+        background: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.25, rgba(0,0,0,0.6446953781512605)), color-stop(0.8, rgba(255,255,255,0)));
+        background: -o-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+        background: linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
+        z-index: -2;
+    }
+            
+    .wrap {
+        
+        .row {
+            position: relative;   
+        }
+                
+        .site-title {
+            
+            padding: 12px 0;
+            display: inline-block;
+            
+            vertical-align: middle;
+            max-width: 270px;
+            
+            @include breakpoint(large) {
+                padding: 6px 0 0 0;
+                max-width: none;
+            }
+                        
+            a {
+                display: inline-block;   
+            }
+            
+            .initiative-of {
+                display: none; 
+                max-width: 216px;
+                position: relative;
+                top: 7px;  
+                left: 18px;
+                
+                @include breakpoint(xxlarge) {
+                    display: inline-block; 
+                }
+            }
+        }
+
+    }
+
+    
+    .menu-toggle {
+        position: absolute;
+        top: 24px;
+        right: rem-calc(map-get($grid-column-gutter, small) /2 );  
+        z-index: 999;
+        
+        @include breakpoint(large) {
+            right: rem-calc(map-get($grid-column-gutter, large) /2 );  
+            top: 24px;
+        }
+    }
+                
+}
+
+
+.header-widgets {
+    
+    .widget {
+        position: relative;
+        top: 60%;
+        transform: translateY(-50%);   
+        
+    }
+ 
+    .menu {
+        
+        text-align: right;
+        
+        li {
+            display: inline-block;   
+        }
+     
+        .resource {
+                        
+            a {
+                font-weight: 700;  
+                position: relative;
+                background-color: $blue;
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 1.18px;
+                
+                &:before {
+                    content: '';
+                    background-image: url('data:image/svg+xml;utf8,<svg width="16" height="23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M13.5 39H0V0h27v39H13.5z"/></defs><g transform="translate(-4 -10)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M19.622 15.725c-.083-.307-.251-.634-.376-.92C17.761 11.267 14.514 10 11.892 10 8.382 10 4.517 12.331 4 17.135v.98c0 .042.014.41.034.595.29 2.288 2.114 4.722 3.477 7.011 1.465 2.453 2.986 4.867 4.493 7.279.93-1.575 1.856-3.17 2.763-4.703.248-.45.535-.898.783-1.328.164-.287.48-.573.624-.838C17.64 23.473 20 20.795 20 18.157v-1.083c0-.286-.358-1.288-.378-1.349zM11.885 21c-1.065 0-2.23-.52-2.806-1.958-.086-.229-.079-.688-.079-.73v-.646C9 15.834 10.592 15 11.977 15 13.681 15 15 16.334 15 18c0 1.667-1.41 3-3.115 3z" fill="#fff" mask="url(#b)"/></g></svg>');
+                    width: 16px;
+                    height: 23px;
+                    display: inline-block;
+                    position: relative;
+                    top: 5px;
+                    margin-right: 12px;
+                    
+                }
+                
+                @include breakpoint(medium) {
+                    background-color: transparent;
+                    color: $blue;
+                    padding-left: 20px;
+                    
+                    &:before {
+                        content: '';
+                        background-image: url('data:image/svg+xml;utf8,<svg width="16" height="23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M13.5 39H0V0h27v39H13.5z"/></defs><g transform="translate(-4 -10)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M19.622 15.725c-.083-.307-.251-.634-.376-.92C17.761 11.267 14.514 10 11.892 10 8.382 10 4.517 12.331 4 17.135v.98c0 .042.014.41.034.595.29 2.288 2.114 4.722 3.477 7.011 1.465 2.453 2.986 4.867 4.493 7.279.93-1.575 1.856-3.17 2.763-4.703.248-.45.535-.898.783-1.328.164-.287.48-.573.624-.838C17.64 23.473 20 20.795 20 18.157v-1.083c0-.286-.358-1.288-.378-1.349zM11.885 21c-1.065 0-2.23-.52-2.806-1.958-.086-.229-.079-.688-.079-.73v-.646C9 15.834 10.592 15 11.977 15 13.681 15 15 16.334 15 18c0 1.667-1.41 3-3.115 3z" fill="#3287C4" mask="url(#b)"/></g></svg>');
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        
+        
+        .advance a {
+            @include button;    
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding();
+            border-radius: 51px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1.18px;
+        }
+           
+    }
+    
+}

@@ -1,0 +1,35 @@
+/* CSS Document */
+
+.section-content {
+    
+    position: relative;
+    
+    .expanded .column {
+        
+        background-position: center;
+        background-size: cover;
+        
+        @include breakpoint(medium down) {
+            background-image: none!important; 
+        }
+        
+        @include breakpoint(large) {
+            min-height: 680px;   
+        }
+    }
+    
+    .two-column {
+    
+        @include breakpoint(large) {
+            
+            .column:first-child {
+                padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+            }
+        }
+    }
+    
+}

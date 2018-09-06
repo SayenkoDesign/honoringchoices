@@ -1,0 +1,104 @@
+// Club
+
+.single-location {
+    
+    .section-hero {
+        .wrap {
+            background-color: $green;
+            text-align: center;
+         }
+    }
+    
+    .section-after-hero {
+        margin-top: 0;
+        .wrap {
+            margin: 0;
+            background-size: cover;
+            padding-top: 14.6%; 
+            min-height: 200px;
+            max-width: none;
+        }
+    }
+    
+    .section-intro {
+        padding-bottom: 0;   
+    }
+    
+    .section-intro .box {
+        max-width: 940px;   
+        text-align: left;
+        
+        p {
+            margin-bottom: 9px;   
+            
+            strong {
+                display: block;   
+            }
+        }
+        
+        .tel {
+            padding: 5px 0; 
+            
+            a {
+                font-size: rem-calc(22); 
+                font-weight: 700;   
+            }
+        }
+        
+        .social-icons {
+            height: 38px;
+            margin-bottom: 30px;
+            
+            @include breakpoint(large) {
+                margin-bottom: 0;   
+             }
+              
+            li {
+               display: inline-block;
+               height: 38px;
+              
+            }
+            
+            a {
+                width: 38px;
+                height: 38px;
+            }
+            
+            svg {
+                width: 28px;
+                height: 28px;
+            }    
+           
+        }
+        
+        .large-4 {
+             
+             padding-top: 20px;
+             
+             .button {
+                margin: 0;   
+             }
+             
+             @include breakpoint(medium) {
+                padding-left: 50px;   
+                padding-top: 0;
+             }
+             
+             p {
+                margin-bottom: 21px;   
+             }
+        }
+        
+        
+        .large-8 {
+             
+             @include breakpoint(medium) {
+                border-right: 2px solid #D7D5D5;
+             }
+
+        }
+        
+    }
+    
+
+}

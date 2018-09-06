@@ -1,0 +1,76 @@
+/*
+Green - AAC687
+Blue - 3287C4
+Maroon - 85213F
+Grey - BCBDBF
+
+*/
+$accent-green: #AAC687;
+$accent-blue: #3287C4;
+$accent-maroon: #85213F;
+$accent-gray: #BCBDBF;
+
+@include breakpoint(large) {
+    
+    .nav-primary {
+     
+        .menu {
+         
+            > .menu-item:nth-child(2) {
+                .sub-menu {
+                    border-color: $accent-blue;
+                }
+                
+            }
+            
+            > .menu-item:nth-child(3) {
+                .sub-menu {
+                    border-color: $accent-maroon;
+                }
+                
+            }
+            
+            > .menu-item:nth-child(4) {
+                .sub-menu {
+                    border-color: $accent-green;
+                }
+                
+            }
+            
+            > .menu-item:nth-child(5) {
+                .sub-menu {
+                    border-color: $accent-gray;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+.accent-color-green {
+    .section-hero .wrap {
+        background-color: $accent-green;   
+    }
+}
+
+.accent-color-blue {
+    .section-hero .wrap {
+        background-color: $accent-blue;   
+    }
+}
+
+.accent-color-maroon {
+    .section-hero .wrap {
+        background-color: $accent-maroon;   
+    }
+}
+
+.accent-color-gray {
+    .section-hero .wrap {
+        background-color: $accent-gray;   
+    }
+}

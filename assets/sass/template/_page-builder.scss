@@ -1,0 +1,59 @@
+// Page Builder
+
+.page-template-page-builder {
+    
+    .site-content {
+        padding-bottom: 0;    
+    }
+    
+    .site-main {
+        
+        section:nth-child(even) {
+            
+            margin-top: 0;
+            
+            .wrap {
+                background-color: $light-gray;
+                padding: 55px 0 0;   
+            }
+            
+            @include breakpoint(large) {
+        
+                .column-block {
+                    margin-bottom: rem-calc(55);   
+                }
+                
+                .column:first-child {
+                    padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+                }
+                
+                .column:last-child {
+                    padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+                }
+            }  
+        }
+        
+        section:nth-child(odd) {
+            
+            .point {
+                display: none;   
+            }
+            
+            @include breakpoint(large) {
+        
+                .column-block {
+                    margin-bottom: rem-calc(55);   
+                }
+                
+                .column:first-child {
+                    padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+                }
+                
+                .column:last-child {
+                    padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
+                }
+            }   
+        }
+    }
+
+}

@@ -1,0 +1,55 @@
+// Theme mixins
+
+@mixin arrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='43'%3E%3Cg  fill='none' fill-rule='evenodd'%3E%3Cg class='color' fill='%23B3ADAD' transform='translate%28-1192 -3149%29'%3E%3Cg  transform='translate%281192 3149%29'%3E%3Cpath id='Right-Arrow' d='M.777 42.26c.505.484 1.196.74 1.86.74.664 0 1.354-.256 1.858-.74L24.23 23.29c.504-.484.77-1.122.77-1.787 0-.663-.266-1.301-.77-1.787L4.495.747a2.687 2.687 0 0 0-3.718 0 2.443 2.443 0 0 0 0 3.574l17.875 17.182L.777 38.686c-1.009.996-1.009 2.604 0 3.574z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    width: 25px;
+    height: 43px;    
+}
+
+
+@mixin arrow-left {
+    
+    &:after {
+        left: 0;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-left-color: #ececec;
+        border-width: 30px;
+        margin-top: -30px;     
+    }
+}
+
+
+@mixin plus { 
+    display: inline-block;
+    position: relative; 
+    
+    &:before,
+    &:after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        
+        
+    }
+    
+    &:before {
+        height: 3px;
+        width: 30px;
+        top: 15px;
+        left: 1.5px;
+    }
+    
+    &:after {
+        height: 30px;
+        width: 3px;
+        top: 1.5px;
+        left: 15px;
+    }
+}

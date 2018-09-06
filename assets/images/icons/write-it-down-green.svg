@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 79 87">
+  <defs>
+    <polygon id="a" points="66 87 0 87 0 43 0 0 66 0"/>
+    <polygon id="c" points="48 0 48 57 0 57 0 0"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" transform="translate(-686.000000, -482.000000) translate(686.000000, 482.000000)">
+    <mask id="b" fill="white">
+      <use xlink:href="#a"/>
+    </mask>
+    <g/>
+    <path fill="#AAC687" d="M52 5l9 10h-9V5zm11 79H3V3h46v14h14v5h3v-7L51 0H0v87h66V62h-3v22z" mask="url(#b)"/>
+    <polygon fill="#AAC687" points="8 12 11 12 11 9 8 9"/>
+    <polygon fill="#AAC687" points="14 12 43 12 43 9 14 9"/>
+    <polygon fill="#AAC687" points="8 17 43 17 43 14 8 14"/>
+    <polygon fill="#AAC687" points="8 24 57 24 57 21 8 21"/>
+    <polygon fill="#AAC687" points="8 29 57 29 57 26 8 26"/>
+    <polygon fill="#AAC687" points="8 34 57 34 57 31 8 31"/>
+    <polygon fill="#AAC687" points="8 41 57 41 57 38 8 38"/>
+    <polygon fill="#AAC687" points="8 47 51 47 51 44 8 44"/>
+    <polygon fill="#AAC687" points="8 52 51 52 51 49 8 49"/>
+    <polygon fill="#AAC687" points="8 59 48 59 48 56 8 56"/>
+    <polygon fill="#AAC687" points="8 64 46 64 46 61 8 61"/>
+    <g transform="translate(31.000000, 19.000000)">
+      <mask id="d" fill="white">
+        <use xlink:href="#c"/>
+      </mask>
+      <g/>
+      <path fill="#AAC687" d="M4 57l2-1h9l3 1v-3h-1c-2-2-4-2-6 0h-1c-2-2-4-2-6 0H3l-3-1v3h1l3 1" mask="url(#d)"/>
+      <path fill="#AAC687" d="M45 6l-2 4-5-2 2-4 1-1 3 1 1 2zM26 48l-5-3 15-34 6 2-16 35zm-5 1l3 1-2 1-1-2zM45 2l-2-2c-3-1-5 0-6 3L17 46l3 10 8-5L48 7c1-2 0-4-3-5z" mask="url(#d)"/>
+    </g>
+  </g>
+</svg>

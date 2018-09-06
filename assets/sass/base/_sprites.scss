@@ -1,0 +1,406 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$auto-name: 'auto';
+$auto-x: 0px;
+$auto-y: 125px;
+$auto-offset-x: 0px;
+$auto-offset-y: -125px;
+$auto-width: 116px;
+$auto-height: 100px;
+$auto-total-width: 327px;
+$auto-total-height: 326px;
+$auto-image: 'assets/images/sprites.png';
+$auto: (0px, 125px, 0px, -125px, 116px, 100px, 327px, 326px, 'assets/images/sprites.png', 'auto', );
+$commercial-name: 'commercial';
+$commercial-x: 0px;
+$commercial-y: 225px;
+$commercial-offset-x: 0px;
+$commercial-offset-y: -225px;
+$commercial-width: 108px;
+$commercial-height: 101px;
+$commercial-total-width: 327px;
+$commercial-total-height: 326px;
+$commercial-image: 'assets/images/sprites.png';
+$commercial: (0px, 225px, 0px, -225px, 108px, 101px, 327px, 326px, 'assets/images/sprites.png', 'commercial', );
+$facebook-name: 'facebook';
+$facebook-x: 116px;
+$facebook-y: 144px;
+$facebook-offset-x: -116px;
+$facebook-offset-y: -144px;
+$facebook-width: 13px;
+$facebook-height: 23px;
+$facebook-total-width: 327px;
+$facebook-total-height: 326px;
+$facebook-image: 'assets/images/sprites.png';
+$facebook: (116px, 144px, -116px, -144px, 13px, 23px, 327px, 326px, 'assets/images/sprites.png', 'facebook', );
+$farm-ranch-name: 'farm-ranch';
+$farm-ranch-x: 220px;
+$farm-ranch-y: 0px;
+$farm-ranch-offset-x: -220px;
+$farm-ranch-offset-y: 0px;
+$farm-ranch-width: 107px;
+$farm-ranch-height: 115px;
+$farm-ranch-total-width: 327px;
+$farm-ranch-total-height: 326px;
+$farm-ranch-image: 'assets/images/sprites.png';
+$farm-ranch: (220px, 0px, -220px, 0px, 107px, 115px, 327px, 326px, 'assets/images/sprites.png', 'farm-ranch', );
+$financial-name: 'financial';
+$financial-x: 101px;
+$financial-y: 0px;
+$financial-offset-x: -101px;
+$financial-offset-y: 0px;
+$financial-width: 119px;
+$financial-height: 104px;
+$financial-total-width: 327px;
+$financial-total-height: 326px;
+$financial-image: 'assets/images/sprites.png';
+$financial: (101px, 0px, -101px, 0px, 119px, 104px, 327px, 326px, 'assets/images/sprites.png', 'financial', );
+$home-name: 'home';
+$home-x: 214px;
+$home-y: 225px;
+$home-offset-x: -214px;
+$home-offset-y: -225px;
+$home-width: 104px;
+$home-height: 101px;
+$home-total-width: 327px;
+$home-total-height: 326px;
+$home-image: 'assets/images/sprites.png';
+$home: (214px, 225px, -214px, -225px, 104px, 101px, 327px, 326px, 'assets/images/sprites.png', 'home', );
+$life-name: 'life';
+$life-x: 0px;
+$life-y: 0px;
+$life-offset-x: 0px;
+$life-offset-y: 0px;
+$life-width: 101px;
+$life-height: 125px;
+$life-total-width: 327px;
+$life-total-height: 326px;
+$life-image: 'assets/images/sprites.png';
+$life: (0px, 0px, 0px, 0px, 101px, 125px, 327px, 326px, 'assets/images/sprites.png', 'life', );
+$other-name: 'other';
+$other-x: 108px;
+$other-y: 225px;
+$other-offset-x: -108px;
+$other-offset-y: -225px;
+$other-width: 106px;
+$other-height: 101px;
+$other-total-width: 327px;
+$other-total-height: 326px;
+$other-image: 'assets/images/sprites.png';
+$other: (108px, 225px, -108px, -225px, 106px, 101px, 327px, 326px, 'assets/images/sprites.png', 'other', );
+$search-name: 'search';
+$search-x: 124px;
+$search-y: 104px;
+$search-offset-x: -124px;
+$search-offset-y: -104px;
+$search-width: 12px;
+$search-height: 12px;
+$search-total-width: 327px;
+$search-total-height: 326px;
+$search-image: 'assets/images/sprites.png';
+$search: (124px, 104px, -124px, -104px, 12px, 12px, 327px, 326px, 'assets/images/sprites.png', 'search', );
+$small-play-name: 'small-play';
+$small-play-x: 116px;
+$small-play-y: 125px;
+$small-play-offset-x: -116px;
+$small-play-offset-y: -125px;
+$small-play-width: 19px;
+$small-play-height: 19px;
+$small-play-total-width: 327px;
+$small-play-total-height: 326px;
+$small-play-image: 'assets/images/sprites.png';
+$small-play: (116px, 125px, -116px, -125px, 19px, 19px, 327px, 326px, 'assets/images/sprites.png', 'small-play', );
+$twitter-name: 'twitter';
+$twitter-x: 101px;
+$twitter-y: 104px;
+$twitter-offset-x: -101px;
+$twitter-offset-y: -104px;
+$twitter-width: 23px;
+$twitter-height: 18px;
+$twitter-total-width: 327px;
+$twitter-total-height: 326px;
+$twitter-image: 'assets/images/sprites.png';
+$twitter: (101px, 104px, -101px, -104px, 23px, 18px, 327px, 326px, 'assets/images/sprites.png', 'twitter', );
+$auto-2x-name: 'auto@2x';
+$auto-2x-x: 0px;
+$auto-2x-y: 250px;
+$auto-2x-offset-x: 0px;
+$auto-2x-offset-y: -250px;
+$auto-2x-width: 232px;
+$auto-2x-height: 200px;
+$auto-2x-total-width: 654px;
+$auto-2x-total-height: 652px;
+$auto-2x-image: 'assets/images/sprites@2x.png';
+$auto-2x: (0px, 250px, 0px, -250px, 232px, 200px, 654px, 652px, 'assets/images/sprites@2x.png', 'auto@2x', );
+$commercial-2x-name: 'commercial@2x';
+$commercial-2x-x: 0px;
+$commercial-2x-y: 450px;
+$commercial-2x-offset-x: 0px;
+$commercial-2x-offset-y: -450px;
+$commercial-2x-width: 216px;
+$commercial-2x-height: 202px;
+$commercial-2x-total-width: 654px;
+$commercial-2x-total-height: 652px;
+$commercial-2x-image: 'assets/images/sprites@2x.png';
+$commercial-2x: (0px, 450px, 0px, -450px, 216px, 202px, 654px, 652px, 'assets/images/sprites@2x.png', 'commercial@2x', );
+$facebook-2x-name: 'facebook@2x';
+$facebook-2x-x: 232px;
+$facebook-2x-y: 288px;
+$facebook-2x-offset-x: -232px;
+$facebook-2x-offset-y: -288px;
+$facebook-2x-width: 26px;
+$facebook-2x-height: 46px;
+$facebook-2x-total-width: 654px;
+$facebook-2x-total-height: 652px;
+$facebook-2x-image: 'assets/images/sprites@2x.png';
+$facebook-2x: (232px, 288px, -232px, -288px, 26px, 46px, 654px, 652px, 'assets/images/sprites@2x.png', 'facebook@2x', );
+$farm-ranch-2x-name: 'farm-ranch@2x';
+$farm-ranch-2x-x: 440px;
+$farm-ranch-2x-y: 0px;
+$farm-ranch-2x-offset-x: -440px;
+$farm-ranch-2x-offset-y: 0px;
+$farm-ranch-2x-width: 214px;
+$farm-ranch-2x-height: 230px;
+$farm-ranch-2x-total-width: 654px;
+$farm-ranch-2x-total-height: 652px;
+$farm-ranch-2x-image: 'assets/images/sprites@2x.png';
+$farm-ranch-2x: (440px, 0px, -440px, 0px, 214px, 230px, 654px, 652px, 'assets/images/sprites@2x.png', 'farm-ranch@2x', );
+$financial-2x-name: 'financial@2x';
+$financial-2x-x: 202px;
+$financial-2x-y: 0px;
+$financial-2x-offset-x: -202px;
+$financial-2x-offset-y: 0px;
+$financial-2x-width: 238px;
+$financial-2x-height: 208px;
+$financial-2x-total-width: 654px;
+$financial-2x-total-height: 652px;
+$financial-2x-image: 'assets/images/sprites@2x.png';
+$financial-2x: (202px, 0px, -202px, 0px, 238px, 208px, 654px, 652px, 'assets/images/sprites@2x.png', 'financial@2x', );
+$home-2x-name: 'home@2x';
+$home-2x-x: 428px;
+$home-2x-y: 450px;
+$home-2x-offset-x: -428px;
+$home-2x-offset-y: -450px;
+$home-2x-width: 208px;
+$home-2x-height: 202px;
+$home-2x-total-width: 654px;
+$home-2x-total-height: 652px;
+$home-2x-image: 'assets/images/sprites@2x.png';
+$home-2x: (428px, 450px, -428px, -450px, 208px, 202px, 654px, 652px, 'assets/images/sprites@2x.png', 'home@2x', );
+$life-2x-name: 'life@2x';
+$life-2x-x: 0px;
+$life-2x-y: 0px;
+$life-2x-offset-x: 0px;
+$life-2x-offset-y: 0px;
+$life-2x-width: 202px;
+$life-2x-height: 250px;
+$life-2x-total-width: 654px;
+$life-2x-total-height: 652px;
+$life-2x-image: 'assets/images/sprites@2x.png';
+$life-2x: (0px, 0px, 0px, 0px, 202px, 250px, 654px, 652px, 'assets/images/sprites@2x.png', 'life@2x', );
+$other-2x-name: 'other@2x';
+$other-2x-x: 216px;
+$other-2x-y: 450px;
+$other-2x-offset-x: -216px;
+$other-2x-offset-y: -450px;
+$other-2x-width: 212px;
+$other-2x-height: 202px;
+$other-2x-total-width: 654px;
+$other-2x-total-height: 652px;
+$other-2x-image: 'assets/images/sprites@2x.png';
+$other-2x: (216px, 450px, -216px, -450px, 212px, 202px, 654px, 652px, 'assets/images/sprites@2x.png', 'other@2x', );
+$search-2x-name: 'search@2x';
+$search-2x-x: 248px;
+$search-2x-y: 208px;
+$search-2x-offset-x: -248px;
+$search-2x-offset-y: -208px;
+$search-2x-width: 24px;
+$search-2x-height: 24px;
+$search-2x-total-width: 654px;
+$search-2x-total-height: 652px;
+$search-2x-image: 'assets/images/sprites@2x.png';
+$search-2x: (248px, 208px, -248px, -208px, 24px, 24px, 654px, 652px, 'assets/images/sprites@2x.png', 'search@2x', );
+$small-play-2x-name: 'small-play@2x';
+$small-play-2x-x: 232px;
+$small-play-2x-y: 250px;
+$small-play-2x-offset-x: -232px;
+$small-play-2x-offset-y: -250px;
+$small-play-2x-width: 38px;
+$small-play-2x-height: 38px;
+$small-play-2x-total-width: 654px;
+$small-play-2x-total-height: 652px;
+$small-play-2x-image: 'assets/images/sprites@2x.png';
+$small-play-2x: (232px, 250px, -232px, -250px, 38px, 38px, 654px, 652px, 'assets/images/sprites@2x.png', 'small-play@2x', );
+$twitter-2x-name: 'twitter@2x';
+$twitter-2x-x: 202px;
+$twitter-2x-y: 208px;
+$twitter-2x-offset-x: -202px;
+$twitter-2x-offset-y: -208px;
+$twitter-2x-width: 46px;
+$twitter-2x-height: 36px;
+$twitter-2x-total-width: 654px;
+$twitter-2x-total-height: 652px;
+$twitter-2x-image: 'assets/images/sprites@2x.png';
+$twitter-2x: (202px, 208px, -202px, -208px, 46px, 36px, 654px, 652px, 'assets/images/sprites@2x.png', 'twitter@2x', );
+$spritesheet-width: 327px;
+$spritesheet-height: 326px;
+$spritesheet-image: 'assets/images/sprites.png';
+$spritesheet-sprites: ($auto, $commercial, $facebook, $farm-ranch, $financial, $home, $life, $other, $search, $small-play, $twitter, );
+$spritesheet: (327px, 326px, 'assets/images/sprites.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 654px;
+$retina-spritesheet-height: 652px;
+$retina-spritesheet-image: 'assets/images/sprites@2x.png';
+$retina-spritesheet-sprites: ($auto-2x, $commercial-2x, $facebook-2x, $farm-ranch-2x, $financial-2x, $home-2x, $life-2x, $other-2x, $search-2x, $small-play-2x, $twitter-2x, );
+$retina-spritesheet: (654px, 652px, 'assets/images/sprites@2x.png', $retina-spritesheet-sprites, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+$auto-group-name: 'auto';
+$auto-group: ('auto', $auto, $auto-2x, );
+$commercial-group-name: 'commercial';
+$commercial-group: ('commercial', $commercial, $commercial-2x, );
+$facebook-group-name: 'facebook';
+$facebook-group: ('facebook', $facebook, $facebook-2x, );
+$farm-ranch-group-name: 'farm-ranch';
+$farm-ranch-group: ('farm-ranch', $farm-ranch, $farm-ranch-2x, );
+$financial-group-name: 'financial';
+$financial-group: ('financial', $financial, $financial-2x, );
+$home-group-name: 'home';
+$home-group: ('home', $home, $home-2x, );
+$life-group-name: 'life';
+$life-group: ('life', $life, $life-2x, );
+$other-group-name: 'other';
+$other-group: ('other', $other, $other-2x, );
+$search-group-name: 'search';
+$search-group: ('search', $search, $search-2x, );
+$small-play-group-name: 'small-play';
+$small-play-group: ('small-play', $small-play, $small-play-2x, );
+$twitter-group-name: 'twitter';
+$twitter-group: ('twitter', $twitter, $twitter-2x, );
+$retina-groups: ($auto-group, $commercial-group, $facebook-group, $farm-ranch-group, $financial-group, $home-group, $life-group, $other-group, $search-group, $small-play-group, $twitter-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+// Legacy breakpoint variables
+// These will be removed in 6.3
+$small-up: null;
+$small-only: null;
+$medium-up: null;
+$medium-only: null;
+$large-up: null;
+$large-only: null;
+$xlarge-up: null;
+$xlarge-only: null;
+$xxlarge-up: null;
+$xxlarge-only: null;
+$xxxlarge-up: null;
+$xxxlarge-only: null;
+
+@if map-has-key($breakpoints, small) {
+  $small-up: screen;
+  $small-only: unquote('screen and #{breakpoint(small only)}');
+}
+
+@if map-has-key($breakpoints, medium) {
+  $medium-up: unquote('screen and #{breakpoint(medium)}');
+  $medium-only: unquote('screen and #{breakpoint(medium only)}');
+}
+
+@if map-has-key($breakpoints, large) {
+  $large-up: unquote('screen and #{breakpoint(large)}');
+  $large-only: unquote('screen and #{breakpoint(large only)}');
+}
+
+@if map-has-key($breakpoints, xlarge) {
+  $xlarge-up: unquote('screen and #{breakpoint(xlarge)}');
+  $xlarge-only: unquote('screen and #{breakpoint(xlarge only)}');
+}
+
+@if map-has-key($breakpoints, xxlarge) {
+  $xxlarge-up: unquote('screen and #{breakpoint(xxlarge)}');
+  $xxlarge-only: unquote('screen and #{breakpoint(xxlarge only)}');
+}
+
+@if map-has-key($breakpoints, xxxlarge) {
+  $xxxlarge-up: unquote('screen and #{breakpoint(xxxlarge)}');
+  $xxxlarge-only: unquote('screen and #{breakpoint(xxxlarge only)}');
+}

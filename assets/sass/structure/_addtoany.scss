@@ -1,0 +1,65 @@
+// Add to Any
+
+
+.share-icons {
+
+	margin: 0;
+	padding: 20px 0;
+	vertical-align: middle;
+	
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin: 0 10px 0 0;
+		vertical-align: middle;
+		
+		&:first-child {
+			margin-left: 0;	
+		}
+		
+		a {
+			display: block;
+            width: 52px;
+			height: 52px;
+			border-radius: 100%;
+			border: 2px solid #404040;
+			position: relative;
+ 			
+			svg {
+				fill: #404040;	
+				height: 32px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+  			}
+			
+			&:hover {
+				opacity: .8;	
+			}
+	    
+        }
+		
+	}
+	
+}
+
+
+.share-icons {
+    display: inline-block;
+    vertical-align: middle;   
+}
+
+.facebook-like {
+    display: inline-block;
+    vertical-align: middle;  
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    a {
+        float: none!important;   
+    }
+}
+

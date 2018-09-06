@@ -1,0 +1,46 @@
+/*!
+Theme Name: Honoring Choices
+Author: Sayenko Design
+Author URI: http://sayenkodesign.com
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: _s
+Tags: Foundation, sass, gulp
+
+_s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+*/
+
+// Settings (allows us to override Foundation global settings)
+@import "settings/settings"; 
+
+// Foundation Sites
+@import 'foundation/index';
+
+// Utilities
+@import "utilities/index";
+
+// Base
+@import "base/index";
+
+// Motion UI
+@import "motion-ui";
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// Components
+@import "components/index";
+
+// Plugins (Gravity forms, Royal Slider etc...)
+@import "plugins/index";
+
+// Sections
+@import "sections/index";
+@import "sections/elements/index";
+
+// Structure
+@import "structure/index";
+
+// Template
+@import	"template/index";

@@ -1,0 +1,267 @@
+/* CSS Document */
+
+.blog {
+    
+    .section-hero {
+        &:after {
+            display: block!important;   
+        }
+        
+        text-align: center;
+        
+        .wrap {
+            background-color: $blue;   
+        }
+    }
+    
+    @include breakpoint(large) {
+        #primary {
+            padding-bottom: 45px;   
+        }   
+    }
+    
+    .site-content {
+        background-color: #f9f9f9;   
+    }
+    
+    
+    .section-after-hero {
+        position: relative;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background-color: #ffffff;   
+        }
+    }
+    
+}
+
+.blog {
+ 
+    .post-hero {
+        background: $gray;
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        position: relative;        
+        padding-top: 99%;        
+     }
+     
+    @include breakpoint(large) {
+        .large-6 .post-hero {
+            padding-top: 65%;
+        }
+    }
+    
+    article {
+        
+        background-color: #fff;
+        
+        box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+        height: 100%;
+        
+        header {
+            padding: 15px 20px;   
+        }
+        
+        header.large-6  {
+            
+            @include breakpoint(large) {
+                padding: 40px 42px;
+            }
+        }
+        
+        .posted-on {
+            color: #4A4A4A;
+            display: block;
+            font-family: $lato;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            line-height: 25px;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            
+            margin-bottom: 50px;
+                        
+            a {
+                color: $blue;
+                
+                &:hover {
+                    color: $light-blue;   
+                }
+            }
+        }
+        
+        .more {
+            color: $blue;
+            font-weight: 300;
+            text-transform: lowercase; 
+            letter-spacing: rem-calc(1);
+            font-size: rem-calc(20);
+            line-height: rem-calc(21); 
+            padding-bottom: 5px;
+            border-bottom: 3px solid $green; 
+            
+            &:hover {
+                color: $light-blue;   
+            }
+            
+        }
+    }
+    
+}
+
+.blog .facetwp-filters {
+    
+    background-color: #fff;
+    box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+    margin: 50px 0 $global-margin;
+    padding: $global-margin $global-margin 0;
+    text-align: center;
+        
+        
+    > * {
+        display: block;
+        margin-bottom: 0!important; 
+         
+        padding: $global-padding ($global-padding/2);
+        
+        @include breakpoint(large) {
+            display: inline-block;
+            margin-bottom: $global-margin!important; 
+        }
+    }
+    
+    span {
+        color: $gray;
+        @extend h3;   
+        margin: 0 5px 0 0;
+        line-height: rem-calc(40);
+        position: relative;
+        top: 4px;
+        text-align: right;
+        min-width: inherit;
+    }
+    
+    .facetwp-facet,
+    .facetwp-sort {
+        @include breakpoint(large) {
+            min-width: 25%;
+        }   
+    }
+    
+    select {
+        outline: none;
+        background-color: #fff;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-image: url("data:image/svg+xml;utf8,<svg width='16' height='9' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'><title>Fill 4</title><path d='M.758.75C.588.91.5 1.13.5 1.343c0 .212.09.433.258.594l6.617 6.316c.17.16.392.246.624.246.23 0 .453-.085.622-.246l6.617-6.316c.347-.33.347-.858 0-1.19-.348-.33-.9-.33-1.247 0L8 6.47 2.004.75C1.658.427 1.097.427.758.75z' fill='#969696' fill-rule='evenodd'/></svg>");
+        background-position: 96% 50%;
+        background-repeat: no-repeat;
+        padding: 8px 30px;	
+        font-size: rem-calc(16);
+        border: 2px solid #969696;
+        height: 40px;        
+    }
+    
+    button {
+        padding: 8px 30px;   
+    }
+}
+
+
+@include breakpoint(medium down) {
+    .facetwp-pager {
+        
+        @include clearfix;
+        margin-bottom: 45px;
+        
+        a {
+            padding: 0;   
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            border: 2px dotted $blue;
+            position: relative;
+            
+            @include breakpoint(large) {
+                width: 66px;
+                height: 66px;
+            }
+        }
+        
+        svg {
+            width: 15.5px;
+            height: 11px;   
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            
+            @include breakpoint(large) {
+                width: 31px;
+                height: 22px;   
+            }
+        }
+        
+        .next {
+            float: right;
+        }
+        
+    }
+}
+
+@include breakpoint(large) {
+
+    .facetwp-pager {
+        
+        @include clearfix;
+        margin-bottom: 45px;
+        
+        ul {
+            @include list-reset;
+            text-align: center;
+            
+            li {
+                display: inline-block;
+                
+                &:first-child {
+                    float: left;   
+                }
+                
+                &:last-child {
+                    float: right;   
+                }
+            }
+        }
+        
+        a {
+            padding: 4px;   
+            
+        }
+        
+        svg {
+            width: 15.5px;
+            height: 11px;   
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            
+            @include breakpoint(large) {
+                width: 31px;
+                height: 22px;   
+            }
+        }
+        
+    }
+    
+}

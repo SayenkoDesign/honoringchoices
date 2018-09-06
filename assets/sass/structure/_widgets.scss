@@ -1,0 +1,143 @@
+// Widgets
+
+.widget-area {
+ 
+    .widget {
+        margin-bottom: 40px;
+        
+        .widget-title {
+            font-size: 30px;   
+            margin-bottom: 24px;
+        }
+        
+        ul {
+            @include list-reset;   
+        }
+    }
+ 
+    .widget_search {
+        .widget-title {
+           @include screen-reader-text; 
+        }
+        
+        form {
+            position: relative;   
+        }
+        
+        .search-field {
+            padding: 10px 40px 10px 10px;
+            border: 1px solid #979797;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5);
+            width: 100%;
+            
+            &:focus {
+                outline: none;   
+            }
+         }
+        
+        .search-submit {
+             width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            
+            
+            svg {
+                width: 20px;
+                height: 20px;   
+                fill: #9e9e9e;
+            }
+            
+            span {
+                @include screen-reader-text; 
+            }
+        }
+    }
+        
+}
+
+
+.social-icons {
+    @include list-reset;
+    
+    height: 32px;
+      
+    li {
+       display: inline-block;
+       padding: 0 10px 0;   
+       height: 32px;
+      
+    }
+    
+    a {
+        transition: $transition;
+        width: 32px;
+        height: 32px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        &:hover {
+            svg {
+                fill: $green;   
+            }
+        }
+    }
+    
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: $blue;  
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);  
+    }    
+   
+}
+
+
+
+
+.share-icons {
+
+	margin: 0 auto 40px;
+	vertical-align: middle;
+	
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin: 0 0 0 15px;
+		vertical-align: middle;
+		
+		&:first-child {
+			margin-left: 0;	
+		}
+		
+		a {
+			width: 42px;
+			height: 42px;
+			display: block;
+			position: relative;
+
+            &:hover svg {
+                fill: $dark-green;  
+               
+            }
+		}
+		
+		svg {
+            fill: $green;  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100%;
+            transform: translate(-50%,-50%); 
+        }
+	
+		
+	}
+	
+}

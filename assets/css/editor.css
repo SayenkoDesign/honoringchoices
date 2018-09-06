@@ -1,0 +1,17 @@
+/* CSS Document */
+
+#poststuff h2  {
+    color: #252B33;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+    
+#poststuff h3 {
+    color: #CA3F39;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+}

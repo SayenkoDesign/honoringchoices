@@ -1,0 +1,299 @@
+/// Clubs
+
+.post-type-archive-location {
+    
+    .site-content {
+        padding-bottom: 60px;   
+    }
+    
+    .section-hero {
+        .wrap {
+            background-color: $green;
+            text-align: center;
+         }
+    }
+    
+    .section-after-hero {
+        margin-top: 0;
+        .wrap {
+            margin: 0;
+            background-size: cover;
+            padding-top: 14.6%; 
+            min-height: 200px;
+            max-width: none;
+        }
+    }
+    
+    .section-intro { 
+        position: relative;
+        margin-top: -100px;
+        padding: 40px 0;
+        
+            
+        @include breakpoint(xlarge) {
+            margin-top: -150px;
+        }
+    
+        .box {
+            max-width: 520px;
+            margin: 0 auto;
+            border-radius: 1px;
+            background-color: #FFFFFF;
+            border-top: 5px solid $blue;
+            box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.13);
+            padding: 38px 28px;
+            text-align: center;
+            position: relative;
+            z-index: 9;
+            margin: 0 auto 0;
+            
+            @include breakpoint(xlarge) {
+                padding: 60px;
+            }
+        }
+    }
+    
+    .bh-sl-container > * {
+        box-sizing: inherit;   
+    }
+    
+    .bh-sl-container .form-input input, .bh-sl-container .form-input select {
+        
+        border: 1px solid #979797;
+        border-radius: 0;
+        font-family: $open_sans;
+        margin: 15px 0;
+        padding: 7.5px 12px;
+        width: 100%;
+        
+        @include breakpoint(768) {
+            margin: 0 15px 0 10px;
+            width: auto;
+            min-width: 240px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    
+    .label {
+        font-family: $open_sans;
+        font-weight: 700;
+    }
+    
+    .bh-sl-container .bh-sl-map-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .bh-sl-container {
+        box-sizing: inherit;
+        color: inherit;
+        float: none;
+        font: inherit;
+        padding: 0;
+        width: 100%;
+    }
+    
+    
+    .bh-sl-form-container {
+       
+       float: none;
+       clear: none;
+       width: auto;
+        
+        form > * {
+            float: none;
+            display: inline-block;   
+            width: auto;
+            
+            svg {
+                position: relative;
+                top: 5px;   
+            }
+            
+        }
+        
+        form button {
+            @include button;
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding();
+            border-radius: 51px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+            min-width: inherit;
+            padding: 9px 24px;
+            margin: 0 auto;
+        }
+    }
+    
+    
+     
+    .bh-sl-container .bh-sl-loc-list {
+        font-size: rem-calc(14);
+        height: auto;
+        width: 100%;
+        overflow: auto!important;
+        @include breakpoint(xlarge) {
+            height: 800px;
+            overflow-x: auto!important;
+        }
+    }
+    
+    .bh-sl-container .bh-sl-loc-list .list-details {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+    }
+       
+    .bh-sl-container .bh-sl-map {
+        float: none;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 12px;
+        
+        @include breakpoint(xlarge) {
+            height: 800px;
+        }
+    }
+    
+    @include breakpoint(xlarge) {
+        .bh-sl-container .bh-sl-loc-list {
+            width: 24%;            
+        }
+        
+        .bh-sl-container .bh-sl-map {
+            width: calc(76% - 12px );
+            float: right;
+            margin-left: 12px;
+        }
+    }
+    
+    
+    .bh-sl-container .bh-sl-loc-list ul li {
+        border: 1px solid #D7D5D5;
+	    border-radius: 8px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
+        position: relative;
+        text-align: center;
+        
+        &.list-focus {
+            background-color: $light-gray!important;   
+            
+            .list-label span {
+                background-color: $green;   
+            }
+            
+            .loc-description { 
+                color: $maroon!important;
+            }
+        }
+        
+    }
+    
+    
+    .bh-sl-container .bh-sl-loc-list .list-label {
+        background: transparent;
+        border-radius: 0;
+        display: block;
+        float: none;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 24px;
+        min-width: inherit;
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        span {
+            background: $blue;
+            color: #fff;
+            display: inline-block;
+            float: none;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            width: auto;
+            min-width: 24px;
+            width: 24px;
+            height: 0;
+            padding: 50% 0;
+            border-radius: 50%;  
+            line-height: 0; 
+        }
+    }
+    
+    
+    .bh-sl-container .bh-sl-loc-list .list-details .list-content {
+        padding: 36px 12px 18px;
+        
+        .loc-name {
+            color: $blue;
+            font-size: rem-calc(22);
+            line-height: rem-calc(32);
+            font-family: $lato;
+            
+            a {
+                text-decoration: none;
+                font-family: $lato;
+                
+                &:hover {
+                    color: $light-blue;   
+                }
+            }
+        }
+        
+        .loc-city {
+            font-size: rem-calc(16);
+            line-height: rem-calc(22);
+            font-weight: normal;
+        }
+        
+        .loc-description { 
+            color: $green;
+        }
+        
+        .loc-phone {
+            font-size: rem-calc(22);
+            line-height: rem-calc(32);
+            font-family: $lato;
+            color: $blue;
+        }
+        
+        .loc-addr,
+        .loc-phone,
+        .loc-links {
+            padding-top: 14px;
+        }
+        
+        .loc-links a {
+            font-size: rem-calc(16);
+            line-height: rem-calc(22);
+            font-family: $lato;
+            text-decoration: none;
+            
+            &:hover {
+                color: $light-blue;   
+            }
+        }
+    }
+    
+    
+    .bh-sl-map {
+        .loc-links {
+            padding-top: 10px;  
+            
+            a {
+                text-decoration: none;   
+            }
+        }
+    }
+    
+}
+

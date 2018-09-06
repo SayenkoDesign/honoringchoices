@@ -1,0 +1,118 @@
+// Single Story
+
+.story-form {
+    
+    .wrap {
+        max-width: 578px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .entry-content {
+        margin-bottom: 30px;  
+        
+        h2 {
+            margin-bottom: 24px;   
+        }
+    }
+ 
+    .gform_wrapper {
+        $padding: 40px;
+        padding: $padding;
+        max-width: 578px;
+        margin: 0 auto;
+        border-radius: 8px;
+        background-color: #AAC687;
+        box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+        
+        @media only screen and (min-width : 641px) {
+				padding-left: $padding + 16px;
+		}
+    }
+    
+    .gform_heading {
+     
+        text-align: center;
+        
+        .gform_title {
+            color: #FFFFFF;
+            font-family: $lato;
+            font-size: 30px;
+            letter-spacing: 0.5px;
+            line-height: 36px;
+            margin-bottom: 24px;
+        }
+        
+        .gform_description {
+            color: #FFFFFF;
+            font-family: $open-sans;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            margin: 0;
+        }
+                
+    }
+    
+    .gform_body {
+        margin-top: -20px;   
+    }
+    
+    .gform_drop_instructions {
+        color: #fff;   
+    }
+    
+    .gform_button_select_files {
+        padding: 12px 15px;
+        font-size: 11px!important;
+        line-height: 20px;
+        letter-spacing: 1.1px;
+        border-radius: 100px;
+        border: 2px solid $white;  
+        min-width: 160px;
+        &:focus,
+        &:hover {
+            background: transparent;   
+        }
+    }
+    
+    .gform_fileupload_multifile .gform_drop_area {
+       border: 1px dashed #FFFFFF!important;
+       border-radius: 8px!important;
+       margin-top: 24px!important;
+    }
+    
+    .gfield_checkbox {
+        
+        input {
+            margin-top: 0!important;   
+        }
+        
+        label {
+            color: #fff;
+            padding-top: 5px;   
+        }
+    }
+    
+    .gform_footer {
+        
+        text-align: center;
+        
+        .button {
+            padding: 12px 5px;
+            font-size: 13px!important;
+            line-height: 20px;
+            letter-spacing: 1.1px;
+            min-width: 180px;
+            border-radius: 100px;
+            border: 2px solid $white; 
+            
+            &:focus,
+            &:hover {
+                background: $blue;   
+            } 
+        }
+        
+    }
+    
+}

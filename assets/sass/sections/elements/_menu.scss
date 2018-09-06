@@ -1,0 +1,56 @@
+// Element Menu
+
+.element-menu {
+    
+    @include breakpoint(large) {
+        max-width: 300px;   
+    }
+    
+    .menu {
+     
+        li {
+            display: block;
+            margin-bottom: 20px;
+            
+            a {
+                
+                background-color: $red;
+                color: #fff;
+                display: block;                
+                font-family: Montserrat;
+                font-size: 12px;
+                letter-spacing: 1.02px;
+                line-height: 14px;
+                padding: 15px 30px 15px 10px;
+                position: relative;
+                text-align: center;
+                text-transform: uppercase;
+                
+                &:before {
+                    content:'';
+                    right: 10px;
+                    top: 50%;
+                    position: absolute;
+
+					width: 12px;
+					height: 12px;
+					border: solid $gold;
+					border-width: 0 2px 2px 0;
+ 					transform: rotate(-45deg) translateY(-50%);
+				}
+                
+                &:hover {
+                    background-color: $light-red; 
+                    
+                    &:before {
+                        border-color: $red;   
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+    }
+}

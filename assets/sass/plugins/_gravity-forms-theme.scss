@@ -1,0 +1,140 @@
+//
+// Gravity Forms
+//  --------------------------------------------------
+
+
+// Theme Specific
+
+body .gform_wrapper:not(.newsletter) {
+	margin-top: 4px!important;	
+	
+	ul {
+		li {
+			list-style-type: none;	
+		}
+	}
+		
+	ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+		margin-top: 16px!important;
+	}
+	
+	
+	li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+	li.gfield.gfield_error.gfield_contains_required label.gfield_label {
+		margin-top: 0!important;
+	}
+	
+	
+	input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select, 
+    textarea {
+		color: #4A4A4A!important;
+ 		outline: none;	
+		border: 1px solid #979797;
+		background-color: #FFFFFF;
+  	}
+	
+	input[type="text"],
+    input[type="tel"],
+    input[type="email"], {
+ 		padding: 9px!important;
+		margin-top: 0!important;	
+	}
+	
+	
+	select {
+		color: #4A4A4A!important;
+ 		padding: 6.5px 8px!important;
+	}
+	
+	textarea {
+		margin-top: 8px;	
+		padding: 8px!important;
+	}
+	
+	select {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0px;
+		background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+		background-position: 100% 50%;
+		background-repeat: no-repeat;	
+ 		
+ 	}
+	
+	.validation_error {
+
+	}
+
+	.gform_footer {
+		
+		input {
+            
+            &:hover{
+                
+            }
+            
+            @include breakpoint(medium) {
+                display: inline-block;
+                max-width: none;
+            }         
+		}
+	}
+
+
+}
+
+
+
+.gf_simple_horizontal .validation_error {
+    display: none!important;   
+}
+
+body .gf_simple_horizontal img.gform_ajax_spinner {
+    display: none !important;
+}
+
+.gf_simple_horizontal li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+    color: #ff006e!important;
+}
+
+.gf_simple_horizontal li.gfield_error ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ff006e!important;
+}
+
+.gf_simple_horizontal li.gfield_error :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ff006e!important;
+}
+
+.gf_simple_horizontal li.gfield_error ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ff006e!important;
+}
+
+
+.gf_simple_horizontal li.gfield.gfield_error, 
+.gf_simple_horizontal li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.gf_simple_horizontal .gfield_error input[type=email], 
+.gf_simple_horizontal .gfield_error input[type=number], 
+.gf_simple_horizontal .gfield_error input[type=password], 
+.gf_simple_horizontal .gfield_error input[type=tel], 
+.gf_simple_horizontal .gfield_error input[type=text], 
+.gf_simple_horizontal .gfield_error input[type=url], 
+.gf_simple_horizontal .gfield_error select, 
+.gf_simple_horizontal .gfield_error textarea, 
+.gf_simple_horizontal .gfield_error.field_sublabel_above .ginput_complex input[type=text] {
+    margin-bottom: 0!important;
+}
+
+.gform_wrapper .validation_message { 
+    color: #ff006e!important;
+}
+
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), 
+.gform_wrapper li.gfield_error textarea {
+    border: 1px solid #ff006e!important;
+}

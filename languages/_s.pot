@@ -1,0 +1,161 @@
+# Copyright (C) 2018 _s
+# This file is distributed under the same license as the _s package.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: archive-event.php:102, category.php:65, home.php:65, search.php:62, single-event.php:71, single-post.php:70, single-program.php:83, single-story.php:70, tag.php:65
+msgid "Previous Post"
+msgstr ""
+
+#: archive-event.php:105, category.php:68, home.php:68, search.php:65, single-event.php:74, single-post.php:73, single-program.php:86, single-story.php:73, tag.php:68
+msgid "Next Post"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40, comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43, comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44, comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:77
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:69
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:115
+msgid "Primary"
+msgstr ""
+
+#: functions.php:116
+msgid "Header"
+msgstr ""
+
+#: functions.php:117
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:118
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:128
+msgid "Widget area for %s"
+msgstr ""
+
+#: header.php:30
+msgid "Skip to content"
+msgstr ""
+
+#: searchform.php:13
+msgctxt "placeholder"
+msgid "Search&hellip;"
+msgstr ""
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: page-templates/landing-page.php:2
+msgid "Landing Page"
+msgstr ""
+
+#: page-templates/page-builder.php:2
+msgid "Page Builder"
+msgstr ""
+
+#: template-parts/content-event.php:46, template-parts/content-post.php:44, template-parts/content-story.php:49
+msgid "Continue Reading"
+msgstr ""
+
+#: template-parts/content-event.php:57, template-parts/content-post.php:55, template-parts/content-story.php:60
+msgid "Share This:"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:26
+msgid "Sorry no results found."
+msgstr ""
+
+#: template-parts/content-page.php:20, template-parts/content-single.php:21, template-parts/content.php:34
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-page.php:31, lib/functions/template-tags.php:118
+msgid "Edit %s"
+msgstr ""
+
+#: template-parts/content.php:27
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: lib/functions/scripts.php:27, lib/functions/scripts.php:28
+msgid "Menu"
+msgstr ""
+
+#: lib/functions/template-tags.php:77
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: lib/functions/template-tags.php:97, lib/functions/template-tags.php:103
+msgid ", "
+msgstr ""
+
+#: lib/functions/template-tags.php:99
+msgid "Posted in %1$s"
+msgstr ""
+
+#: lib/functions/template-tags.php:105
+msgid "Tagged %1$s"
+msgstr ""
+
+#: lib/functions/template-tags.php:111
+msgid "Leave a comment"
+msgstr ""
+
+#: lib/functions/template-tags.php:111
+msgid "1 Comment"
+msgstr ""
+
+#: lib/functions/template-tags.php:111
+msgid "% Comments"
+msgstr ""

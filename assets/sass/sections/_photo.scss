@@ -1,0 +1,176 @@
+/* CSS Document */
+
+.section-photo {
+    
+    $photo-grid-height: 562px;
+    $photo-grid-gap: 15px;
+    
+    .grid-block {
+        width: 100%;  
+        padding-top: $photo-grid-gap; 
+    }
+    
+    .grid-block .bg {
+        width:100%;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: ($photo-grid-height/2);
+        
+        @include breakpoint(large) {
+            height: ($photo-grid-height+$photo-grid-gap);  
+        }
+     }
+     
+     .grid-count-2,
+     .grid-count-3 {
+         .grid-left {
+         
+             @include breakpoint(large) {
+                 float: left;
+                 width: 58.33333%;
+             }
+         }
+         
+         .grid-right {
+             @include breakpoint(large) {
+                 float: left;
+                 width: 41.66667%;
+             }
+         }
+     }
+     
+     .grid-count-4,
+     .grid-count-5 {
+         .grid-left {
+         
+             @include breakpoint(xlarge) {
+                 float: left;
+                 width: 50%;
+             }
+             
+             @include breakpoint(xxlarge) {
+                 float: left;
+                 width: 58.33333%;
+             }
+         }
+         
+         .grid-right {
+             @include breakpoint(xlarge) {
+                 float: left;
+                 width: 50%;
+             }
+             
+             @include breakpoint(xxlarge) {
+                 float: left;
+                 width: 41.66667%;
+             }
+         }
+     }
+     
+     
+     
+     .grid-right {
+      
+        // https://codepen.io/ronnidc/pen/jEzpVR
+        
+         /* one item */
+        div:first-child:nth-last-child(1) {
+          @include breakpoint(large) {
+              padding-left: $photo-grid-gap;
+          }
+        }
+        
+        
+        /* Two items */
+        div:first-child:nth-last-child(2),
+        div:first-child:nth-last-child(2) ~ div {
+          
+          .bg {
+            height: ($photo-grid-height/2);   
+          }
+          
+          @include breakpoint(medium) {
+            float: left;
+            &:nth-child(1) {
+                  width: 58.33333%;
+              }
+              &:nth-child(2) {
+                padding-left: $photo-grid-gap;
+                width: 41.66667%;
+              }
+          }
+          
+          @include breakpoint(large) {
+              &:nth-child(1),
+              &:nth-child(2) {
+                padding-left: $photo-grid-gap;
+                width: 100%;
+                float: none;
+              }
+          }
+        }
+        
+        /* Three items */
+        div:first-child:nth-last-child(3),
+        div:first-child:nth-last-child(3) ~ div {
+          
+          .bg {
+            height: ($photo-grid-height/2);   
+          }
+          
+          @include breakpoint(medium) {
+              float: left;
+              
+              
+              &:nth-child(1) {
+                  width: 58.33333%;
+              }
+              &:nth-child(2) {
+                padding-left: $photo-grid-gap;
+                width: 41.66667%;
+              }
+          }
+          
+          @include breakpoint(large) {
+              padding-left: $photo-grid-gap;
+          }
+        }
+        
+        /* Four items */
+        div:first-child:nth-last-child(4),
+        div:first-child:nth-last-child(4) ~ div {
+          
+          .bg {
+            height: ($photo-grid-height/2);   
+          }
+          
+          @include breakpoint(medium) {
+          
+              float: left;
+              
+              &:nth-child(1) {
+                  width: 58.33333%;
+              }
+              &:nth-child(2) {
+                width: 41.66667%;
+                padding-left: $photo-grid-gap;
+              }
+              &:nth-child(3) {
+                width: 41.66667%;
+              }
+              &:nth-child(4) {
+                  width: 58.33333%;
+                  padding-left: $photo-grid-gap;
+              }
+          }
+          
+          @include breakpoint(large) {
+              padding-left: $photo-grid-gap;
+          }
+          
+        }
+         
+     }     
+    
+}

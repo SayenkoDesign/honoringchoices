@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Example</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/storelocator.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="bh-sl-container">
+      <div id="page-header">
+        <h1 class="bh-sl-title">Using Chipotle as an Example</h1>
+        <p>I used locations around Minneapolis and the southwest suburbs. So, for example, Edina, Plymouth, Eden Prarie, etc. would be good for testing the functionality.
+        You can use just the city as the address - ex: Edina, MN.</p>
+      </div>
+
+      <div class="bh-sl-form-container">
+        <form id="bh-sl-user-location" method="post" action="#">
+            <div class="form-input">
+              <label for="bh-sl-address">Enter Address or Zip Code:</label>
+              <input type="text" id="bh-sl-address" name="bh-sl-address" />
+            </div>
+
+            <button id="bh-sl-submit" type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div id="bh-sl-map-container" class="bh-sl-map-container">
+        <div id="bh-sl-map" class="bh-sl-map"></div>
+        <div class="bh-sl-loc-list">
+          <ul class="list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/libs/handlebars.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script src="assets/js/plugins/storeLocator/jquery.storelocator.js"></script>
+		<script>
+			$(function() {
+				$('#bh-sl-map-container').storeLocator(
+                {
+                    
+                    'defaultLoc': true,
+					'defaultLat': '47.64863',
+					'defaultLng' : '-122.52357469999998',
+                    'mapSettings': {zoom: 12},
+                    'dataType': 'json',
+                    //'dataLocation': 'data/locations.json',
+                    dataRaw: [{"id":1,"name":"Ballard Boys &#038; Girls Club","permalink":"https:\/\/bgclub.vanwp.ca\/clubs\/ballard-boys-girls-club\/","city":"Ballard","address":"1767 NW 64th St, <br \/>\r\nSeattle, WA 98107, USA","email":"bob@hotmail.com","phone":"+1 206-436-1870","register":"#","lat":"47.6751226","lng":"-122.38162339999997","map_marker":{"address":"1767 NW 64th St, Seattle, WA 98107, USA","lat":"47.6751226","lng":"-122.38162339999997"}},{"id":2,"name":"Bainbridge Island Club","permalink":"https:\/\/bgclub.vanwp.ca\/clubs\/bainbridge-island-club\/","city":"Bainbridge","address":"9453 Coppertop Loop NE, <br \/>\r\nBainbridge Island, <br \/>\r\nWA 98110, USA","email":"bob@hotmail.com","phone":"555-555-5555","hours":"M-F, 9am-6pm<br \/>\r\nSa-S, 9am-5pm","grades_served":"PreK-12","register":"https:\/\/google.ca","lat":"47.64863","lng":"-122.52357469999998","map_marker":{"address":"9453 Coppertop Loop NE, Bainbridge Island, WA 98110, USA","lat":"47.64863","lng":"-122.52357469999998"}}],
+                    'listTemplateID': 'listTemplate',
+                    'infowindowTemplateID': 'infowindowTemplate',
+                    'disableAlphaMarkers': true,
+                    'storeLimit': -1,
+                    'distanceAlert': -1,
+                    'fullMapStart': true,
+                    'callbackCreateMarker': function(map, point, letter, category) {
+                        
+                        var number = letter.charCodeAt(0) - "A".charCodeAt(0) + 1;
+                                                
+                        var image = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='37' height='52'%3E%3Cdefs%3E%3Cpath id='a' d='M31 89H0V0h62v89H31z'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' transform='translate%28-9 -23%29'%3E%3Cmask id='b' fill='%23fff'%3E%3Cuse xlink:href='%23a'/%3E%3C/mask%3E%3Cpath fill='%230081C6' d='M45.126 35.944c-.193-.694-.58-1.434-.869-2.083C40.822 25.867 33.313 23 27.25 23 19.134 23 10.195 28.27 9 39.132v2.217c0 .093.032.925.078 1.342.67 5.174 4.89 10.676 8.04 15.853C20.507 64.09 24.024 69.546 27.508 75c2.15-3.56 4.292-7.166 6.39-10.633.574-1.016 1.239-2.031 1.81-3.002.381-.65 1.113-1.295 1.445-1.896C40.542 53.46 46 47.406 46 41.442v-2.45c0-.645-.828-2.91-.874-3.048zM27.234 47.87c-2.463 0-5.158-1.176-6.488-4.427-.199-.518-.183-1.555-.183-1.65v-1.461c0-4.142 3.681-6.028 6.884-6.028 3.94 0 6.99 3.016 6.99 6.784 0 3.769-3.26 6.782-7.203 6.782z' mask='url%28%23b%29'/%3E%3Ccircle cx='28' cy='41' r='11' fill='%23FFF'/%3E%3Ctext fill='%234A4A4A' font-family='OpenSans-Bold, Open Sans' font-size='14' font-weight='bold' x='28' y='46' text-anchor='middle'%3E " + number + " %3C/text%3E%3C/g%3E%3C/svg%3E";
+                                                
+                        return new google.maps.Marker({
+                          position : point,
+                          map      : map,
+                          icon     : image,
+                          draggable: false
+                        });
+                    }
+                 }
+                );
+			});
+            
+		</script>
+        
+        
+        <script id="listTemplate" type="text/x-handlebars-template">
+        {{#location}}
+        <li data-markerid="{{markerid}}">
+            <div class="list-label">{{marker}}</div>
+            <div class="list-details">
+                <div class="list-content">
+                    <div class="loc-city">{{city}}</div>
+                    <div class="loc-name">{{name}}</div>
+                    <div class="loc-addr">{{{address}}}</div> 
+                    <div class="loc-phone">{{phone}}</div>
+                    <div class="loc-hours">{{{hours}}}</div>
+                    <div class="loc-links"><a href="{{permalink}}" target="_blank">Learn More</a> | <a href="{{register}}" target="_blank">Register</a></div>
+                </div>
+            </div>
+        </li>
+        {{/location}}
+        </script>
+        
+        <script id="infowindowTemplate" type="text/x-handlebars-template">
+        {{#location}}
+        <div class="loc-name">{{name}}</div>
+        <div>{{{address}}}</div>
+        {{/location}}
+        </script>
+
+  </body>
+</html>

@@ -1,0 +1,384 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"residence",
+				"residence_title"
+			],
+			[
+				"grid",
+				"grid\t@include grid-column();"
+			],
+			[
+				"media",
+				"media\t@media #{$large-up} > 768px"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "prv open ",
+		"selected_items":
+		[
+			[
+				"prv open ",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"prv open",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"s",
+				"SassBeautify"
+			],
+			[
+				"SassBeautify",
+				"SassBeautify"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"form",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package control i",
+				"Package Control: Install Package"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 580.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"package control",
+			"Package Control: Install Package",
+			"package control: install package",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/honoringchoices/wp-content/themes/honoring-choices"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/buildmypractice/wp-content/themes/build-my-practice/lib/functions/build-bundle/step-4.php",
+		"/Applications/MAMP/htdocs/dolomiti/wp-content/themes/dolomiti/assets/sass/sections/_section.scss",
+		"/Applications/MAMP/htdocs/rex/wp-content/themes/rex/assets/scripts/project.js",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/Predawn/predawn.sublime-theme",
+		"/private/etc/hosts",
+		"/Users/kylerumble/Desktop/acclarowp.com.ste",
+		"/Users/kylerumble/.profile",
+		"/Users/kylerumble/.bash_profile",
+		"/Users/kylerumble/Downloads/foundation-sites-6.3.1/docs/pages/accordion.md",
+		"/Applications/MAMP/htdocs/veritas/wp-content/themes/veritas/assets/sass/template/_front-page.scss",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/myhouse/wp-content/themes/my-house/assets/scripts/foundation.js",
+		"/Applications/MAMP/htdocs/okfb/wp-content/themes/okfb_s/lib/functions/mega-menu.php",
+		"/Users/kylerumble/Downloads/myhousf4_myhouseen (1).sql",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/todo.txt",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/header.php",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/front-page.php",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/assets/sass/template/_page.scss",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/assets/sass/modules/_hero.scss",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/assets/sass/template/_front-page.scss",
+		"/Applications/MAMP/htdocs/joinderm/wp-content/themes/joinderm_s/template-parts/section-hero.php",
+		"/Applications/MAMP/htdocs/joinderm/joinderm.sublime-project",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/User/CodeFormatter.sublime-settings",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/Users/kylerumble/Desktop/style.css",
+		"/Applications/MAMP/htdocs/dcd/wp-content/themes/dcd/assets/styles/sass/template/_contact.scss",
+		"/Applications/MAMP/htdocs/dcd/wp-content/themes/dcd/assets/styles/sass/template/_front-page.scss",
+		"/Applications/MAMP/htdocs/dcd/wp-content/themes/dcd/assets/styles/sass/template/_page.scss",
+		"/Users/kylerumble/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
+		"/Applications/MAMP/htdocs/dcd/wp-content/themes/dcd/front-page.php",
+		"/private/var/folders/pd/_y6qrrcd6tn06gs0h2jh838c0000gn/T/E16DE893-012F-411D-8612-57DFF3DFB69A/page-templates/page-find-service.php",
+		"/Volumes/Seagate Drive/Websites/Butter Creative/sportsmedicinepartners.co.uk/wordpress/wp-config.php",
+		"/Users/kylerumble/Downloads/localhost.sql",
+		"/Applications/MAMP/htdocs/bbv/wp-activate.php",
+		"/Volumes/Seagate Drive/Clients/Kennedy Anderson/TailWind/tailwin7_wp864-migrate-20160628002518.sql",
+		"/Applications/MAMP/htdocs/tailwind/wp-content/themes/x/framework/views/global/_footer.php",
+		"/Applications/MAMP/htdocs/epag/wp-signup.php",
+		"/Users/kylerumble/Downloads/acf-export-2016-04-07.json",
+		"/Users/kylerumble/Downloads/siteorigin-panels/tpl/js-templates.php",
+		"/Users/kylerumble/Downloads/MusicOnMain-Facebook-PixelCode.rtf",
+		"/Users/kylerumble/Downloads/4.3.0-guideguide/installer.jsx",
+		"/Applications/MAMP/htdocs/camellia/wp-content/themes/camellia/lib/child-theme-functions.php",
+		"/Applications/MAMP/htdocs/camellia/wp-config.php",
+		"/Applications/MAMP/htdocs/wtfs/wp-content/themes/index.php",
+		"/private/var/folders/pd/_y6qrrcd6tn06gs0h2jh838c0000gn/T/com.microsoft.Outlook/Outlook Temp/plugins-min.js",
+		"/Applications/MAMP/htdocs/salisburywalk/wp-content/themes/salisburywalk/lib/functions/scripts.php",
+		"/Volumes/Seagate Drive/Websites/DCD/salisburylane.com/wp-config.php",
+		"/Users/kylerumble/Downloads/wp-event-calendar/includes/common/functions.php",
+		"/Volumes/Seagate Drive/Websites/Kennedy Anderson/curtaincall.com/wp-content/themes/curtain-call/lib/functions/page.php",
+		"/Users/kylerumble/Downloads/allianceticketing.com.ste",
+		"/Users/kylerumble/Downloads/expertfirstaidandcprcourses.ca.ste",
+		"/Volumes/Seagate Drive/Clients/SWCA/nancy spooner/Elegant themes/Elegant themes/divi-builder/divi-builder.php",
+		"/Users/kylerumble/Desktop/landsendensemble.ca.ste",
+		"/Applications/MAMP/htdocs/cgepartnership/wp-content/themes/cgep/template-carlos-slim.php",
+		"/Applications/MAMP/htdocs/mla/wp-content/plugins/genesis-featured-page-advanced/genesis-featured-page-advanced.php",
+		"/private/var/folders/pd/_y6qrrcd6tn06gs0h2jh838c0000gn/T/0C0D1181-7EC5-4F2B-B121-492F06F022A1/wp-content/themes/makenna/home.php",
+		"/Users/kylerumble/Downloads/wp-event-calendar/assets/js/event.js",
+		"/Users/kylerumble/Downloads/danielchoidesign.com.ste",
+		"/Users/kylerumble/Downloads/cgepartnership.com.ste",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/button/button.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/button/tpl/simple.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/price-box/presets/simple.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/testimonial/presets/simple.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/price-box/price-box.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/tpl/metabox-panels.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/inc/live-editor.php",
+		"/Users/kylerumble/Downloads/siteorigin-panels/js/siteorigin-panels.js",
+		"/Users/kylerumble/Downloads/siteorigin-panels/widgets/widgets/testimonial/testimonial.php",
+		"/Applications/AMPPS/www/vsmf/wp-content/plugins/core-functionality/lib/widgets/widget-acf-featured-content.php",
+		"/Applications/MAMP/conf/apache/extra/httpd-default.conf",
+		"/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf",
+		"/Users/kylerumble/Library/Application Support/Alfred 2/Workflow Data/com.kylerumble.wordpressinstaller/settings.config",
+		"/Users/kylerumble/Library/Application Support/Alfred 2/Workflow Data/com.kylerumble.wordpressinstaller/settings.conf",
+		"/Applications/AMPPS/www/_backups/twineagle/wp-content/themes/twin-eagle/dist/scripts/main.js",
+		"/Users/kylerumble/Downloads/cta.kml",
+		"/Applications/AMPPS/www/staffan/.gitignore",
+		"/Applications/AMPPS/www/_backups/pluck/wp-content/themes/pluck/lib/assets/js/mobile-menu.js",
+		"/Users/kylerumble/Downloads/soliloquy-themes/soliloquy-themes.php",
+		"/Users/kylerumble/Dropbox/Websites/Hey Shauna/stretchvancouver.com/wp-content/themes/stretch/archive-class_descriptions.php",
+		"/Users/kylerumble/Downloads/widget-output-filters/widget-output-filters.php",
+		"/Users/kylerumble/Dropbox/Websites/Hey Shauna/stretchvancouver.com/wp-content/themes/stretch/lib/functions/scripts.php",
+		"/Applications/AMPPS/www/kr-read-more-inline/kr-read-more-inline.php",
+		"/Users/kylerumble/Dropbox/Websites/Hey Shauna/stretchvancouver.com/wp-content/themes/stretch/sass/layouts/structure/_content.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/GruntFile.js",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/_colors.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/_boxes.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/_panels.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/_utilities.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/_forms.scss",
+		"/Users/kylerumble/Dropbox/TriLion - KYLE (1)/DriverDo_StyleGuide/src/scss/bourbon/helpers/_radial-arg-parser.scss",
+		"/Users/kylerumble/Dropbox/Websites/Hey Shauna/stretchvancouver.com/wp-content/themes/stretch/sass/layouts/template/_index.scss",
+		"/Users/kylerumble/Dropbox/Websites/Hey Shauna/stretchvancouver.com/wp-content/themes/stretch/lib/functions/page.php",
+		"/Users/kylerumble/Dropbox/Websites/VanWP/vanwp.com/vbb/wp-content/plugins/core-functionality/lib/functions/post-types.php",
+		"/Applications/AMPPS/www/stretch/wp-content/plugins/core-functionality/lib/post-types/stories.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/assets/js/general.js",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_navigation.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/functions/sidebar.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_events.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_widgets.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_front-page.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_sidebar.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_schedule.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_teachers.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_footer.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_healcode.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/functions/general.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_typography.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/home.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/single-post.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/flexible-posts-widget/stories-widget.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/_settings.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/page-templates/prices.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/genesis-cleanup.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_header.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_index.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_prices.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_outreach.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/functions/page.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_stories.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/structure/_mobile-navigation.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/archive-story.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/lib/functions/widgets.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/page-templates/my-first-time.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/flexible-posts-widget/stories.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_blog.scss",
+		"/Applications/AMPPS/www/stretch/wp-content/plugins/core-functionality/plugin.php",
+		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_class-descriptions.scss"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "honoringchoices.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"frotn",
+				"assets/styles/sass/template/_front-page.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 375.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

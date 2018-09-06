@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 31 22">
+  <defs>
+    <polygon id="a" points="0 0 0 65 65 65 65 0 0 0"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" transform="translate(-1192.000000, -1789.000000) translate(202.000000, 1682.000000) translate(0.000000, 86.000000) translate(972.000000, 0.000000)">
+    <g/>
+    <path fill="#226493" d="M36 43a1 1 0 0 0 2 0l11-10a1 1 0 0 0 0-2L38 21h-2v2l10 9-10 9v2z"/>
+    <path stroke="#226493" stroke-linecap="square" stroke-width="3" d="M46 32H20"/>
+  </g>
+</svg>

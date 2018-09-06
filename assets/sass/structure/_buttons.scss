@@ -1,0 +1,132 @@
+@mixin button() {
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;    
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none!important;
+
+	color: #FFFFFF;
+	font-family: $lato;
+	font-size: 13px;
+	letter-spacing: 1.1px;
+	line-height: 20px;
+	text-align: center;
+    min-width: 180px;
+    
+    &:hover {
+        background-color: transparent;   
+    }
+    
+    
+    @include breakpoint(medium) {
+        display: inline-block;
+        margin: 0;
+        max-width: none;
+    }
+            
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    svg {
+       position: absolute;
+       left: 10px;
+       top: 50%;
+       transform: translateY(-50%);
+    } 
+    
+}
+
+@mixin button-background( $background: transparent, $background-hover: transparent ) {
+    background-color: $background;
+    
+    &:hover{
+        background-color: $background-hover;
+        border-color: $background-hover;
+    }  
+}
+
+@mixin button-border( $border-color: transparent, $border-color-hover: transparent, $size: 2px ) {
+    border-color: $border-color;
+    border-width: $size;
+    &:hover{
+        border-color: $border-color-hover;
+    }  
+}
+
+@mixin button-color( $color: $white, $color-hover: $white, $color-visited: $white, $color-focus: $white, $color-active: $white ) {
+    
+    color: $color;
+    
+    &:visited {
+        color: $color-visited;
+    }
+    
+    &:focus {
+        color: $color-focus;
+    }
+    
+    &:active {
+        color: $color-active;
+    }
+
+    
+    &:hover{
+        color: $color-hover;
+    }  
+}
+
+@mixin button-padding( $top: 13px, $right: 19px, $bottom: 13px, $left: 19px ) {
+    padding: $top $right $bottom $left;
+}
+
+
+.button {
+    @include button;    
+        
+    &.blue {
+        @include button-background( $blue, $light-blue );
+        @include button-color();
+        @include button-padding();
+        border-radius: 51px;
+    	box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+    }
+    
+    &.green {
+        @include button-background( $green, $dark-green );
+        @include button-color();
+        @include button-padding();
+        border-radius: 51px;
+    	box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+    }
+    
+    &.green-alt {
+        @include button-background( transparent, $green );
+        @include button-color( $green, $white, $green, $white, $white );
+        @include button-padding();
+        @include button-border( $green, $green );
+        border-radius: 51px;
+    	// box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+    }
+    
+}
+
+
+.button-group {
+    
+    margin: 0 -10px;
+ 
+    a {
+        margin: 0 auto 20px;   
+    }
+    
+    @include breakpoint(medium) {
+        a {
+            margin: 0 10px $global-margin;   
+        }
+    }
+    
+}
+
