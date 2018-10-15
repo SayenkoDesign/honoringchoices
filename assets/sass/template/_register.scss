@@ -1,0 +1,42 @@
+// Register
+
+.template-register {
+ 
+    section.default .entry-content {
+        margin: 0 auto;
+        max-width: rem-calc(600);   
+        box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+        padding: rem-calc(30);
+        
+        @include breakpoint(large) {
+            padding: rem-calc(60);
+        }
+        
+        h2 {
+            text-align: center;
+            color: $dark-blue;   
+        }
+
+        .button {
+            @include button;   
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding();
+            border-radius: 51px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+        }
+        
+    }
+    
+}
+
+
+
+.template-gf-activation {
+    
+    .site-content {
+        margin: 0 auto;
+        max-width: $global-width;
+        padding: 60px 0;   
+    }
+}

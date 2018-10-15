@@ -30,62 +30,68 @@
 
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
         
-    <header id="masthead" class="site-header" role="banner">
-		<div class="wrap">
-                    
-			<div class="row">
-                                
-                <div class="large-5 xxlarge-7 columns site-branding">
-                    <div class="site-title">
-                    <?php
-                    $site_url = home_url();
-                    $logo = sprintf('<img src="%slogo.png" class="" />', trailingslashit( THEME_IMG ) );                    
-                    printf('<a href="%s" title="%s">%s</a>',
-                            $site_url, get_bloginfo( 'name' ), $logo );
-                    printf( '<img src="%sinitiative-of.png" class="initiative-of" />', trailingslashit( THEME_IMG ) );
-                    ?>
-                    </div>
-                </div><!-- .site-branding -->
+    <div class="sticky-header">
+        <header id="masthead" class="site-header" role="banner">
+            <div class="wrap">
+                        
+                <div class="row">
                                     
-                <div class="large-7 xxlarge-5 columns header-widgets show-for-large">
-                    <?php
-                    if(is_active_sidebar('header')){
-                        dynamic_sidebar('header');
-                    }
-                    ?>                    
-                </div> 
-                                                      
-			</div>
-            
-            <?php
-                printf( '<div class="wave-top show-for-large">%s</div>', get_svg( 'wave-top' ) );
-            ?>   
-            <nav id="site-navigation" class="nav-primary" role="navigation">            
-                <div class="row small-collapse large-uncollapse">
-                <?php
-                    // Desktop Menu
-                    $args = array(
-                        'theme_location' => 'primary',
-                        'menu' => 'Primary Menu',
-                        'container' => 'div',
-                        'container_class' => 'small-12 columns',
-                        'container_id' => '',
-                        'menu_id'        => 'primary-menu',
-                        'menu_class'     => 'dropdown menu',
-                        'before' => '',
-                        'after' => '',
-                        'link_before' => '',
-                        'link_after' => '',
-                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-                     );
-                    wp_nav_menu($args);
-                ?>
+                    <div class="large-5 xxlarge-7 columns site-branding">
+                        <div class="site-title">
+                        <?php
+                        $site_url = home_url();
+                        $logo = sprintf('<img src="%slogo.png" class="" />', trailingslashit( THEME_IMG ) );                    
+                        printf('<a href="%s" title="%s">%s</a>',
+                                $site_url, get_bloginfo( 'name' ), $logo );
+                        printf( '<img src="%sinitiative-of.png" class="initiative-of" />', trailingslashit( THEME_IMG ) );
+                        ?>
+                        </div>
+                    </div><!-- .site-branding -->
+                                        
+                    <div class="large-7 xxlarge-5 columns header-widgets show-for-large">
+                        <?php
+                        if(is_active_sidebar('header')){
+                            dynamic_sidebar('header');
+                        }
+                        ?>                    
+                    </div> 
+                                                          
                 </div>
-            </nav>
-              
-		</div><!-- wrap -->
-         
-	</header><!-- #masthead -->
+                
+                <?php
+                    printf( '<div class="wave-top show-for-large">%s</div>', get_svg( 'wave-top' ) );
+                ?>   
+                <div class="nav-primary-wrapper">
+                    <div class="row small-collapse large-uncollapse"> 
+                        <nav id="site-navigation" class="nav-primary" role="navigation" aria-label="Main" itemscope itemtype="https://schema.org/SiteNavigationElement">            
+                            
+                            <?php
+                                // Desktop Menu
+                                $args = array(
+                                    'theme_location' => 'primary',
+                                    'menu' => 'Primary Menu',
+                                    'container' => '',
+                                    'container_class' => '',
+                                    'container_id' => '',
+                                    'menu_id'        => 'primary-menu',
+                                    'menu_class'     => 'menu',
+                                    'before' => '',
+                                    'after' => '',
+                                    'link_before' => '',
+                                    'link_after' => '',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+                                 );
+                                wp_nav_menu($args);
+                            ?>
+                            
+                        </nav>
+                    </div>  
+                </div>
+                  
+            </div><!-- wrap -->
+             
+        </header><!-- #masthead -->
+    </div>
 
 <div id="page" class="site-container">
 

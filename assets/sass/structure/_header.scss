@@ -11,55 +11,68 @@ Header
     }      
  }
  
- .site-header {
+  .site-header {
 
-	&.fixed {
-		display: none;
-		
-		@media #{$xlarge-up} {
-      		display: block;
-		}
-		
-		transition: transform .25s ease-in-out;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		z-index: 999;
-		transform: translateY(-150%);
-		background-color: white;
-
-        
-        .wrap {
-            position: relative;
-            top: auto; 
+	@include breakpoint(large) {
+        &.fixed {
+            transition: transform .25s ease 0s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: -2;
+            transform: translateY(-150%);
+            background-color: white;
+    
             
-            @include breakpoint(large) {                
-                .row:last-child {
-                    padding-top: 0;   
-                }
-            } 
+            .wrap {
+                position: relative;
+                top: auto; 
+                
+                @include breakpoint(large) {                
+                    .row:last-child {
+                        padding-top: 0;   
+                    }
+                } 
+                
+            }
             
+            
+    
         }
-        
-        
-
-	}
-
-	&.fixed.fixed-show {
-		transform: translateY(0);
-	}
+    
+        &.fixed.fixed-show {
+            transform: translateY(0);
+            z-index: 999;
+        }
+    }
 }
 
+.sticky-header {
+    @include breakpoint(large) {
+        min-height: 139px;   
+    }
+}
 
 .site-header {
     
     width: 100%;
     z-index: 999;
-    position: relative;
+    background-color: $dark-blue;
+    -webkit-transform: translateZ(0);
     
-    border-top: 6px solid #AAC687;
+    @include breakpoint(large) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    
+    .wrap {
+        background-color: #fff;
+        border-top: 6px solid #AAC687;
+    }
     
     &:after {
         content: '';
@@ -76,13 +89,13 @@ Header
         background: -webkit-gradient(linear, 100% 0, 0 0, color-stop(0.25, rgba(0,0,0,0.6446953781512605)), color-stop(0.8, rgba(255,255,255,0)));
         background: -o-linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
         background: linear-gradient(180deg, rgba(0,0,0,0.6446953781512605) 25%, rgba(255,255,255,0) 80%);
-        z-index: -2;
+        z-index: -3;
     }
             
     .wrap {
         
         .row {
-            position: relative;   
+            
         }
                 
         .site-title {

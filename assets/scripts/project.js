@@ -917,6 +917,55 @@ return ImagesLoaded;
 });
 
 
+/**
+ * accessibleDropDownMenu.js
+ *
+ * jquery.accessibleDropDownMenu.js
+ * @version   2.0 | 14th January 2014
+ * @author    Beau Charman | @beaucharman | http://www.beaucharman.github.io
+ * @link      https://gist.github.com/beaucharman/7348970 | 
+ *            http://jsfiddle.net/beaucharman/X2ArC/
+ * @license   MIT license
+ */
+ 
+;(function ($) {
+
+    "use strict";
+
+    $.fn.accessibleDropDownMenu = function (options) {
+
+         var settings = $.extend({
+            'item': 'li',
+            'anchor': 'a'
+        }, options);
+
+        /* Grab the element instance */
+        var menu = $(this);
+
+        /* Drop down menu support for IE 6 */
+        $(settings.item, menu).mouseover(function () {
+
+            $(this).addClass('focus');
+
+        }).mouseout(function () {
+
+            $(this).removeClass('focus');
+        });
+
+        /* Drop Down menu keyboard accessible via :focus */
+        $(settings.anchor, menu).focus(function () {
+
+            $(this).parents(settings.item).addClass('focus');
+
+        }).blur(function () {
+
+            $(this).parents(settings.item).removeClass('focus');
+        });
+
+    };
+
+})(jQuery);
+
 /*
  Original Plugin by Osvaldas Valutis, www.osvaldas.info
  http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
@@ -6916,6 +6965,8 @@ return Outlayer;
 			$(this).attr('target', '_blank');
 		}
 	});
+    
+    $('a.url').attr('target', '_blank');
 	
     
 
@@ -6928,47 +6979,67 @@ return Outlayer;
     
     // Scroll up show header
 
-	var $site_header =  $('.site-header');
-
-	// clone header
-	var $sticky = $site_header.clone()
-							   .prop('id', 'masthead-fixed' )
-							   .attr('aria-hidden','true')
-							   .addClass('fixed')
-							   .insertBefore('#masthead');
+	var $sticky =  $('.site-header');
             
-    $sticky.each(function () {
+    $sticky.each(function (i, element) {
+        
         var $win = $(window), 
             $self = $(this),
             isShow = false,
-            delta = 300, // distance from top where its active
+            delta = 400, // distance from top where its active
             lastScrollTop = 0;
-    
-        $win.on('scroll', function () {
-          
-          // don't show below sticky menu
-          if( $('.facetwp-template').hasClass('is-paging') ) {
-              return;
-          }
-          
-          var scrollTop = $win.scrollTop();
-          var offset = scrollTop - lastScrollTop;
-          lastScrollTop = scrollTop;
-          
-    
-    
-          // min-offset, min-scroll-top
-          if (offset < 0 && scrollTop > delta ) {
-            if (!isShow ) {
-              $self.addClass('fixed-show');
-              isShow = true;
+            
+        var scrollHeight = $(document).height();
+
+        $win.on("scroll", function() {
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+            var scrollBottom = ( (scrollHeight - scrollPosition) / scrollHeight ) * 100;
+            var scrollTop = $win.scrollTop();
+            var offset = scrollTop - lastScrollTop;
+            lastScrollTop = scrollTop;
+            
+            /*
+            console.log( 'ScrollTop: ' + scrollTop );
+            
+            console.log( 'ScrollHeight: ' + scrollHeight );
+            
+            console.log( 'ScrollPosition: ' + scrollPosition );
+            
+            console.log( 'scrollBottom:' + scrollBottom );
+            */
+            
+            if( scrollHeight < (delta * 2) ) {
+                return;
             }
-          } else if (offset > 0 || offset < lastScrollTop ) {
-            if (isShow) {
-              $self.removeClass('fixed-show');
-              isShow = false;
+            
+            if ( scrollTop > delta && scrollBottom > 0 ) {
+                
+                $self.addClass('fixed');
+                
+                if (offset < 0 ) {
+                    if (!isShow ) {
+                      $self.addClass('fixed-show');
+                      isShow = true;
+                    }
+                } else if (offset > 0 || offset <= lastScrollTop ) {
+                    if (isShow) {
+                      $self.removeClass('fixed fixed-show');
+                      isShow = false;
+                    }
+                }
+                else {
+                    $self.removeClass('fixed fixed-show');
+                    isShow = false;
+                }
+                
             }
-          }
+            else {
+                
+                $self.removeClass('fixed fixed-show'); 
+                isShow = false; 
+                 
+            }
+            
         });
     });
     
@@ -6981,21 +7052,27 @@ return Outlayer;
 	// Load Foundation
 	$(document).foundation();
     
+    // Accessible menus
+    
+    $(".nav-primary").accessibleDropDownMenu();
+    
     
     $(window).on('load changed.zf.mediaquery', function(event, newSize, oldSize) {
         
         $( '.nav-primary' ).doubleTapToGo();
         
-        if( ! Foundation.MediaQuery.atLeast('xlarge') ) {
-          $( '.nav-primary' ).doubleTapToGo( 'destroy' );
+        if( Foundation.MediaQuery.atLeast('large') ) {
+          $('.sticky-header').css( 'height', $('.site-header').height() );
+        }
+        else {
+            $( '.nav-primary' ).doubleTapToGo( 'destroy' );
+            $('.sticky-header').css( 'height', '' );
         }
         
-        // need to reset sticky on resize. Otherwise ti breaks
-        if( ! Foundation.MediaQuery.atLeast('xxlarge') ) {
+        // need to reset sticky on resize. Otherwise it breaks
+        if( ! Foundation.MediaQuery.atLeast('large') ) {
             $(document).foundation();
         }
-        
-        
                 
     });
     
@@ -7013,6 +7090,14 @@ return Outlayer;
         e.preventDefault();
 
     });
+    
+    
+    // Make sure videos don't play in background
+    $(document).on(
+      'open.zf.reveal', '#modal-search', function () {
+        $(this).find("input").first().focus();
+      }
+    );
     
    
     

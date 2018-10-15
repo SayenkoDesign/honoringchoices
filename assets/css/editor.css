@@ -1,17 +1,18 @@
 /* CSS Document */
 
-#poststuff h2  {
-    color: #252B33;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 400;
-}
-    
-#poststuff h3 {
-    color: #CA3F39;
-    font-size: 22px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    line-height: 25px;
-    text-transform: uppercase;
+.wp-editor
+    .button {
+        display: block;
+        padding: .625rem;
+        text-align: center;
+        font-size: .875rem;
+        font-weight: 700;
+        line-height: 1.35;
+        text-transform: uppercase;   
+        width: 12.1875rem;
+        max-width: 12.1875rem;
+        text-decoration: none;
+        border: 1px solid #333;
+        color: #333;
+        border-radius: 12px;
 }

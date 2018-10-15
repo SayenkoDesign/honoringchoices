@@ -21,6 +21,8 @@
 	include_once( 'includes/taxonomy-core/Taxonomy_Core.php' );
     
     include_once( 'includes/table-class.php' );
+    
+    include_once( 'includes/theme-functions/array.php' );
 
     include_once( 'includes/theme-functions/shortcodes.php' );
 
@@ -41,6 +43,8 @@
 	include_once( 'functions/scripts.php' );
 
 	include_once( 'functions/social.php' );
+    
+    include_once( 'functions/members.php' );
 
 	include_once( 'functions/menus.php' );
     
@@ -57,6 +61,16 @@
     include_once( 'functions/addtoany.php' );
     
     include_once( 'functions/locations.php' );
+    
+    include_once( 'functions/the-events-calendar.php' );
+    
+    include_once( 'functions/bbpress.php' );
+    
+    include_once( 'functions/learndash.php' );
+    
+    include_once( 'functions/user-profile.php' );
+    
+    include_once( 'functions/shortcodes.php' );
     
 /****************************************
 	include_onces (Foundation)

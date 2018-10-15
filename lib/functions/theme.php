@@ -23,6 +23,51 @@ function _s_footer() {
 add_action( 'wp_footer', '_s_footer' );
 
 
+/*
+ * Modify TinyMCE editor to remove H1.
+ */
+function tiny_mce_remove_unused_formats($init) {
+	// Add block format elements you want to show in dropdown
+	$init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;';
+	return $init;
+}
+
+add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+
+
+// Enable the Styles dropdown menu item
+// Callback function to insert 'styleselect' into the $buttons array
+function my_mce_buttons_2( $buttons ) {
+    array_unshift( $buttons, 'styleselect' );
+    return $buttons;
+}
+
+add_filter('mce_buttons_2', 'my_mce_buttons_2');
+
+
+// Add the Button CSS to the Dropdown Menu
+// Callback function to filter the MCE settings
+function my_mce_before_init_insert_formats( $init_array ) {
+
+    // Define the style_formats array
+    $style_formats = array(
+    
+    // Each array child is a format with it's own settings
+    array(
+        'title' => 'Button',
+        'selector' => 'a',
+        'classes' => 'button blue',
+        )
+    );
+    
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats'] = json_encode( $style_formats );
+    return $init_array;
+}
+
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
 /**
  * Check if a post contains video.  Maybe set a thumbnail, store the video URL as post meta.
  *
@@ -90,3 +135,23 @@ function wds_check_for_vimeo( $content ) {
 	}
 	return false;
 }
+
+
+function the_title_trim($title) {
+
+	$title = attribute_escape($title);
+
+	$findthese = array(
+		'#Protected:#',
+		'#Private:#'
+	);
+
+	$replacewith = array(
+		'', // What to replace "Protected:" with
+		'' // What to replace "Private:" with
+	);
+
+	$title = preg_replace($findthese, $replacewith, $title);
+	return $title;
+}
+add_filter('the_title', 'the_title_trim');

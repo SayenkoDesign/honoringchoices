@@ -6,12 +6,10 @@ get_header(); ?>
 get_template_part( 'template-parts/hero', 'story' );
 ?>
 
-<div class="row align-center">
-
-    <div class="large-9 columns">
-    
-        <div id="primary" class="content-area">
-        
+<div id="primary" class="content-area">
+    <div class="row align-center story-content">
+        <div class="large-9 columns">
+            
             <main id="main" class="site-main" role="main">
                 <?php
                 while ( have_posts() ) :

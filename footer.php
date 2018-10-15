@@ -18,7 +18,20 @@
     <div class="wrap">
     
         <?php
-        if( ! is_user_logged_in() || WP_DEBUG ) {
+        $show_footer = true;
+        
+        // Hide for learndash & BB Press
+        if( hc_is_learndash() || hc_is_bbpress() ) {
+            $show_footer = false;
+        }
+        
+        // Pages let you remove as needed
+        if( is_page() ) {
+            $remove_footer_cta = get_field( 'remove_footer_cta' );
+            $show_footer = $remove_footer_cta ? false : true;
+        }
+        
+        if( $show_footer ) {
            get_template_part( 'template-parts/section', 'footer-cta' ); 
         }
         ?>

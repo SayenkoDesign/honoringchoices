@@ -23,17 +23,10 @@ a {
 
 // Links
 a {
- 	outline: none!important;	
-	font-weight: normal;
-	//transition: background 200ms linear, color 200ms linear;
 	
-	&:focus {
+	&:hover {
 		outline: none!important;	
 	}
-
-	&:visited {
-		//color: inherit;
-	} // &:visited
 
 } // a
 
@@ -93,12 +86,12 @@ h6 {
 
 // entry content
 
- .entry-content {
+ .entry-content,
+ .entry-summary {
  
 	a {
 		color: $anchor-color;
 		text-decoration: none;
-		//text-decoration: underline;
 			
 		&:hover {
 			color: $anchor-color-hover;
@@ -133,6 +126,11 @@ h6 {
     
     ol:not([class]) {
         list-style: decimal;
+        margin-left: rem-calc(18);
+        
+        li {
+           margin-bottom: rem-calc(8); 
+        }
     }
  	
 }
@@ -140,10 +138,11 @@ h6 {
 .page .entry-content {
     
     ul:not([class]) {
-        list-style-type: none;
+        
             
-        li {
+       > li {
             position: relative;
+            list-style-type: none;
             
             min-height: 21px;
             padding: 0 0 5px 34px;
@@ -176,7 +175,20 @@ h6 {
             }
     
             
-        }   
+        } 
+        
+       li li {
+            list-style-type: circle;
+            list-style-position: outside;
+            padding-left: 0;
+            margin: rem-calc( 10 0 10 20);
+            min-height: 0;
+            
+            &:before,
+            &:after {
+                display: none;   
+            }
+        }
     }
 }
 

@@ -8,6 +8,29 @@
     
     .site-main {
         
+        .section-content {
+            
+            .entry-content *:last-child {
+                margin-bottom: 0;   
+            }
+            
+            @include breakpoint(large) {
+        
+                .column-block {
+                    margin-bottom: rem-calc(55);   
+                }
+                
+                .large-order-1 .element-photo {
+                    padding-right: rem-calc(map-get($grid-column-gutter, large)); 
+                }
+                
+                .large-order-2  .element-photo {
+                    padding-left: rem-calc(map-get($grid-column-gutter, large)); 
+                }
+                
+            }     
+        }
+        
         section:nth-child(even) {
             
             margin-top: 0;
@@ -17,43 +40,10 @@
                 padding: 55px 0 0;   
             }
             
-            @include breakpoint(large) {
-        
-                .column-block {
-                    margin-bottom: rem-calc(55);   
-                }
-                
-                .column:first-child {
-                    padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
-                }
-                
-                .column:last-child {
-                    padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
-                }
-            }  
+            
         }
         
-        section:nth-child(odd) {
-            
-            .point {
-                display: none;   
-            }
-            
-            @include breakpoint(large) {
         
-                .column-block {
-                    margin-bottom: rem-calc(55);   
-                }
-                
-                .column:first-child {
-                    padding-right: rem-calc(map-get($grid-column-gutter, large)*1.5);  
-                }
-                
-                .column:last-child {
-                    padding-left: rem-calc(map-get($grid-column-gutter, large)*1.5);  
-                }
-            }   
-        }
     }
 
 }

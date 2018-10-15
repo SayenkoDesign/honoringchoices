@@ -1,15 +1,4 @@
 <?php
-/**
- * Custom Body Class
- *
- * @param array $classes
- * @return array
- */
-function kr_body_class( $classes ) {
-  $classes[] = 'page-builder';
-  return $classes;
-}
-add_filter( 'body_class', 'kr_body_class' );
 
 get_header(); ?>
 
@@ -25,86 +14,37 @@ get_header(); ?>
     // Add top section
     intro();
     function intro() {
+        
+        add_filter( 'single_location_icon_folder', function() {
+            return sprintf( '%sicons/location/', trailingslashit( THEME_IMG ) );
+        });
+        
+        $location = new Single_location;
                 
-        
-        $location = [];
-        
-        $fields = array( 
-                        'address' => '', 
-                        'contact_name' => '', 
-                        'contact_position' => '', 
-                        'phone' => '', 
-                        'website' => '', 
-                        'email' => '', 
-                        'map_marker' => ''
-                       );
+        $left = sprintf( '<div class="small-12 medium-6 large-4 columns column-block">%s%s%s%s</div>',  
+                        $location->get_field( 'address' ),
+                        $location->get_field( 'phone' ),
+                        $location->get_field( 'website' ),
+                        $location->get_field( 'email' )
+                );
                 
-        foreach( $fields as $key => $field ) {
-            
-            $data = get_field( $key );
-            
-            if( !empty( $data ) ) {
-                
-                if( 'map_marker' == $key ) {
-                    $location['lat'] = $data['lat']; 
-                    $location['lng'] = $data['lng']; 
-                    $url = wp_is_mobile() ? 'place' : 'dir';
-                    $location['directions'] = sprintf( 'https://www.google.com/maps/%s/%s', $url, urlencode( $data['address'] ) );
-                }
-                                
-                if( ! is_array( $data ) ) {
-                    
-                    switch( $key ) {
-                        case 'address':
-                        $location[$key] = sprintf( '<div class="address">%s%s</div>', get_theme_icon( 'address' ), nl2br( $location['address'] ) ) ? : '';
-                    }
-                    
-                    $location[$key] = $data;
-                }
-            }
-             
+        $position = _s_format_string( get_field( 'contact_position' ), 'h3', [] );
+        $name = _s_format_string( get_field( 'contact_name' ), 'h4', [] );
+        $email = get_field( 'email' );
+        if( ! empty( $email ) ) {
+            $email = sprintf( '<p>%s</p>', _s_format_string( antispambot( $email ), 'a', [ 'href' => antispambot( $email ) ] ) );
         }
         
-        $location = wp_parse_args( $location, $fields );
+        $event_category = get_field( 'event_category' );
         
-        if( ! empty( $location['address'] ) ) {
-            $address = sprintf( '<div class="address">%s%s</div>', get_theme_icon( 'address' ), nl2br( $location['address'] ) );
-        }
+        $events = $location->get_events( $event_category );
         
-        if( ! empty( $contact_name ) ) { {
-            $phone = _s_format_telephone_url( $location['phone'] );
-        }
-        
-        if( ! empty( $phone ) ) { {
-            $phone = _s_format_telephone_url( $location['phone'] );
-        }
-        
-        if( ! empty( $phone ) ) { {
-            $phone = _s_format_telephone_url( $location['phone'] );
-        }
-        
-        
-        
-        $content = '';
-        
-        $content = _s_get_textarea( $location['address'], 'p', array( 'class' => 'location' ) );
-        
-        $content .= sprintf( '<p><a href="%s" class="arrow">%s</a></p>', $location['directions'], 'Get Directions' );
-        
-        $content .= sprintf( '<p class="tel"><a href="%s">%s</a></p>', $phone );
-        
-        $left = sprintf( '<div class="small-12 large-6 columns">%s</div>', $content );
-        
-       
-        $right = sprintf( '<div class="small-12 large-6 columns">%s</div>', $content );
-        
-        $left = sprintf( '<div class="row">%s%s</div>', $left, $right );
-        
-        $left = sprintf( '<div class="small-12 medium-6 large-8 columns">%s</div>',  $left );
-        
-        $content = sprintf( '<p><a href="%s" class="button green">%s</a></p>', '#section-leadership', 'Message Us' ); // #club-contact
-        $content .= sprintf( '<p><a href="%s" class="button green">%s</a></p>', _s_format_telephone_url( $location['phone'] ), 'Call Us' );
-        $right = sprintf( '<div class="small-12 medium-6 large-4 columns">%s</div>',  $content );
+        $right = sprintf( '<div class="small-12 medium-6 large-8 columns column-block"><div class="details">%s%s%s</div>%s</div>',  
+                          $position, 
+                          $name, 
+                          $email,
+                          $events
+                );
         
         $attr = array( 'id' => 'location-intro', 'class' => 'section-intro' );        	
         

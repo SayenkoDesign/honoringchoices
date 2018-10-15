@@ -19,6 +19,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/kylerumble/.bash_profile",
+			"settings":
+			{
+				"buffer_size": 950,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -128,6 +137,7 @@
 	],
 	"file_history":
 	[
+		"/Volumes/Seagate Drive/Websites/Sayenko Design/buildmp.wpengine.com/wp-content/themes/build-my-practice/functions.php",
 		"/Applications/MAMP/htdocs/buildmypractice/wp-content/themes/build-my-practice/lib/functions/build-bundle/step-4.php",
 		"/Applications/MAMP/htdocs/dolomiti/wp-content/themes/dolomiti/assets/sass/sections/_section.scss",
 		"/Applications/MAMP/htdocs/rex/wp-content/themes/rex/assets/scripts/project.js",
@@ -254,8 +264,7 @@
 		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/page-templates/my-first-time.php",
 		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/flexible-posts-widget/stories.php",
 		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_blog.scss",
-		"/Applications/AMPPS/www/stretch/wp-content/plugins/core-functionality/plugin.php",
-		"/Applications/AMPPS/www/stretch/wp-content/themes/stretch/sass/layouts/template/_class-descriptions.scss"
+		"/Applications/AMPPS/www/stretch/wp-content/plugins/core-functionality/plugin.php"
 	],
 	"find":
 	{
@@ -290,8 +299,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/kylerumble/.bash_profile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

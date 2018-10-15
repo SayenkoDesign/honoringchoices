@@ -1,0 +1,129 @@
+//
+// Comments
+//  --------------------------------------------------
+
+.comments-area {
+    padding: 30px 0;   
+}
+
+.comments-title {
+    margin-bottom: 30px;   
+}
+
+.comment-list {
+	
+    padding: 30px 0;
+    
+    @include list-reset;
+    
+    .comment {
+		> article {
+            margin: 0 0 30px;
+		}
+	}
+    
+    .comment-author {
+        margin-bottom: 5px;   
+    }
+    
+    
+    .comment-metadata {
+        margin-bottom: 10px;
+    }
+
+	.children {
+	}
+}
+
+.comment-header {
+	@include clearfix;
+
+	.comment-author {
+	}
+
+	img {
+	}
+}
+
+.comment-content {
+	@extend .entry-content;
+}
+
+.comment-respond {
+	
+    form {
+        max-width: 600px;   
+    }
+    
+    .form-submit {
+		@include clearfix;
+	}
+}
+
+.comment-notes,
+.logged-in-as,
+.form-allowed-tags {
+	
+}
+
+.comment-notes,
+.logged-in-as,
+.form-allowed-tags,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+}
+
+
+.comment-form {
+	
+	p {	
+    	
+	}
+	
+	label {
+        display: block;
+        margin: 10px 0 0 0;
+	}
+	
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	select,
+	textarea {
+        color: #4A4A4A!important;
+        outline: none;	
+        border: 1px solid #979797;
+        background-color: #FFFFFF;
+        width: 100%;
+	}
+    
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	select {
+        height: 42px;
+	}
+    
+    .form-submit {
+        padding-top: 20px;   
+    }
+	
+	button.submit {
+        @include button;   
+        @include button-background( $blue, $light-blue );
+        @include button-color();
+        @include button-padding();
+        border-radius: 51px;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+        
+        &:hover {
+            background-color: $light-blue!important;   
+        }
+	}
+	
+}
+
+.comment-form-comment {
+}

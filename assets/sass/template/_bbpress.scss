@@ -1,0 +1,263 @@
+// BB Press
+
+
+#bbpress-forums {
+    
+    font-size: rem-calc(14);
+    
+    .button {
+        color: #FFFFFF;
+        font-family: $lato;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        @include button-background( $blue, $light-blue );
+        @include button-color();
+    }
+    
+    div.bbp-template-notice p {
+        margin: 0.5em 0 6px 0 !important;
+        padding: 2px;
+        font-size: rem-calc(14);
+        line-height: 140%;
+    }
+    
+    #bbp_topic_title,
+    #bbp_topic_tags {
+        color: #4A4A4A!important;
+        padding: 7px 8px!important;
+        outline: none;	
+        border: 1px solid #979797;
+        background-color: #FFFFFF; 
+        font-size: rem-calc(14);
+        width: 100%;
+    }
+    
+    form label {
+        font-weight: 600;  
+        margin-bottom: 4px!important; 
+    }
+    
+    
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    select, 
+    textarea {
+        color: #4A4A4A!important;
+        outline: none;	
+        border: 1px solid #979797;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+    
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 9px!important;
+        margin-top: 0!important;	
+    }
+    
+    textarea {
+        padding: 8px!important;
+    }
+        
+    
+    
+    fieldset {
+        
+        legend {
+            font-size: rem-calc(18);   
+        }
+    }
+    
+    .bbp-breadcrumb {
+        margin-bottom: $global-margin;   
+    }
+    
+    #subscription-toggle {
+        margin-bottom: 10px;
+        
+        a {
+            color: #FFFFFF;
+            font-family: $lato;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 13px;
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding( 5, 10, 5 10 );   
+        }
+        
+        margin: rem-calc(10) 0 0;
+    
+        @include breakpoint(large) {
+            float: right;
+            margin: 0;
+        }
+    
+    }
+    
+    
+    #favorite-toggle {
+        
+        margin-bottom: 10px;
+        
+        a {
+            color: #FFFFFF;
+            font-family: $lato;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding( 5, 10, 5 10 );   
+        }
+        
+        margin: rem-calc(10) 0 0;
+            
+        @include breakpoint(large) {
+            float: right;
+            margin: 0;
+        }
+    
+    }
+    
+    #qt_bbp_reply_content_toolbar .button,
+    #qt_bbp_topic_content_toolbar .button {
+        
+        @include breakpoint(medium down) {
+            width: 100%;
+        }
+    }
+    
+    
+    
+    select {
+        color: #4A4A4A!important;
+        padding: 6.5px 8px!important;
+    }
+
+    
+    select {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+        background-position: 100% 50%;
+        background-repeat: no-repeat;	
+        
+    }
+    
+    div.bbp-template-notice.info {
+        border: $light-blue 1px solid;
+        background-color: $light-blue;
+        color: #fff;
+        
+        a {
+            color: #fff;   
+        }
+    }
+    
+    
+    span.bbp-admin-links a {
+        color: $blue;
+        font-size: rem-calc(12);
+        font-family: $lato;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+}
+
+
+#bbpress-forums #bbp-search-form { 
+
+    margin-bottom: $global-margin; 
+    
+    #bbp_search {
+        color: #4A4A4A!important;
+        padding: 7px 8px!important;
+        outline: none;	
+        border: 1px solid #979797;
+        background-color: #FFFFFF; 
+        display: block;
+        width: 100%;  
+        margin-bottom: rem-calc(10);
+        font-size: rem-calc(14);
+        
+        @include breakpoint(large) {
+            display: inline-block;
+            width: auto;
+            margin-bottom: 0;
+            margin-right: rem-calc(15);
+        }
+    }
+    
+    .button {
+        color: #FFFFFF;
+        font-family: $lato;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        @include button-background( $blue, $light-blue );
+        @include button-color();
+        @include button-padding( 5, 10, 5 10 );
+        border-radius: 51px;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);   
+    }
+    
+}
+
+#bbpress-forums ul.bbp-lead-topic, 
+#bbpress-forums ul.bbp-topics, 
+#bbpress-forums ul.bbp-forums, 
+#bbpress-forums ul.bbp-replies, 
+#bbpress-forums ul.bbp-search-results {
+    font-size: rem-calc($paragraph-font-size);
+    overflow: hidden;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    clear: both;
+} 
+
+.bbp-forum-title {
+    font-size: rem-calc(22);
+}
+
+
+#bbpress-forums .bbp-forum-info .bbp-forum-content, 
+#bbpress-forums p.bbp-topic-meta {
+    font-size: rem-calc($paragraph-font-size);
+    margin: 5px 0 5px;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+#bbpress-forums p.bbp-topic-meta img.avatar, 
+#bbpress-forums ul.bbp-reply-revision-log img.avatar, 
+#bbpress-forums ul.bbp-topic-revision-log img.avatar, 
+#bbpress-forums div.bbp-template-notice img.avatar, 
+#bbpress-forums .widget_display_topics img.avatar, 
+#bbpress-forums .widget_display_replies img.avatar {
+    margin-bottom: 0!important;
+    border: none;
+}
+
+
+#bbpress-forums div.bbp-search-form {
+    float: none;
+    
+    @include breakpoint(large) {
+        float: right;
+    }
+}
+
+.bbpress div.bbp-breadcrumb {
+    float: none;
+    
+    @include breakpoint(large) {
+        float: left;
+    }
+}

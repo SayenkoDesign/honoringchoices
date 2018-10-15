@@ -53,11 +53,18 @@ class Element_Row extends Element_Base {
         $id = $this->get_id();
 
 		$this->add_render_attribute(
-			'wrapper', 'class', [
-				'row',
-                $this->get_name() . '-' . $id
-			]
+			'wrapper', 'class', ['row']
 		);
+        
+        $settings = $this->get_settings();
+        
+        if( ! empty( $settings ) ) {
+            foreach( $settings as $key => $setting ) {
+                $this->add_render_attribute(
+                    'wrapper', $key, $settings
+                );
+            }
+        }
     }
     
 	/**

@@ -1,47 +1,72 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying all pages.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package _s
  */
 
 get_header(); ?>
 
-<div class="row">
+<?php
+get_template_part( 'template-parts/hero' );
 
-	<div class="medium-8 columns">
+?>
 
-		<div id="primary" class="content-area">
+<div id="primary" class="content-area">
 
-			<main id="main" class="site-main" role="main">
-			<?php
-			while ( have_posts() ) :
+	<main id="main" class="site-main" role="main">
+	<?php
+    if( hc_is_learndash() ) {
+        printf( '<div class="column row">%s</div>', do_shortcode( '[uo_breadcrumbs]' ) );
+    }
+    
+ 	// Default
+	section_default();
+	function section_default() {
+				
+		global $post;
+		
+		$attr = array( 'class' => 'section default' );
+		
+		$args = array(
+            'html5'   => '<section %s>',
+            'context' => 'section',
+            'attr' => $attr,
+        );
+        
+        _s_markup( $args );
+        
+        _s_structural_wrap( 'open' );
+		
+		print( '<div class="column row">' );
+		
+		while ( have_posts() ) :
 
-				the_post();
+			the_post();
+            			
+            echo '<div class="entry-content">';
+            
+			the_content();
+            
+            echo '</div>';
+				
+		endwhile;
+		
+		print( '</div>' );
+        
+		_s_structural_wrap( 'close' );
+	    echo '</section>';
+	}
+	?>
+	</main>
 
-				get_template_part( 'template-parts/content', 'single' );
-
-				the_post_navigation();
-
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-
-				endwhile; ?>
-
-			</main>
-
-		</div>
-
-	</div>
-
-	<div class="medium-4 columns">
-
-		<?php get_sidebar(); ?>
-
-	</div>
 
 </div>
 

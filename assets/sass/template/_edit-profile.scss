@@ -1,0 +1,66 @@
+
+.page-edit-profile {
+ 
+    .entry-content form {
+     
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        select, 
+        textarea {
+            color: #4A4A4A!important;
+            outline: none;	
+            border: 1px solid #979797;
+            background-color: #FFFFFF;
+            width: 100%;
+        }
+        
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 9px!important;
+            margin-top: 0!important;	
+        }
+        
+        
+        select {
+            color: #4A4A4A!important;
+            padding: 6.5px 8px!important;
+        }
+        
+        textarea {
+            margin-top: 8px;	
+            padding: 8px!important;
+        }
+        
+        select {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0px;
+            background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+            background-position: 100% 50%;
+            background-repeat: no-repeat;	
+            
+        }
+        
+        .login-submit {
+            padding-top: 20px;   
+        }
+        
+        .button {
+            @include button;   
+            @include button-background( $blue, $light-blue );
+            @include button-color();
+            @include button-padding();
+            border-radius: 51px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
+            
+            &:hover {
+                background-color: $light-blue!important;   
+            }
+        }   
+        
+    }
+    
+}

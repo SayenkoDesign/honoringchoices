@@ -5,21 +5,27 @@
 	// Load Foundation
 	$(document).foundation();
     
+    // Accessible menus
+    
+    $(".nav-primary").accessibleDropDownMenu();
+    
     
     $(window).on('load changed.zf.mediaquery', function(event, newSize, oldSize) {
         
         $( '.nav-primary' ).doubleTapToGo();
         
-        if( ! Foundation.MediaQuery.atLeast('xlarge') ) {
-          $( '.nav-primary' ).doubleTapToGo( 'destroy' );
+        if( Foundation.MediaQuery.atLeast('large') ) {
+          $('.sticky-header').css( 'height', $('.site-header').height() );
+        }
+        else {
+            $( '.nav-primary' ).doubleTapToGo( 'destroy' );
+            $('.sticky-header').css( 'height', '' );
         }
         
-        // need to reset sticky on resize. Otherwise ti breaks
-        if( ! Foundation.MediaQuery.atLeast('xxlarge') ) {
+        // need to reset sticky on resize. Otherwise it breaks
+        if( ! Foundation.MediaQuery.atLeast('large') ) {
             $(document).foundation();
         }
-        
-        
                 
     });
     
@@ -37,6 +43,14 @@
         e.preventDefault();
 
     });
+    
+    
+    // Make sure videos don't play in background
+    $(document).on(
+      'open.zf.reveal', '#modal-search', function () {
+        $(this).find("input").first().focus();
+      }
+    );
     
    
     

@@ -105,7 +105,7 @@ img.aligncenter {
 
 
 
-@media #{$large-up} {
+@include breakpoint(large) {
       
 	.alignleft {
 		float: left;

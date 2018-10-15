@@ -1,108 +1,96 @@
-// Primary Navigation
-
-
-.site-header .nav-primary {
-	display: none;
+.nav-primary-wrapper {
+    background-color: $dark-blue;
     
     @include breakpoint(large) {
-        display: block;
         background-color: $blue;
+       
     }
 }
 
+.nav-primary {
+	display: none;
+    width: 100%;
 
-.nav-primary li {   
-
-	a {
-		color: $white;
-        font-family: $lato;
-		font-size: 15px;
-        font-weight: 500;
-	}
-}
-
-.nav-primary .menu-item {
- 	border-top: 1px solid $white;
-    display: block;
+    .menu-item {  
+        border-top: 1px solid $white;
+        display: block;
+        list-style-type: none;
+        width: 100%;
+        position: relative;
+        
+        &:first-child {
+            border: none;   
+        }
+        
+        &:hover,
+        &.current-menu-item,
+        &.current_page_parent,
+        &.current-page-ancestor,
+        &.current-menu-ancestor,
+        &.current-menu-parent,
+        &.current-category-ancestor {
     
-    &:hover,
-	&.current-menu-item,
-	&.current_page_parent,
-	&.current-page-ancestor,
-	&.current-menu-ancestor,
-	&.current-menu-parent,
-	&.current-category-ancestor {
+            > a {
+                color: $white;
+            }
+        } 
 
-		> a {
-			color: $white;
-		}
-	}
-}
-
-.nav-primary li {
-	list-style-type: none;
-	width: 100%;
-	position: relative;
-
-	a {
-		color: $white;
-		font-size: 17px;
-        font-weight: 400;
-        letter-spacing: 1px;
-		margin: 0;
-		padding: 20px 50px 20px 15px;
-		display: block;
-        text-transform: uppercase;
-
-		i {
-			font-style: normal;
-		}
-	}
     
-    > span button {
-        color: $white;
-		font-size: 17px;
-        font-weight: 400;
-        letter-spacing: 1px;
-		margin: 0;
-		display: block;
-        text-transform: uppercase;
+        a {
+            color: $white;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0;
+            padding: 20px 50px 20px 15px;
+            display: block;
+            text-transform: uppercase;
+        }
+        
+        a {
+            display: block;
+            margin: 0;
+            padding: 15px 50px 15px 40px;
+        }
+        
+        > span {
+            display: block;
+            padding: 15px 50px 15px 40px;
+            
+            span {
+                color: $white;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                margin: 0;
+                display: inline-block;
+                text-transform: uppercase;
+            }
+        }
+
     }
-
-	.sub-menu li > a,
-    .sub-menu li > span,
-     {
-		padding-left: 30px;
-        font-weight: 400;
-	}
-}
-
-.nav-primary .menu > li:first-child {
-	border: none;
-}
-
-.nav-primary .menu {
-	background: $dark-blue;
     
-    a {
-        color: #fff;   
+    .sub-menu {
+        background-color: $light-blue;  
+        display: none;
     }
-
-	.sub-menu {
- 		background: #999;
-	}
 }
-
 
 @include breakpoint(large) {
     
+    .menu-toggle,
+    .sub-menu-toggle {
+        display: none;
+        visibility: hidden;
+    }
+    
     .nav-primary {
 		display: block;
-		width: auto;
         
-        position: relative;
-        z-index: 2;
- 
+        .menu .menu-item:focus {
+            position: static;
+        }
+                         
 		.sub-menu {
 			width: auto;
 			display: block;
@@ -113,41 +101,44 @@
 		@include list-reset;
 		background: transparent;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
 
 		.menu-item {
 			background: transparent;
 			border: none;
-			display: inline-block;
 			width: auto;
-			margin: 0 20px;
+			margin: 0 25px;
             
  			a {
 				color: #fff;
 				position: relative;
-				display: block;
-				font-size: 15px;
-                line-height: 21px;
-                font-weight: 400;
+				display: inline-block; 
+				font-size: rem-calc(15);
+                line-height: 1.2;
+                font-weight: 700;
 				text-decoration: none;
   			}
  		}
 
 		// First level
 		> .menu-item {
- 			display: inline-block;
  			text-align: left;
-            padding: 0 0 9px;
-
-			> a,
-            > span {
+            padding: 3px 10px 12px;
+            position: relative;
+            
+			> a {
 				color: #fff;
-				padding: 0 15px;
-                display: inline-block;                
+				padding: 0;
  			}
 
 			&.menu-item-has-children > a {
                 
                 position: relative;
+                
+                /* indicator
                 padding-right: 20px;
 				
 				&:before {
@@ -163,15 +154,29 @@
 					border-width: 0 1px 1px 0;
  					transform: rotate(45deg);
 				}
+                */
+			}
+            
+            &.current-menu-item,
+			&.current_page_parent,
+			&.current-page-ancestor,
+			&.current-menu-ancestor,
+			&.current-category-ancestor {
+
+				> a {
+					background: transparent;
+                    color: $white;
+ 				}
+                
 			}
 
 			&:hover,
 			&:focus,
 			&:active {
-
+                
 				> a {
 					background: transparent;
-                    color: $white;
+                    color: rgba($white, .9); 
                     
                     
                     &:before {
@@ -179,75 +184,70 @@
                     }
 				}
 
-				> .sub-menu {
-                    top: 100%;
-					opacity: 1;
-				}
 			}
-
-			&.current-menu-item,
-			&.current_page_parent,
-			&.current-page-ancestor,
-			&.current-menu-ancestor,
-			&.current-category-ancestor {
-                
-
-				> a {
-					background: transparent;
-                    color: $white;
- 				}
-			}
-
+            
+            a:focus {
+                color: rgba($white, .9); 
+            }
+			
  		}
         
-        .menu-item-search {
-            padding-bottom: 5px;   
-        }
-
-		// Sublevels
-		.sub-menu {
-			@include list-reset;
-			position: absolute;
-			left: -7.5px;
-            top: -999em;
-			z-index: 1000;
-			opacity: 0;
-			padding: 10px 12px;
-			min-width: 250px;
-			background-color: #FFFFFF;
+        
+        .menu-item .sub-menu {
+            @include list-reset;
+            position: absolute;
+            top: 100%;
+            left: auto;
+            margin-left: -27px;
+            min-width: 250px;
+            
+            transform: translateY(-150%);
+            padding: 20px 12px 0px;
+            z-index: -2;
+            opacity: 0;
+            background-color: $white;
+            transition-delay: .25s; 
+            transition: opacity .5s ease 0s, transform .5s ease 0s;
+            border-bottom: 4px solid #FFD302;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-            border-bottom: 5px solid $green;
-
-			.menu-item {
+            
+            .menu-item {
 				border: none;
 				display: block;
-				margin: 0 0 10px 0;
-                
+				margin: 0 15px 20px;
+                padding: 0;
 
 				> a {
                     background: transparent;
-                    color: $blue;
-					display: block;
 					position: relative;
-                    padding: 0 10px;
+                    padding: 0;
                     
                     color: #4A4A4A;
                     font-size: 15px;	
-                    font-weight: 500;	
                     letter-spacing: 0.5px;	
                     text-transform: none;
 
 					&:hover {
-						background: transparent;
-						color: $light-blue;
+						color: $light-blue; 
 					}
+                    
+                    &:focus {
+                        color: $light-blue;  
+                    }
 				}
 			}
             
 			.sub-menu {
 
 			}
-		}
+        }
+        
+        //.menu-item > a:focus ~ ul.sub-menu,
+        .menu-item.focus > ul.sub-menu,
+        .menu-item:hover > ul.sub-menu {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
 	}
    
@@ -277,8 +277,10 @@
 }
 
 
-
 .menu-item-search {
+    
+    padding-top: 0!important;
+    padding-bottom: 0!important;
     
     button img {
         display: none;   
@@ -287,8 +289,9 @@
     @include breakpoint(large) {
         
         span {
-            padding-left: 0!important;   
-            padding-right: 0!important;
+            padding: 0!important;  
+            position: relative;
+            top: 2px; 
         }
         
         button img {

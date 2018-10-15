@@ -43,6 +43,7 @@ if ( have_posts() ) :
         
         
         foreach( $fields as $field ) {
+            
             $data = get_field( $field );
             
             if( !empty( $data ) ) {
@@ -51,22 +52,21 @@ if ( have_posts() ) :
                     $location['lat'] = $data['lat']; 
                     $location['lng'] = $data['lng']; 
                 }
-                
+                                
                 $location[$field] = $data;
             }
              
         }
         
         $terms = get_the_terms( get_the_ID(), 'location_cat' );
-        if( ! is_wp_error( $terms ) ) {
-            $term = $terms[0]->name;
-            $location['category'] = $term;
+        if( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
+            $term = array_pop( $terms );
+            $color = get_field( 'category_color', 'location_cat' . '_' . $term->term_id );
+            $location['category_color'] = sprintf( 'style="color:%s;"', $color );
+            $location['category'] = $term->name;
         }
         
-        
-        
-        $location['address'] = nl2br( $location['address'] );
-        
+                
         array_push($locations, $location);
     
     endwhile;
@@ -90,7 +90,7 @@ if ( have_posts() ) :
             <div class="list-details">
                 <div class="list-content">
                     <div class="loc-name"><a href="{{permalink}}">{{{name}}}</a></div>
-                    <div class="loc-description">{{{category}}}</div>
+                    <div class="loc-description" {{{category_color}}}>{{{category}}}</div>
                     <div class="loc-addr">{{{address}}}</div> 
                     <div class="loc-phone">{{phone}}</div>
                     <div class="loc-links"><a href="{{permalink}}">Learn More</a></div>

@@ -273,13 +273,40 @@
         }
         
         .loc-links a {
-            font-size: rem-calc(16);
-            line-height: rem-calc(22);
-            font-family: $lato;
+            position: relative;
+            display: inline-block;
+            min-height: 22px;
+            padding: 0 30px 0 5px;
+            line-height: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
             text-decoration: none;
             
-            &:hover {
-                color: $light-blue;   
+            &:before {
+                content: '';
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                background: transparent;
+                border: 2px solid $blue;
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+            
+            &:after {
+                content: '';
+                display: inline-block;
+                border: solid $blue;
+                border: solid $blue;
+                border-width: 0 2px 2px 0;
+                width: 7px;
+                height: 7px;  
+                position: absolute;
+                top: 45%;
+                transform: rotate(-45deg) translateY(-50%);
+                right: 6px; 
             }
         }
     }

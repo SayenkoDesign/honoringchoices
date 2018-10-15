@@ -4,47 +4,67 @@
     
     // Scroll up show header
 
-	var $site_header =  $('.site-header');
-
-	// clone header
-	var $sticky = $site_header.clone()
-							   .prop('id', 'masthead-fixed' )
-							   .attr('aria-hidden','true')
-							   .addClass('fixed')
-							   .insertBefore('#masthead');
+	var $sticky =  $('.site-header');
             
-    $sticky.each(function () {
+    $sticky.each(function (i, element) {
+        
         var $win = $(window), 
             $self = $(this),
             isShow = false,
-            delta = 300, // distance from top where its active
+            delta = 400, // distance from top where its active
             lastScrollTop = 0;
-    
-        $win.on('scroll', function () {
-          
-          // don't show below sticky menu
-          if( $('.facetwp-template').hasClass('is-paging') ) {
-              return;
-          }
-          
-          var scrollTop = $win.scrollTop();
-          var offset = scrollTop - lastScrollTop;
-          lastScrollTop = scrollTop;
-          
-    
-    
-          // min-offset, min-scroll-top
-          if (offset < 0 && scrollTop > delta ) {
-            if (!isShow ) {
-              $self.addClass('fixed-show');
-              isShow = true;
+            
+        var scrollHeight = $(document).height();
+
+        $win.on("scroll", function() {
+            var scrollPosition = $(window).height() + $(window).scrollTop();
+            var scrollBottom = ( (scrollHeight - scrollPosition) / scrollHeight ) * 100;
+            var scrollTop = $win.scrollTop();
+            var offset = scrollTop - lastScrollTop;
+            lastScrollTop = scrollTop;
+            
+            /*
+            console.log( 'ScrollTop: ' + scrollTop );
+            
+            console.log( 'ScrollHeight: ' + scrollHeight );
+            
+            console.log( 'ScrollPosition: ' + scrollPosition );
+            
+            console.log( 'scrollBottom:' + scrollBottom );
+            */
+            
+            if( scrollHeight < (delta * 2) ) {
+                return;
             }
-          } else if (offset > 0 || offset < lastScrollTop ) {
-            if (isShow) {
-              $self.removeClass('fixed-show');
-              isShow = false;
+            
+            if ( scrollTop > delta && scrollBottom > 0 ) {
+                
+                $self.addClass('fixed');
+                
+                if (offset < 0 ) {
+                    if (!isShow ) {
+                      $self.addClass('fixed-show');
+                      isShow = true;
+                    }
+                } else if (offset > 0 || offset <= lastScrollTop ) {
+                    if (isShow) {
+                      $self.removeClass('fixed fixed-show');
+                      isShow = false;
+                    }
+                }
+                else {
+                    $self.removeClass('fixed fixed-show');
+                    isShow = false;
+                }
+                
             }
-          }
+            else {
+                
+                $self.removeClass('fixed fixed-show'); 
+                isShow = false; 
+                 
+            }
+            
         });
     });
     

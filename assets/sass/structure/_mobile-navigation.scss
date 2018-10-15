@@ -1,13 +1,6 @@
 // Mobile Navigation
 
-.menu-toggle,
-.sub-menu-toggle {
-	display: block;
-    
-    @include breakpoint(large) {
-        display: none;
-    }
-}
+
 
 .menu-toggle {
     
@@ -49,32 +42,3 @@
 	}
 	
 }
-
-.genesis-responsive-menu,
-.genesis-responsive-menu .sub-menu {
-	display: none;
-}
-
-
-.genesis-responsive-menu .menu li {
-	width: auto;
-	position: relative;
-    margin: 0;
-
-	a {
-		display: block;
-        margin: 0;
-		padding: 15px 50px 15px 40px;
-	}
-    
-    > span {
-        display: block;
-        padding: 15px 50px 15px 40px;
-    }
-
-	.sub-menu li {
-		padding-left: 30px;
-	}
-}
-
-

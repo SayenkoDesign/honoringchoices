@@ -1,6 +1,21 @@
 // Archive Story
 
 .post-type-archive-story {
+    
+    .site-content {
+        position: relative;
+        z-index: 2;
+        @include logo-mark(); 
+                
+        &:after {
+            right: 1%;
+            bottom: 0;  
+            max-height: 90%; 
+        }  
+   
+    }
+    
+    
     .site-main {
         max-width: 980px;
         margin: 0 auto;

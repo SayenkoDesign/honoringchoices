@@ -101,7 +101,7 @@ class Foundation_Grid extends Foundation {
                       
                     if ( $button['link'] == 'Page' ) {
                         if ( ! empty( $button['page'] ) ) {
-                            $url = $page;
+                            $url = $button['page'];
                         }
                     } 
                     else if( $button['link'] == 'Absolute URL' ) {

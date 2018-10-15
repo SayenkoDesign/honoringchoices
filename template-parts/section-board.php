@@ -57,7 +57,7 @@ if( ! class_exists( 'Board_Section' ) ) {
             
             if ( $loop->have_posts() ) : 
             
-                $out .= sprintf( '<header class="column row text-center">%s</header>', _s_format_string( 'Staff & Faculty', 'h2' ) );
+                $out .= sprintf( '<header class="column row text-center">%s</header>', _s_format_string( 'Advisory Board', 'h2' ) );
                         
                 $grid_columns = 'large-up-4';
                 

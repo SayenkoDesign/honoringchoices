@@ -28,6 +28,7 @@ body .gform_wrapper:not(.newsletter) {
 	input[type="text"],
     input[type="tel"],
     input[type="email"],
+    input[type="password"]
     select, 
     textarea {
 		color: #4A4A4A!important;
@@ -38,7 +39,8 @@ body .gform_wrapper:not(.newsletter) {
 	
 	input[type="text"],
     input[type="tel"],
-    input[type="email"], {
+    input[type="email"],
+    input[type="password"] {
  		padding: 9px!important;
 		margin-top: 0!important;	
 	}
@@ -131,10 +133,10 @@ body .gf_simple_horizontal img.gform_ajax_spinner {
 }
 
 .gform_wrapper .validation_message { 
-    color: #ff006e!important;
+    // color: #ff006e!important;
 }
 
 .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), 
 .gform_wrapper li.gfield_error textarea {
-    border: 1px solid #ff006e!important;
+    // border: 1px solid #ff006e!important;
 }

@@ -25,7 +25,7 @@ get_template_part( 'template-parts/hero', 'home' );
 	<?php
  	 _s_get_template_part( 'template-parts/section', 'home-help' );
      
-     _s_get_template_part( 'template-parts/section', 'home-news' );
+     _s_get_template_part( 'template-parts/section', 'home-slider' );
      
      _s_get_template_part( 'template-parts/section', 'home-join' );
      

@@ -1,0 +1,28 @@
+.section-intro { 
+    position: relative;
+    margin-top: -100px;
+    padding: 40px 0;
+    
+        
+    @include breakpoint(xlarge) {
+        margin-top: -125px;
+    }
+
+    .box {
+        max-width: 560px;
+        margin: 0 auto;
+        border-radius: 1px;
+        background-color: #FFFFFF;
+        border-top: 5px solid $blue;
+        box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.13);
+        padding: 38px 28px;
+        text-align: center;
+        position: relative;
+        z-index: 9;
+        margin: 0 auto 0;
+        
+        @include breakpoint(xlarge) {
+            padding: 30px 28px;
+        }
+    }
+}

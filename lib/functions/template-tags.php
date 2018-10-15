@@ -159,6 +159,15 @@ function _s_locate_template( $template_name, $template_path = '', $default_path 
 }
 
 
+if ( ! function_exists( '_s_get_posted_on' ) ) :
+
+    function _s_posted_on() {
+        echo   _s_get_posted_on(); 
+    }
+
+endif;
+
+
 /**
  * Custom template tags for this theme.
  *
@@ -403,4 +412,22 @@ function _s_format_telephone_url( $number = false ) {
     }
     
 	return sprintf( 'tel:%s', preg_replace( '/[^0-9]/','', $number ) );
+}
+
+
+function _s_format_email_url( $email = false ) {
+    
+    if( empty( $email ) ) {
+        return;
+    }
+    
+	return sprintf( 'mailto:%s', antispambot( $email ) );
+}
+
+function maybe_add_http( $url, $ssl = false ) {
+    $scheme = $ssl ? 's' : '';    
+    if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+        $url = sprintf( 'http%s://%s', $scheme, $url );
+    }
+    return $url;
 }

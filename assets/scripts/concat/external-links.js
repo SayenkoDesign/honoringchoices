@@ -10,6 +10,8 @@
 			$(this).attr('target', '_blank');
 		}
 	});
+    
+    $('a.url').attr('target', '_blank');
 	
     
 

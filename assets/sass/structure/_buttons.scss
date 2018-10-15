@@ -79,7 +79,7 @@
 }
 
 @mixin button-padding( $top: 13px, $right: 19px, $bottom: 13px, $left: 19px ) {
-    padding: $top $right $bottom $left;
+    padding: rem-calc($top) rem-calc($right) rem-calc($bottom) rem-calc($left);
 }
 
 

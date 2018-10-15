@@ -9,12 +9,13 @@
 //   4. Base Typography
 //   5. Off Canvas Menu
 
+@import '../../../node_modules/foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------
 
 $global-font-size: 100%;
-$global-width: 1264px;
+$global-width: rem-calc(1264);
 $global-lineheight: 1.5;
 
 $black: #000;
@@ -43,8 +44,8 @@ $body-font-color: $gray;
 $body-font-family: $open-sans;
 
 
-$global-margin: 22px;
-$global-padding: 10px;
+$global-margin: rem-calc(22);
+$global-padding: rem-calc(10);
 $global-weight-normal: normal;
 $global-weight-bold: 700;
 $global-radius: 0;
@@ -56,11 +57,11 @@ $global-text-direction: ltr;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  large: 980px,
-  xlarge: 1024px,
-  xxlarge: 1200px,
-  xxxlarge: 1440px
+  medium: 640,
+  large: 980,
+  xlarge: 1024,
+  xxlarge: 1200,
+  xxxlarge: 1440
 );
 // must match $breakpoints
 $breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
@@ -72,9 +73,9 @@ $breakpoint-classes: (small medium large xlarge xxlarge xxxlarge);
 $grid-row-width: $global-width;
 $grid-column-count: 12; // usually 12
 $grid-column-gutter: (
-  small: 40px,
-  medium: 40px,
-  large: 30px
+  small: 40,
+  medium: 40,
+  large: 30
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -102,7 +103,7 @@ $header-styles: (
 
 $header-color: $dark-gray;
 $header-lineheight: 1.23;
-$header-margin-bottom: 30px;
+$header-margin-bottom: rem-calc(30);
 $small-font-size: 14px;
 $header-small-font-color: $dark-gray;
 
@@ -119,7 +120,7 @@ $anchor-color-hover: scale-color($blue, $lightness: -20%);
 
 
 $accordion-item-background-hover: #fff;
-$accordion-content-background: #ececec;
+$accordion-content-background: #fff;
 $accordion-content-border: 1px solid #D7D5D5;
 
 $tab-background: #ffffff;

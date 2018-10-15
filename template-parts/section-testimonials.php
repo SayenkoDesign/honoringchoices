@@ -51,7 +51,7 @@ if( ! class_exists( 'Testimonial_Section' ) ) {
             
             foreach( $rows as $row ) {
                 
-                $cite = $row->post_title;
+                $cite = get_field( 'name', $row->ID );
                                 
                 $url = get_field( 'url', $row->ID );
                 
@@ -75,6 +75,10 @@ if( ! class_exists( 'Testimonial_Section' ) ) {
                     $cite =  _s_format_string( $cite, 'h3' );
                                         
                 }
+                
+                // Wrap quote in quotes
+                
+                $quote = sprintf( '"%s"', apply_filters( 'pb_the_content', trim( $row->post_content, '"' ) ) );
                 
                 $blockquote = sprintf( '<blockquote>%s%s</blockquote>', apply_filters( 'pb_the_content', $row->post_content ), $cite );
                 

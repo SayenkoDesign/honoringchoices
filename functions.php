@@ -35,8 +35,6 @@ if ( ! function_exists( '_s_setup' ) ) :
 		
     	define( 'GOOGLE_API_KEY', '' );	
 
-    	define( 'DISALLOW_FILE_EDIT', true );
-
 		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -160,6 +158,6 @@ add_action('login_head', '_s_login_logo');
  * @uses get_stylesheet_uri() Returns URI of theme stylesheet
  */
 function _s_add_editor_styles() {
-    add_editor_style( trailingslashit( THEME_CSS ) . '/editor.css' );
+    add_editor_style( trailingslashit( THEME_CSS ) . 'editor.css' );
 }
 add_action( 'init', '_s_add_editor_styles' );

@@ -89,12 +89,12 @@ function _s_blog_template_redirect( $template ) {
 		$template = get_query_template( 'home' );	
 	return $template;
 }
-add_filter( 'template_include', '_s_blog_template_redirect' );	
+// add_filter( 'template_include', '_s_blog_template_redirect' );	
 
 
 function _s_add_blog_class( $classes ) {
   
-  if ( is_category() || is_author() || is_search() ) {
+  if ( is_category() || is_author() ) {
       $classes[] = 'blog';
   }
    return $classes;
@@ -139,7 +139,19 @@ function _s_get_post_author( $size = 100, $user_id = false ) {
     
     $display_name = get_the_author_meta('display_name', $author_id );
     $author_image = '';
-    if( $avatar = get_avatar( $author_id, $size ) ) {
+    
+    $acf_avatar = get_field( 'hc_custom_avatar', 'user_' . $author_id );
+    $avatar = get_avatar( $author_id, $size );
+        
+    if( empty( $acf_avatar ) && empty( $avatar ) ) {
+        return;
+    }
+    
+    if( $acf_avatar ) {
+        $avatar = wp_get_attachment_image( $acf_avatar, array( '100', '100', true ) );
+        return sprintf( '<div class="post-author">%s<p>%s</p></div>', $avatar, $display_name );
+    }
+    else {
          $author_url = get_author_posts_url( $author_id ); 
          //return sprintf( '<div class="post-author"><a href="%s">%s<p>%s</p></a></div>',$author_url, $avatar, $display_name );
          return sprintf( '<div class="post-author">%s<p>%s</p></div>', $avatar, $display_name );

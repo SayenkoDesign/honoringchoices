@@ -130,13 +130,17 @@
         text-align: center;         
     } 
     
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
         .large-order-1 .widget {
             text-align: left;   
         }
         
         .large-order-3 .widget {
             text-align: right;   
+            
+            form {
+                float: right;   
+            }
         }
      } 
    
@@ -155,7 +159,7 @@
     form {
         width: 100%!important;
         
-        @include breakpoint(large) {
+        @include breakpoint(medium) {
             overflow: hidden;  
             border-radius: 0 51px 51px 0;
             box-shadow: 0 0 6px 0 rgba(0,0,0,0.5); 
@@ -189,7 +193,7 @@
     }
     
     .gform_body {
-        @include breakpoint(large down) {
+        @include breakpoint(medium down) {
             box-shadow: 0 0 6px 0 rgba(0,0,0,0.5); 
         }
     }
@@ -228,7 +232,7 @@
          
          .button {
              
-            @include breakpoint(large down) {
+            @include breakpoint(small down) {
                 @include button;    
                 @include button-background( $blue, $light-blue );
                 @include button-color();

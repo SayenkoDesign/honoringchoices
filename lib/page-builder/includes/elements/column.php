@@ -55,47 +55,9 @@ class Element_Column extends Element_Base {
 		$this->add_render_attribute(
 			'wrapper', 'class', [
 				'column',
-                'column-block',
-                $this->get_name() . '-' . $id
+                'column-block'
 			]
 		);
-                
-        
-        // Generate column classes
-        $count = self::$count;
-        
-        $column_width = $this->get_settings( 'column_widths' );
-        
-        $row_id = $this->get_settings( 'row_id' );
-                                        
-        $width = 12;
-        
-        if( isset( $column_width ) && !empty( $column_width ) ) {
-            $width = $this->convert_to_columns( $column_width ); 
-        }   
-                
-        $this->add_render_attribute( 'wrapper', 'class', sprintf( 'small-12 large-%s', $width ) );  
-        
-        $small_even_order = $this->get_settings( 'small_even_order' ) ? $this->get_settings( 'small_even_order' ) : 'small-order-2'; 
-        $small_odd_order = $this->get_settings( 'small_odd_order' ) ? $this->get_settings( 'small_odd_order' ) : 'small-order-1';  
-        $large_even_order = $this->get_settings( 'large_even_order' ) ? $this->get_settings( 'large_even_order' ) : 'large-order-1';  
-        $large_odd_order = $this->get_settings( 'large_odd_order' ) ? $this->get_settings( 'large_odd_order' ) : 'large-order-2';  
-        
-        if( $id % 2 == 0 ) {
-            $this->add_render_attribute( 'wrapper', 'class', $small_even_order );
-        }
-        else {
-            $this->add_render_attribute( 'wrapper', 'class', $small_odd_order );
-        }
-        
-        // Desktop order?        
-        
-        if( ( $id + $row_id ) % 2 == 0 ) {
-            $this->add_render_attribute( 'wrapper', 'class', $large_even_order );
-        }
-        else {
-            $this->add_render_attribute( 'wrapper', 'class', $large_odd_order );
-        }
     }
 	
 	/**

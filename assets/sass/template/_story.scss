@@ -1,5 +1,25 @@
 // Single Story
 
+
+.single-story {
+ 
+    .content-area {
+        position: relative;
+        z-index: 2;
+        @include logo-mark(); 
+                
+        &:after {
+            right: 1%;
+            top: 5%;  
+            max-height: 90%; 
+            background-position: top;
+        }  
+   
+    }
+    
+}
+
+
 .story-form {
     
     .wrap {

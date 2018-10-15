@@ -38,51 +38,39 @@ wp_reset_postdata();
 
 ?>
 
-<div class="row">
-
-    <div class="large-8 columns">
+<div class="column row">
     
-        <div id="primary" class="content-area">
-        
-            <main id="main" class="site-main" role="main">
-                <?php
-                 
-                if ( have_posts() ) : ?>
-        
-                   <?php
-                    while ( have_posts() ) :
-        
-                        the_post();
-        
-                        get_template_part( 'template-parts/content', get_post_type() );
-        
-                    endwhile;
-                    
-                    $previous = sprintf( '%s<span class="%s"></span>', 
-                                         get_svg( 'arrow-circle' ), __( 'Previous Post', '_s') );
-                    
-                    $next = sprintf( '%s<span class="%s"></span>', 
-                                         get_svg( 'arrow-circle' ), __( 'Next Post', '_s') );
-                    
-                    the_posts_navigation( array( 'prev_text' => $previous, 'next_text' => $next ) );
-                    
-                else :
-        
-                    get_template_part( 'template-parts/content', 'none' );
-        
-                endif; ?>
-        
-            </main>
-        
-        </div>
+    <div id="primary" class="content-area">
+    
+        <main id="main" class="site-main" role="main">
+            <?php
+             
+            if ( have_posts() ) : ?>
+            
+                <header class="page-header">
+                    <h1 class="page-title"><?php /* translators: the term(s) searched */ printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                </header><!-- .page-header -->
+    
+               <?php
+                while ( have_posts() ) :
+    
+                    the_post();
+    
+                    get_template_part( 'template-parts/content', 'search' );
+    
+                endwhile;
+                
+                the_posts_navigation( array( 'prev_text' => 'Previous', 'next_text' => 'Next' ) );
+                
+            else :
+    
+                get_template_part( 'template-parts/content', 'none' );
+    
+            endif; ?>
+    
+        </main>
     
     </div>
-    
-    <div class="large-4 columns">
-    
-        <?php get_sidebar(); ?>
-    
-    </div>	
 
 </div>
 
