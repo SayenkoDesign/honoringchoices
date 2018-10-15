@@ -5,7 +5,7 @@
 *.bak
 *.swp
 Thumbs.db
-package-lock.json
+/package-lock.json
 
 node_modules/
 acf-json
