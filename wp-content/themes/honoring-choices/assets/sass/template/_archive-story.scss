@@ -156,6 +156,8 @@
             background-position: center;
             position: relative;
             display: table;
+            width: 100%;
+            background-color: $dark-gray;
             
             &:after {
                 content: '';

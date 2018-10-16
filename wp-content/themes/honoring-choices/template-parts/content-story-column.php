@@ -29,10 +29,14 @@ if( wds_check_if_content_contains_video() )
               
     $post_title = the_title( '<h3>', '</h3>', false );
     
-    $more = sprintf( '<span class="arrow">%s</span>', get_svg( 'arrow-right' ) ) ;
+    $more = sprintf( '<span class="arrow">%s</span>', get_svg( 'arrow-right' ) );
     
+    $custom_url = get_field( 'custom_link_url' );
+    
+    $link = ! empty( $custom_url ) ? $custom_url : get_permalink();
+
     $card = sprintf( '<a class="card" href="%s"><div class="center">%s%s%s</div>%s</a>%s', 
-                      get_permalink(), $tagline, $post_title, $more, $play_hover, $play  );
+                      $link, $tagline, $post_title, $more, $play_hover, $play  );
                             
     $html = new Element_Html( [ 'fields' => [ 'html' => $card ] ]  ); 
     $html->add_render_attribute( 'wrapper', 'class', 'background-image' );

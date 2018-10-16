@@ -5,7 +5,7 @@
 
 // Theme Specific
 
-body .gform_wrapper:not(.newsletter) {
+body .site-main .gform_wrapper {
 	margin-top: 4px!important;	
 	
 	ul {
@@ -73,9 +73,12 @@ body .gform_wrapper:not(.newsletter) {
 		
 		input {
             
-            &:hover{
-                
-            }
+            @include button;
+            @include button-background( $green, $dark-green );
+            @include button-color();
+            @include button-padding();
+            border-radius: 51px;
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
             
             @include breakpoint(medium) {
                 display: inline-block;

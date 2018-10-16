@@ -13,5 +13,4 @@ $user = new WP_User( (int) $user_id );
 
 <div id="signup-welcome">
     <p><span class="h3"><?php _e('Username:'); ?></span> <?php echo $user->user_login ?></p>
-    <p><span class="h3"><?php _e('Password:'); ?></span> <?php echo $password; ?></p>
 </div>

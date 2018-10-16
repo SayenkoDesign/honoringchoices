@@ -51,7 +51,7 @@ if( ! class_exists( 'After_Hero_About_Section' ) ) {
                 
             $subheading = _s_format_string( sprintf( '<span>%s</span>', _s_wrap_string( $this->get_fields( 'subheading' ) ) ), 'h3' );
             
-            $description = _s_format_string( $this->get_fields( 'description' ), 'p' );
+            $description = $this->get_fields( 'editor' );
             
             $quote_mark = sprintf( '<div class="quote-mark"><img src="%sicons/quote-white.svg" /></div>', trailingslashit( THEME_IMG ) );
             

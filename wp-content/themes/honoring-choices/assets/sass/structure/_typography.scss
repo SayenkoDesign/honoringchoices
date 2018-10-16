@@ -113,16 +113,25 @@ h6 {
         //margin-bottom: 0;   
     }
 	
-	ul, ol {
-        @include list-reset;
+	ul:not([class]),
+    ol:not([class]) {
+        margin: rem-calc(0 0 30 20);
         
     }
-
-	ul:not([class]),
-	ol:not([class]) {
- 		margin: 0 0 30px;
- 		
-	}
+    
+    ul:not([class]) {
+        li {
+            list-style: disc; 
+            
+            ul {
+                margin-bottom: 0;   
+            }
+        }
+        
+        li li {
+            list-style-type: circle;   
+        }
+    }
     
     ol:not([class]) {
         list-style: decimal;
@@ -139,6 +148,7 @@ h6 {
     
     ul:not([class]) {
         
+       margin-left: 0;
             
        > li {
             position: relative;
@@ -204,6 +214,24 @@ h6 {
             box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1); 
         }
         
+    }
+    
+    .accordion-content {
+        
+        ul:not([class]) {
+            li {
+                list-style: disc; 
+                padding-left: 0;
+                &:after,
+                &:before {
+                    display: none;   
+                }
+            }
+            
+            li li {
+                list-style-type: circle;   
+            }
+        }
     }
     
 }

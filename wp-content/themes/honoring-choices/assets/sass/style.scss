@@ -32,6 +32,9 @@ _s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc
 // Components
 @import "components/index";
 
+// Structure
+@import "structure/index";
+
 // Plugins (Gravity forms, Royal Slider etc...)
 @import "plugins/index";
 
@@ -39,8 +42,7 @@ _s is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc
 @import "sections/index";
 @import "sections/elements/index";
 
-// Structure
-@import "structure/index";
+
 
 // Template
 @import	"template/index";

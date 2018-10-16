@@ -62,6 +62,8 @@
     
     include_once( 'functions/locations.php' );
     
+    include_once( 'functions/story.php' );
+    
     include_once( 'functions/the-events-calendar.php' );
     
     include_once( 'functions/bbpress.php' );
