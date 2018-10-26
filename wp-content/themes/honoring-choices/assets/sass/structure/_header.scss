@@ -11,25 +11,23 @@ Header
     }      
  }
  
-  .site-header {
+
+
+ .site-header {
 
 	@include breakpoint(large) {
+                
         &.fixed {
-            transition: transform .25s ease 0s;
+            transition: transform .2s ease 0s;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             width: 100%;
-            z-index: -2;
-            transform: translateY(-150%);
-            background-color: white;
-    
-            
+            z-index: 99;
+            transform: translateY(0); 
             .wrap {
-                position: relative;
-                top: auto; 
-                
+                position: relative;                
                 @include breakpoint(large) {                
                     .row:last-child {
                         padding-top: 0;   
@@ -37,23 +35,23 @@ Header
                 } 
                 
             }
+
             
+            &.nav-down.shrink {
+                // Shrink as needed
+            }
             
-    
+            &.nav-up {
+                transform: translateY(-100%);   
+            }
+                
         }
+        
+        
     
-        &.fixed.fixed-show {
-            transform: translateY(0);
-            z-index: 999;
-        }
     }
 }
 
-.sticky-header {
-    @include breakpoint(large) {
-        min-height: 139px;   
-    }
-}
 
 .site-header {
     

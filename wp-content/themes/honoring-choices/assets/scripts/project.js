@@ -6977,72 +6977,47 @@ return Outlayer;
 
 	'use strict';
     
-    // Scroll up show header
-
-	var $sticky =  $('.site-header');
-            
-    $sticky.each(function (i, element) {
-        
-        var $win = $(window), 
-            $self = $(this),
-            isShow = false,
-            delta = 400, // distance from top where its active
-            lastScrollTop = 0;
-            
-        var scrollHeight = $(document).height();
-
-        $win.on("scroll", function() {
-            var scrollPosition = $(window).height() + $(window).scrollTop();
-            var scrollBottom = ( (scrollHeight - scrollPosition) / scrollHeight ) * 100;
-            var scrollTop = $win.scrollTop();
-            var offset = scrollTop - lastScrollTop;
-            lastScrollTop = scrollTop;
-            
-            /*
-            console.log( 'ScrollTop: ' + scrollTop );
-            
-            console.log( 'ScrollHeight: ' + scrollHeight );
-            
-            console.log( 'ScrollPosition: ' + scrollPosition );
-            
-            console.log( 'scrollBottom:' + scrollBottom );
-            */
-            
-            if( scrollHeight < (delta * 2) ) {
-                return;
-            }
-            
-            if ( scrollTop > delta && scrollBottom > 0 ) {
-                
-                $self.addClass('fixed');
-                
-                if (offset < 0 ) {
-                    if (!isShow ) {
-                      $self.addClass('fixed-show');
-                      isShow = true;
-                    }
-                } else if (offset > 0 || offset <= lastScrollTop ) {
-                    if (isShow) {
-                      $self.removeClass('fixed fixed-show');
-                      isShow = false;
-                    }
-                }
-                else {
-                    $self.removeClass('fixed fixed-show');
-                    isShow = false;
-                }
-                
-            }
-            else {
-                
-                $self.removeClass('fixed fixed-show'); 
-                isShow = false; 
-                 
-            }
-            
-        });
+    var didScroll;
+    var lastScrollTop = 0;
+    var delta = 300;
+    var navbarHeight = $('.site-header').outerHeight();
+    
+    $(window).scroll(function(event){
+        didScroll = true;
     });
     
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+    
+    function hasScrolled() {
+        var st = $(window).scrollTop();
+        
+        // Make scroll more than delta
+        if(Math.abs(lastScrollTop - st) <= delta) {
+            return;
+        }
+        
+        // If scrolled down and past the navbar, add class .nav-up.
+        if (st > lastScrollTop && st > navbarHeight){
+            // Scroll Down
+            $('.site-header').removeClass('nav-down').addClass('nav-up shrink');
+        } else {
+            // Scroll Up
+            if(st + $(window).height() < $(document).height()) {
+                $('.site-header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+        
+        if(st <= delta) {
+            $('.site-header').removeClass('shrink')
+        }
+      
+        lastScrollTop = st;
+    }
 
 }(document, window, jQuery));
 (function (document, window, $) {
@@ -7059,13 +7034,11 @@ return Outlayer;
     
     $(window).on('load changed.zf.mediaquery', function(event, newSize, oldSize) {
         
-        $( '.nav-primary' ).doubleTapToGo();
-        
         if( Foundation.MediaQuery.atLeast('large') ) {
           $('.sticky-header').css( 'height', $('.site-header').height() );
+          $('.site-header').addClass('fixed');
         }
         else {
-            $( '.nav-primary' ).doubleTapToGo( 'destroy' );
             $('.sticky-header').css( 'height', '' );
         }
         
@@ -7255,21 +7228,23 @@ return Outlayer;
         $.smoothScroll({
             scrollTarget: target,
             beforeScroll: function() {
-                
+                $('.site-header').hide();
             },
             afterScroll: function() {
-                 
+                 $('.site-header').show();
             },
             
         });
     };
-
-    // if page has a #hash
-    if (location.hash) {
-        $('html, body').scrollTop(0).show();
-        // smooth-scroll to hash
-        scrollnow();
-    }
+    
+    $(window).load(function() {
+        // if page has a #hash
+        if (location.hash) {
+            $('html, body').scrollTop(0).show();
+            // smooth-scroll to hash
+            scrollnow();
+        }
+    });
 
     // for each <a>-element that contains a "/" and a "#"
     $('a[href*="/"][href*=#]').each(function(){

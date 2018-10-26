@@ -219,6 +219,7 @@ h6 {
     .accordion-content {
         
         ul:not([class]) {
+            margin-left: rem-calc(18);
             li {
                 list-style: disc; 
                 padding-left: 0;

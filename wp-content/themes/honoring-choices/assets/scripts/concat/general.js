@@ -12,13 +12,11 @@
     
     $(window).on('load changed.zf.mediaquery', function(event, newSize, oldSize) {
         
-        $( '.nav-primary' ).doubleTapToGo();
-        
         if( Foundation.MediaQuery.atLeast('large') ) {
           $('.sticky-header').css( 'height', $('.site-header').height() );
+          $('.site-header').addClass('fixed');
         }
         else {
-            $( '.nav-primary' ).doubleTapToGo( 'destroy' );
             $('.sticky-header').css( 'height', '' );
         }
         

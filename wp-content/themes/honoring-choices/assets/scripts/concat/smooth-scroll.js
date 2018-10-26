@@ -20,21 +20,23 @@
         $.smoothScroll({
             scrollTarget: target,
             beforeScroll: function() {
-                
+                $('.site-header').hide();
             },
             afterScroll: function() {
-                 
+                 $('.site-header').show();
             },
             
         });
     };
-
-    // if page has a #hash
-    if (location.hash) {
-        $('html, body').scrollTop(0).show();
-        // smooth-scroll to hash
-        scrollnow();
-    }
+    
+    $(window).load(function() {
+        // if page has a #hash
+        if (location.hash) {
+            $('html, body').scrollTop(0).show();
+            // smooth-scroll to hash
+            scrollnow();
+        }
+    });
 
     // for each <a>-element that contains a "/" and a "#"
     $('a[href*="/"][href*=#]').each(function(){
