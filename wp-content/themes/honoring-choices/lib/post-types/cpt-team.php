@@ -25,8 +25,8 @@ class CPT_Team extends CPT_Core {
 				self::POST_TYPE // Registered name/slug
 			),
 			array( 
-				'public'              => false,
-				'publicly_queryable'  => true,
+				'public'              => true,
+				'publicly_queryable'  => false,
 				'show_ui'             => true,
 				'query_var'           => true,
 				'capability_type'     => 'post',
@@ -48,7 +48,6 @@ class CPT_Team extends CPT_Core {
 
 new CPT_Team();
 
-/*
 
 $team_categories = array(
     __( 'Team Category', CPT_Team::TEXTDOMAIN ), // Singular
@@ -63,5 +62,3 @@ register_via_taxonomy_core( $team_categories,
 	), 
 	array( CPT_Team::POST_TYPE ) 
 );
-
-*/

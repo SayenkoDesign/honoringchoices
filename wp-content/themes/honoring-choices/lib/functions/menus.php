@@ -1,5 +1,16 @@
 <?php
 
+add_filter( 'nav_menu_meta_box_object', 'show_private_pages_menu_selection', 10 );
+/**
+* Add query argument for selecting pages to add to a menu
+*/
+function show_private_pages_menu_selection( $args ){
+	if( $args->name == 'page' ) {
+		$args->_default_query['post_status'] = array('publish','private');
+	}
+	return $args;
+}
+
 // Add Search icon to primary menu
 function primary_navigation( $items, $args ) {
     if( $args->theme_location == 'primary' )  {

@@ -2,17 +2,6 @@
 Header
 ---------------------------------------------- */
 
-// Fix for sticky header
-.logged-in .site-header.fixed {
-    top: 46px;
-
-    @media screen and (min-width: 783px) {
-        top: 32px;
-    }      
- }
- 
-
-
  .site-header {
 
 	@include breakpoint(large) {

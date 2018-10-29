@@ -10,8 +10,10 @@
         
         .section-content {
             
-            .entry-content *:last-child {
-                //margin-bottom: 0;   
+            .entry-content {
+                h3 {
+                    margin-bottom: rem-calc(20);   
+                }
             }
             
             @include breakpoint(large) {

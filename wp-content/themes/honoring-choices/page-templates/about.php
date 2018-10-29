@@ -19,10 +19,11 @@ get_template_part( 'template-parts/after-hero', 'about' );
 	<?php
         get_template_part( 'template-parts/section', 'about-personal-stories' );       
         
-		get_template_part( 'template-parts/section', 'staff' );   
-        
-        get_template_part( 'template-parts/section', 'board' ); 
-        
+        /*
+        **** Create a "Tram Section"
+        Combine staff and board into a "Team" section and query by the categories. Create a relaitonship field inside About page edit screen to choose the categories to show. */
+		get_template_part( 'template-parts/section', 'team' );   
+                
         get_template_part( 'template-parts/section', 'supporters' ); 
         
         get_template_part( 'template-parts/section', 'partners' ); 

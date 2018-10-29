@@ -135,15 +135,18 @@
     }
     
     
-    .section-staff {
+    .section-team-curved {
         .wrap {
             background-color: $light-gray;  
             padding-top: 45px;    
         }
     }
     
-    .section-staff,
-    .section-advisory-board {
+    #section-team-1 {
+        margin-top: 0;   
+    }
+    
+    .section-team {
      
         article {
             position: relative;

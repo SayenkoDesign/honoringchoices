@@ -33,7 +33,7 @@ if ( ! function_exists( '_s_setup' ) ) :
 		define( 'THEME_NAME', sanitize_title( wp_get_theme() ) );
 		define( 'THEME_VERSION', '1.0' );	
 		
-    	define( 'GOOGLE_API_KEY', '' );	
+    	define( 'GOOGLE_API_KEY', 'AIzaSyDAkLMe2GIfgDbjsvT7fID-P7RUD9I0K0o' );	
 
 		/**
 		 * Make theme available for translation.

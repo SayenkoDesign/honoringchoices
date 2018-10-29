@@ -8,7 +8,7 @@ if( ! class_exists( 'About_Personal_stories_Section' ) ) {
             parent::__construct();
             
             $fields = get_field( 'personal_stories' );
-            $fields['button'] = [ 'text' => 'Read More Persoanl Stories >', 'link' => $fields['link_text'] ];
+             $fields['button'] = [ 'text' => $fields['link_text'] ? $fields['link_text'] : 'Read More Personal Stories >', 'link' => '' ];
             $this->set_fields( $fields );
             
             // Render the section
@@ -90,7 +90,7 @@ if( ! class_exists( 'About_Personal_stories_Section' ) ) {
                 $photo = sprintf( '<div class="thumbnail"%s></div>', $background );
             }
             $name  = _s_format_string( $element[ 'name' ], 'h3' );
-            $button = new Element_Button( [ 'fields' => [ 'button' => [ 'text' => 'Read More >'] ] ] ); // set fields from Constructor
+            $button = new Element_Button( [ 'fields' => [ 'button' => [ 'link' => '', 'text' => 'Read More >'] ] ] ); // set fields from Constructor
             $button->add_render_attribute( 'anchor', 'href', $story );
             $button = $button->get_element();
             $title = _s_format_string( $element[ 'title' ], 'h5', [ 'class' => 'title' ] );
