@@ -43,7 +43,7 @@ function _s_create_accordion( $args = [], $content = '' ) {
             $accordion .= sprintf( '<li class="accordion-item" data-accordion-item>%s</li>', $item );
         }
         
-        return sprintf( '<ul class="accordion" data-accordion data-allow-all-closed="true">%s</ul>', $accordion );
+        return sprintf( '<ul class="accordion" data-accordion data-allow-all-closed="true" data-multi-expand="true">%s</ul>', $accordion );
     }
 }
 
