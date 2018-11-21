@@ -148,7 +148,7 @@ function wds_check_for_vimeo( $content ) {
 
 function the_title_trim($title) {
 
-	$title = attribute_escape($title);
+	$title = esc_attr($title);
 
 	$findthese = array(
 		'#Protected:#',

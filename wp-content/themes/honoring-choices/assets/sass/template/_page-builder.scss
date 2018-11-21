@@ -19,7 +19,7 @@
             @include breakpoint(large) {
         
                 .column-block {
-                    margin-bottom: rem-calc(55);   
+                    //margin-bottom: rem-calc(55);   
                 }
                 
                 .large-order-1 .element-photo {
@@ -39,7 +39,7 @@
             
             .wrap {
                 background-color: $light-gray;
-                padding: 55px 0 0;   
+                padding: rem-calc(45 0 0);   
             }
             
             

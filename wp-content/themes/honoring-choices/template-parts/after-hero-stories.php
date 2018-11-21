@@ -75,7 +75,14 @@ if( ! class_exists( 'After_Hero_Stories_Section' ) ) {
             foreach( $photos as $key => $photo ) {
                 $background = _s_get_acf_image( $photo['ID'], 'large', true );
                 $style = sprintf( ' style="background-image: url(%s);"', $background );
-                $items .= sprintf( '<div class="%s"><div class="background"%s>%s</div></div>', $photo_classes[$key], $style, $content[$key] );
+                
+                if( 3 == $key ) {
+                    $items .= sprintf( '<a href="#story-form" class="%s"><div class="background"%s>%s</div></a>', $photo_classes[$key], $style, $content[$key] );
+                }
+                else {
+                    $items .= sprintf( '<div class="%s"><div class="background"%s>%s</div></div>', $photo_classes[$key], $style, $content[$key] );
+                }
+                
             }
             
             $grid = sprintf( '<div class="column"><div class="photo-grid clearfix">%s</div></div>', $items );

@@ -139,7 +139,7 @@ class Element_Section extends Element_Base {
         
         $this->add_render_attribute(
 			'wrapper', 'id', [
-				'section-' . $id
+				$this->get_name() . '-' . $id
 			]
 		);
         
@@ -161,7 +161,7 @@ class Element_Section extends Element_Base {
                             
             switch( $name ) {
                 case 'id':
-                    $this->add_render_attribute( 'wrapper', 'id', $value, true ); // overwrite for single ID
+                    $this->add_render_attribute( 'wrapper', 'id', $this->get_name() . '-' . $value, true ); // overwrite for single ID
                 break;
                 case 'class':
                     $this->add_render_attribute( 'wrapper', 'class', $value );

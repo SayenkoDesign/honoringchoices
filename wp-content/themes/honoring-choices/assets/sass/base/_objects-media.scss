@@ -87,7 +87,7 @@ img.alignright,
 }
 
 .wp-caption {
-	width: auto !important;
+	width: auto;
 
 	p {
 		margin-bottom: 0;
@@ -95,7 +95,7 @@ img.alignright,
 }
 
 .wp-caption-text {
-	margin: 0;
+	margin: rem-calc(10 0 $global-margin);
 }
 
 img.alignleft,

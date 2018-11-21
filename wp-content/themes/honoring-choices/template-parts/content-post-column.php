@@ -20,17 +20,21 @@ $even = ( $post_count % 2 == 0 ) ? true : false;
     }     
     
     $post_date = _s_get_posted_on();
+    
+    $custom_url = get_field( 'custom_link_url' );
+    
+    $link = ! empty( $custom_url ) ? $custom_url : get_permalink();
        
-    $post_title = sprintf( '<h2><a href="%s">%s</a></h2>', get_permalink(), get_the_title() );
+    $post_title = sprintf( '<h2><a href="%s">%s</a></h2>', $link, get_the_title() );
     
     $even = ( $post_count % 2 == 0 ) ? true : false;
     
     $read_more = '';
-    
+        
     if( $full_width ) {
         echo '<div class="row">';
         
-        $read_more = sprintf( '<p class="read-more"><a href="%s" class="more">%s</a></p>', get_permalink(), __( 'Read More', '_s' ) ) ;
+        $read_more = sprintf( '<p class="read-more"><a href="%s" class="more">%s</a></p>', $link, __( 'Read More', '_s' ) ) ;
     }
     
     $column = $full_width ? ' small-12 large-6 column' : '';

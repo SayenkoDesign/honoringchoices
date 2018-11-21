@@ -261,3 +261,19 @@
         float: left;
     }
 }
+
+.profile_edit_profile {
+    
+    padding: rem-calc(10 0);
+    
+    a {
+        color: #FFFFFF!important;
+        font-family: $lato;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        @include button-background( $blue, $light-blue );
+        @include button-color();
+        @include button-padding( 5, 10, 5 10 );   
+    }
+}

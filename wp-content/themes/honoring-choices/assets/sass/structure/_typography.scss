@@ -82,6 +82,7 @@ h4,
 h5,
 h6 {
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 // entry content
@@ -115,7 +116,7 @@ h6 {
 	
 	ul:not([class]),
     ol:not([class]) {
-        margin: rem-calc(0 0 30 20);
+        margin: rem-calc(0 0 $global-margin 20);
         
     }
     
@@ -138,7 +139,7 @@ h6 {
         margin-left: rem-calc(18);
         
         li {
-           margin-bottom: rem-calc(8); 
+           margin-bottom: rem-calc(5); 
         }
     }
  	
@@ -155,7 +156,7 @@ h6 {
             list-style-type: none;
             
             min-height: 21px;
-            padding: 0 0 5px 34px;
+            padding: 0 0 0 34px;
             line-height: inherit;
             margin-bottom: 5px;
             

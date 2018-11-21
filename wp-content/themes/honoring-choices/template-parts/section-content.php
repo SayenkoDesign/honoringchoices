@@ -52,7 +52,7 @@ if( ! class_exists( 'Content_Section' ) ) {
             $settings = $this->get_settings();
                         
             $row = new Element_Row(); 
-            $row->add_render_attribute( 'wrapper', 'class', 'align-middle large-unstack' );
+            $row->add_render_attribute( 'wrapper', 'class', 'large-unstack' );
                         
             $column = new Element_Column(); 
             $column->add_render_attribute( 'wrapper', 'class', $column_order[0] );

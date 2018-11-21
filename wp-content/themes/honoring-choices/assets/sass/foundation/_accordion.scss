@@ -11,19 +11,15 @@
 	.accordion-title {
 		display: block;
 		position: relative;
-        
-        h4 {
-            margin-bottom: 0;   
-        }
+        color: $dark-gray;
 	}
 }
 
-.accordion-title:before {
-    color: $green;
-    font-size: 24px;   
-}
 
 
 .accordion-content {
-		display: none;
+    
+    h4 {
+        color: $dark-gray; 
+    }
 }

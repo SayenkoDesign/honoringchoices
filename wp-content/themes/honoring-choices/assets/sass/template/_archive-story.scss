@@ -35,7 +35,8 @@
     
         .photo-grid {
                         
-            > div {
+            > div,
+            > a {
                 
                 &:first-child() .background {
                     &:after {
@@ -47,6 +48,32 @@
                         bottom: 0;
                         left: 0;
                         background-color: rgba($maroon,0.8);
+                    }
+                }
+                
+                &:nth-child(2) .background {
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba($dark-blue,0.8);
+                    }
+                }
+                
+                &:nth-child(3) .background {
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba($green,0.8);
                     }
                 }
                 
