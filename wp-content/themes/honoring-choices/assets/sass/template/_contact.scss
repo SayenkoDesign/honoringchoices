@@ -46,6 +46,9 @@
 
 .contact-form {
     
+    max-width: rem-calc(980);
+    margin-left: auto;
+    margin-right: auto;
     
     .entry-content {
         margin-bottom: 30px;  
@@ -54,17 +57,18 @@
             margin-bottom: 24px;   
         }
     }
- 
-    .gform_wrapper {
-        $padding: 40px;
-        padding: $padding;
-        border-radius: 8px;
-        background-color: $blue;
-        box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
-        
-        @media only screen and (min-width : 641px) {
-				padding-left: $padding + 16px;
-		}
+     
+}
+
+.contact-form .gform_wrapper {
+    $padding: 40px;
+    padding: $padding;
+    border-radius: 8px;
+    background-color: $blue;
+    box-shadow: 0 11px 12px 0 rgba(0,0,0,0.1);
+    
+    @media only screen and (min-width : 641px) {
+            padding-left: $padding + 16px;
     }
     
     .gform_heading {
@@ -147,5 +151,4 @@
         }
         
     }
-    
 }
