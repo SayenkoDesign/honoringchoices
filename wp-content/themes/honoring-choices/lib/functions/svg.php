@@ -14,11 +14,11 @@ function get_svg( $type = '' ) {
         </svg>',
     
             'curve-top' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 49">
-          <path fill="#eff3f1" fill-rule="evenodd" d="M1440 25V0c-355 29-595 44-720 44S355 29 0 0v49h1440z" transform=""/>
+          <path fill="#f5f5f5" fill-rule="evenodd" d="M1440 25V0c-355 29-595 44-720 44S355 29 0 0v49h1440z" transform=""/>
         </svg>',
         
         'curve-bottom' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 49">
-          <path fill="#eff3f1" fill-rule="evenodd" d="M1440 25v24c-353-22-593-33-720-33S353 27 0 49V0h1440z" transform=""/>
+          <path fill="#f5f5f5" fill-rule="evenodd" d="M1440 25v24c-353-22-593-33-720-33S353 27 0 49V0h1440z" transform=""/>
         </svg><strong></strong>',
                            		
         'menu-icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" class="menu-icon" viewBox="0 0 38 34"><g fill="none" fill-rule="evenodd" stroke="#454C54" stroke-width="3" stroke-linecap="square"><path d="M2 22h34M2 12h34M2 32h27M2 2h27"/></g><span class="screen-reader-text">menu icon</span></svg>',

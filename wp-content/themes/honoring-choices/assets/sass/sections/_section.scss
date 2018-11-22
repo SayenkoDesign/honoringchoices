@@ -30,3 +30,8 @@ section {
     }
     
 }
+
+
+.section-content-2 [class*="element"]:last-child p:last-child {
+    margin-bottom: 0;   
+}

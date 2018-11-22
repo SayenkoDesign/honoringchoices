@@ -45,6 +45,7 @@ if( ! class_exists( 'Content_Section' ) ) {
             }
             else {
                 $column_order = [ 'small-order-2', 'large-order-1' ];   
+                $this->set_settings( 'curved', true );
             }
             
             $elements = $this->get_fields();
