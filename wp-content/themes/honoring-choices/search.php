@@ -60,7 +60,13 @@ wp_reset_postdata();
     
                 endwhile;
                 
-                the_posts_navigation( array( 'prev_text' => 'Previous', 'next_text' => 'Next' ) );
+                $previous = sprintf( '%s<span class="screen-reader-text">%s</span>', 
+                                     get_svg( 'arrow' ), __( 'Previous Post', '_s') );
+                
+                $next = sprintf( '%s<span class="screen-reader-text">%s</span>', 
+                                     get_svg( 'arrow' ), __( 'Next Post', '_s') );
+                
+                the_posts_navigation( array( 'prev_text' => $previous, 'next_text' => $next ) );
                 
             else :
     
