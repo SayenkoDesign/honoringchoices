@@ -7228,12 +7228,8 @@ return Outlayer;
         $.smoothScroll({
             scrollTarget: target,
             beforeScroll: function() {
-                $('.site-header').hide();
-            },
-            afterScroll: function() {
-                 $('.site-header').show();
-            },
-            
+                $('.site-header').addClass('nav-up');
+            }            
         });
     };
     
