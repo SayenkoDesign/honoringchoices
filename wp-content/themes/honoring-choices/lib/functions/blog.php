@@ -15,8 +15,8 @@ add_action( 'template_redirect', function() {
 function _s_paginate_links( $args = [] ) {
     
     $defaults = array(
-        'prev_text'          => __('<span>Previous</span>'),
-        'next_text'          => __('<span>Next</span>'),
+        'prev_text'          => __('<span>« Previous Page</span>'),
+        'next_text'          => __('<span>Next Page »</span>'),
         'type'               => 'array'
     );
     
@@ -44,15 +44,17 @@ function _s_paginate_links( $args = [] ) {
     }
     
     if( ! $previous ) {
-        array_unshift( $out, '<li class="nav-previous"><a class="disable"><span>Previous</span></a></li>' );
+        array_unshift( $out, sprintf( '<li class="nav-previous"><a class="disable">%s</a></li>', $args['prev_text'] ) );
     }
     
     if( ! $next ) {
-        $out[] = '<li class="nav-next"><a class="disable"><span>Next</span></a></li>';
+        $out[] = sprintf( '<li class="nav-next"><a class="disable">%s</a></li>', $args['next_text'] );
     }
     
     return sprintf( '<div class="posts-pagination"><ul class="nav-links">%s</ul>', join( '', $out ) );
 }
+
+
 
 function _s_get_the_post_navigation( $args = array() ) {
     $args = wp_parse_args( $args, array(

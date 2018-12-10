@@ -27,6 +27,8 @@
     
     .section-after-hero {
         position: relative;
+        margin-top: 0;
+        padding-top: rem-calc(45);
         
         &:before {
             position: absolute;

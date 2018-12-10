@@ -96,13 +96,7 @@ wp_reset_postdata();
                     echo facetwp_display( 'pager' );
                 }
                 else {
-                    $previous = sprintf( '%s<span class="screen-reader-text">%s</span>', 
-                                     get_svg( 'arrow' ), __( 'Previous Post', '_s') );
-                
-                    $next = sprintf( '%s<span class="screen-reader-text">%s</span>', 
-                                         get_svg( 'arrow' ), __( 'Next Post', '_s') );
-                    
-                    the_posts_navigation( array( 'prev_text' => $previous, 'next_text' => $next ) );
+                    echo _s_paginate_links();
                 }
                 
             else :
