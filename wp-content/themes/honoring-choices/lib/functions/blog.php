@@ -11,6 +11,49 @@ add_action( 'template_redirect', function() {
 	}
 });
 
+
+function _s_paginate_links( $args = [] ) {
+    
+    $defaults = array(
+        'prev_text'          => __('<span>Previous</span>'),
+        'next_text'          => __('<span>Next</span>'),
+        'type'               => 'array'
+    );
+    
+    $args = wp_parse_args( $args, $defaults );
+    
+    $links =  paginate_links( $args );
+    
+    $out = [];
+    
+    $previous = $next = false;
+    
+    foreach( $links as $link ) {
+        $class = 'number';
+        if (strpos( $link, 'prev') !== false) {
+            $previous = true;
+            $class = 'nav-previous';
+        } else if (strpos( $link, 'next') !== false) {
+            $next = true;
+            $class = 'nav-next';
+        } else {
+            $class = 'number';   
+        }
+        
+        $out[] = sprintf( '<li class="%s">%s</li>', $class, $link );
+    }
+    
+    if( ! $previous ) {
+        array_unshift( $out, '<li class="nav-previous"><a class="disable"><span>Previous</span></a></li>' );
+    }
+    
+    if( ! $next ) {
+        $out[] = '<li class="nav-next"><a class="disable"><span>Next</span></a></li>';
+    }
+    
+    return sprintf( '<div class="posts-pagination"><ul class="nav-links">%s</ul>', join( '', $out ) );
+}
+
 function _s_get_the_post_navigation( $args = array() ) {
     $args = wp_parse_args( $args, array(
         'prev_text'          => '%title',
