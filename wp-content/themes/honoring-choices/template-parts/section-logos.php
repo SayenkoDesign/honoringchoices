@@ -1,56 +1,58 @@
 <?php
-// Home Intro
+// About - Logos
 
-if( ! class_exists( 'Partners_Section' ) ) {
-    class Partners_Section extends Element_Section {
+if( ! class_exists( 'Logos_Section' ) ) {
+    class Logos_Section extends Element_Section {
         
         public function __construct() {
             parent::__construct();
                         
-            $fields = get_field( 'partners' );
-            $this->set_fields( $fields );
-            
-            // Render the section
-            $this->render();
-            
-            // print the section
-            $this->print_element();        
+            $fields = get_field( 'logos' );
+            $this->set_fields( $fields );     
         }
               
         // Add default attributes to section        
         protected function _add_render_attributes() {
             
             // use parent attributes
-            parent::_add_render_attributes();
-    
-            $this->add_render_attribute(
-                'wrapper', 'class', [
-                     $this->get_name() . '-partners', 'section-logos'
-                ]
-            );  
-            
-            $this->add_render_attribute(
-                'wrapper', 'id', [
-                     $this->get_name() . '-partners'
-                ], true
-            );             
+            parent::_add_render_attributes();          
             
         }
         
         
-       
+        
         public function before_render() {
                             
             $this->add_render_attribute( 'wrap', 'class', 'wrap' );
             
-            $logo_mark = sprintf( '<div class="logo-mark icon shadow"><img src="%slogo-mark.svg" class="" /></div>', trailingslashit( THEME_IMG ) );  
+            $before = sprintf( '<div class="shape">%s</div>', get_svg( 'curve-top' ) );
+            $before = '';
             
-            return sprintf( '<%s %s>%s<div %s>', 
+            $logo_mark = sprintf( '<div class="logo-mark icon shadow"><img src="%slogo-mark.svg" class="" /></div>', trailingslashit( THEME_IMG ) );
+            
+            return sprintf( '<%s %s>%s%s<div %s>', 
                             esc_html( $this->get_html_tag() ), 
                             $this->get_render_attribute_string( 'wrapper' ), 
+                            $before,
                             $logo_mark,
                             $this->get_render_attribute_string( 'wrap' )
                             );
+        }
+        
+        /**
+         * After section rendering.
+         *
+         * Used to add stuff after the section element.
+         *
+         * @since 1.0.0
+         * @access public
+         */
+        public function after_render() {
+            
+            $after = sprintf( '<div class="shape">%s</div>', get_svg( 'curve-bottom' ) );  
+            $after = '';
+            
+            return sprintf( '</div>%s</%s>', $after, esc_html( $this->get_html_tag() ) );
         }
         
         
@@ -61,18 +63,16 @@ if( ! class_exists( 'Partners_Section' ) ) {
                                                 
             $row = new Element_Row(); 
             $column = new Element_Column(); 
-                            
-            // Header
-            $header = new Element_Header( [ 'fields' => $fields ] ); // set fields from Constructor
-            $header = $header->get_element();
-            
-            // Editor
-            $editor = new Element_Editor( [ 'fields' => $fields ] ); // set fields from Constructor
-            $editor = $editor->get_element();
-            
+                                        
             $featured_logos = $this->get_logos( true );
+                        
+            $html = sprintf( '<header class="header"><h2>%s</h2></header>', get_the_title() );
+                        
+            if( ! empty( get_the_content() ) ) {
+                $html .= apply_filters( 'the_content', get_the_content() );
+            }
             
-            $content = new Element_Html( [ 'fields' => [ 'html' => $header . $editor . $featured_logos ] ]  );
+            $content = new Element_Html( [ 'fields' => [ 'html' => $html . $featured_logos ] ]  );
             $content->add_render_attribute( 'wrapper', 'class', ['entry-content', 'introduction' ], true );
             $column->add_child( $content );
             
@@ -162,5 +162,10 @@ if( ! class_exists( 'Partners_Section' ) ) {
     }
         
 }
-   
-new Partners_Section;
+
+$section = new Logos_Section();
+$section->add_render_attribute( 'wrapper', 'id', $section->get_name() . '-' .$group ); 
+$section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-' .$group ); 
+$section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-logos' ); 
+$section->render();
+$section->print_element();

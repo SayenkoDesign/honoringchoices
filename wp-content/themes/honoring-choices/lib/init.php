@@ -96,6 +96,7 @@ include_once( 'foundation/class-foundation-grid.php' );
     include_once( 'post-types/cpt-story.php' );
     include_once( 'post-types/cpt-testimonial.php' );   
     include_once( 'post-types/cpt-team.php' );  
+    include_once( 'post-types/cpt-logos.php' );  
     
 /****************************************
 	Widgets
