@@ -164,7 +164,7 @@ if( ! class_exists( 'Logos_Section' ) ) {
 }
 
 $section = new Logos_Section();
-$section->add_render_attribute( 'wrapper', 'id', $section->get_name() . '-' .$group ); 
+$section->add_render_attribute( 'wrapper', 'id', $section->get_name() . '-' .$group, true ); 
 $section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-' .$group ); 
 $section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-logos' ); 
 $section->render();
