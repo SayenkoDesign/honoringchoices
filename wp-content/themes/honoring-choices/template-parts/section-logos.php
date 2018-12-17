@@ -15,7 +15,9 @@ if( ! class_exists( 'Logos_Section' ) ) {
         protected function _add_render_attributes() {
             
             // use parent attributes
-            parent::_add_render_attributes();          
+            parent::_add_render_attributes();  
+            
+            $this->add_render_attribute( 'wrapper', 'id', $this->get_name() . '-' .$this->get_settings( 'group' ), true );         
             
         }
         
@@ -164,7 +166,7 @@ if( ! class_exists( 'Logos_Section' ) ) {
 }
 
 $section = new Logos_Section();
-$section->add_render_attribute( 'wrapper', 'id', $section->get_name() . '-' .$group, true ); 
+$section->set_settings( [ 'group' => $group ] ); 
 $section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-' .$group ); 
 $section->add_render_attribute( 'wrapper', 'class', $section->get_name() . '-logos' ); 
 $section->render();
