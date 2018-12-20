@@ -118,7 +118,7 @@ if ( have_posts() ) :
                     'defaultLoc': true,
 					'defaultLat': '47.64863',
 					'defaultLng' : '-122.52357469999998',
-                    'mapSettings': {zoom: 10, styles: 
+                    'mapSettings': {zoom: 6, styles: 
                     
                                             [
                           {

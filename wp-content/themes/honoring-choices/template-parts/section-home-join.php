@@ -74,6 +74,7 @@ if( ! class_exists( 'Home_Join_Section' ) ) {
             $settings = $this->get_settings();
                         
             $row = new Element_Row(); 
+            $row->add_render_attribute( 'wrapper', 'class', [ 'medium-unstack' ] ); 
             
             // Column
             $column = new Element_Column(); 
