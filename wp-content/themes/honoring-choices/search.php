@@ -38,7 +38,8 @@ wp_reset_postdata();
 
 ?>
 
-<div class="column row">
+<div class="row align-center">
+<div class="column small-12 large-9">
     
     <div id="primary" class="content-area">
     
@@ -71,6 +72,8 @@ wp_reset_postdata();
         </main>
     
     </div>
+
+</div>
 
 </div>
 

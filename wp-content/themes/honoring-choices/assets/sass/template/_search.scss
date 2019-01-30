@@ -10,6 +10,8 @@
         
         article {
             
+            margin-bottom: rem-calc(30);
+            
             h2 {
             
                 margin-bottom: 0;
@@ -30,7 +32,11 @@
                 font-size: 15px;
                 letter-spacing: 0.5px;
                 line-height: 25px;
-                margin-bottom: 15px;
+                margin-bottom: 0;
+            }
+            
+            footer {
+                margin-top: rem-calc(15);   
             }
             
             .more {
