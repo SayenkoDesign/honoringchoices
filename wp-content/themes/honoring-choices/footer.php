@@ -45,7 +45,7 @@
                     <div class="column column-block large-4 large-order-2">
                     <?php
                     $site_url = home_url();
-                        $logo = sprintf('<img src="%sfooter-logo.png" class="" />', trailingslashit( THEME_IMG ) );                    
+                        $logo = sprintf('<img src="%sfooter-logo-v2.svg" class="" />', trailingslashit( THEME_IMG ) );                    
                         printf('<aside class="widget widget_media_image text-center"><a href="%s" title="%s">%s</a></aside>',
                                 $site_url, get_bloginfo( 'name' ), $logo );
                     ?>

@@ -43,7 +43,7 @@
                         $logo = sprintf('<img src="%slogo.png" class="" />', trailingslashit( THEME_IMG ) );                    
                         printf('<a href="%s" title="%s">%s</a>',
                                 $site_url, get_bloginfo( 'name' ), $logo );
-                        printf( '<img src="%sinitiative-of.png" class="initiative-of" />', trailingslashit( THEME_IMG ) );
+                        printf( '<img src="%sinitiative-of-v2.svg" class="initiative-of" />', trailingslashit( THEME_IMG ) );
                         ?>
                         </div>
                     </div><!-- .site-branding -->
